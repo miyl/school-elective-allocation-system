@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>School Allocation System</title>
+    <link rel="stylesheet" href="{% static 'libs/node/node_modules/bootstrap/dist/css/bootstrap.min.css' %}" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{% static '/css/css.css' %}" media="screen" charset="utf-8">
+  </head>
+  <body>
+
+    <nav class="nav nav-tabs"></nav>
+
+    {% block content %}{% endblock %}
+    <script src="{% static 'libs/node/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' %}" charset="utf-8"></script>
+  </body>
+</html>

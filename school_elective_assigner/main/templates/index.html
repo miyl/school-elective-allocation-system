@@ -1,20 +1,7 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>School Allocation System</title>
-    <link rel="stylesheet" href="{% static 'libs/node/node_modules/bootstrap/dist/css/bootstrap.min.css' %}" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="{% static '/css/css.css' %}" media="screen" charset="utf-8">
-  </head>
-  <body>
+{% block content %}
+
     <h1>Velkommen til vores Valgfagsallokeringssystem!</h1>
 
-    <nav class="nav nav-tabs">
-    </nav>
-
-    <script src="/static/libs/node/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" charset="utf-8"></script>
-  </body>
-</html>
+{% endblock %}
