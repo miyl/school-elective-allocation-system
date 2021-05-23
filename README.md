@@ -10,3 +10,4 @@ KEA Datamatiker Final Project April 2021
 2. python -m venv env |Îopretter et virtual env
 3. . env/Scripts/activate # enter virtual env
 4. pip install -r requirements.txt # installer pakker i virtual env
+
