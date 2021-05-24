@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-<!-- Navbar skal evt. ikke være synlig under login. Det er snarere en test. -->
-{% include 'navbar.html' %}
 
     <body>
         <div class="container">
@@ -25,7 +23,8 @@
                       <input type="checkbox" class="custom-control-input" id="customCheck">
                       <label class="custom-control-label">Remember password</label>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="submit-btn">Sign in</button>
+                    <!--<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="submit-btn">Sign in</button>-->
+                    <a class='btn btn-primary' href='/assignments'>Sign in</a>
                   
                     <div>
                         <a id="sign-up" href="#">Sign up</a> <br>
