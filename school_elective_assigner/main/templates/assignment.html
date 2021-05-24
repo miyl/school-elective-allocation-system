@@ -1,5 +1,73 @@
-{% extends 'base_with_nav.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-Hello
+
+{% comment %} https://getbootstrap.com/docs/5.0/components/navs-tabs/#javascript-behavior {% endcomment %}
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="tildeling-tab" data-bs-toggle="tab" data-bs-target="#tildeling" type="button" role="tab"
+      aria-controls="tildeling" aria-selected="true">Tildeling</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="valgfag-tab" data-bs-toggle="tab" data-bs-target="#valgfag" type="button" role="tab"
+      aria-controls="valgfag" aria-selected="false">Valgfag</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="elever-tab" data-bs-toggle="tab" data-bs-target="#elever" type="button" role="tab"
+      aria-controls="elever" aria-selected="false">Elever</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="kriterier-tab" data-bs-toggle="tab" data-bs-target="#kriterier" type="button" role="tab"
+      aria-controls="kriterier" aria-selected="false">Kriterier</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="resultat-tab" data-bs-toggle="tab" data-bs-target="#resultat" type="button" role="tab"
+      aria-controls="resultat" aria-selected="false">Resultat</button>
+  </li>
+  <li class="nav-item" style="margin-left: auto;" role="presentation">
+    <a class="nav-link" href="{% url 'assignments' %}">Tildelingsoversigt</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" href="{% url 'index' %}">Logud</a>
+  </li>
+</ul>
+
+
+
+<div class="tab-content" id="myTabContent">
+
+  <div class="tab-pane fade show active" id="tildeling" role="tabpanel" aria-labelledby="tildeling-tab">
+    Tildeling her
+  </div>
+
+  <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
+    Valgfag her
+  </div>
+  <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
+    Elever her
+  </div>
+
+  <div class="tab-pane fade" id="kriterier" role="tabpanel" aria-labelledby="kriterier-tab">
+    Kriterier her
+  </div>
+
+  <div class="tab-pane fade" id="resultat" role="tabpanel" aria-labelledby="resultat-tab">
+    Resultat her
+  </div>
+
+</div>
+
+
+
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="create_assignment" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
 {% endblock %}
