@@ -1,3 +1,13 @@
-body {
-  background: red;
+#submit-btn { 
+  font-size: small;
+  margin-bottom: 2%;
+}
+
+#sign-up, #forgot-password {
+  color:steelblue;
+  margin-bottom: 2%;
+}
+
+.container {
+  margin-top: 10%;
 }

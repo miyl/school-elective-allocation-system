@@ -1,7 +1,43 @@
 {% extends 'base.html' %}
-
 {% block content %}
+<!-- Navbar skal evt. ikke være synlig under login. Det er snarere en test. -->
+{% include 'navbar.html' %}
 
-    <h1>Velkommen til vores Valgfagsallokeringssystem!</h1>
+    <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 mx-auto">
+              <div class="card card-signin">
+                <div class="card-body">
+                  <h5 class="card-title">Sign In</h5>
+                  <form class="form-login">
+                    <div class="form-label-group">
+                      <label for="inputEmail">Email address</label>
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    </div>
+
+                    <div class="form-label-group">
+                      <label for="inputPassword">Password</label>
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    </div>
+      
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input type="checkbox" class="custom-control-input" id="customCheck">
+                      <label class="custom-control-label">Remember password</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="submit-btn">Sign in</button>
+                  
+                    <div>
+                        <a id="sign-up" href="#">Sign up</a> <br>
+                        <a id="forgot-password" href="#">Forgot Password?</a>
+                    </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+      
 
 {% endblock %}
