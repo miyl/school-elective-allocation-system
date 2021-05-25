@@ -50,6 +50,8 @@
       Description: {{ course.description_en }}<br/>
       Beskrivelse: {{ course.description_da }}<br/>
       </br/>
+      {% empty %}
+      Der er ikke oprettet fag for tildelingen.
     {% endfor %}
   </div>
   <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
@@ -75,6 +77,8 @@
       {% endfor %}
       <br/>
 
+      {% empty %}
+      Der er ikke tilføjet elever til tildelingen.
     {% endfor %}
     </ul>
   </div>
