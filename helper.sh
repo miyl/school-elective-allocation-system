@@ -2,13 +2,14 @@
 
 help() {
   printf '%s\n' 'Valid commands: run, migrate, dump-db, load-db.'
+  exit
 }
 
 # Exit if zero arguments received
-[ -z "$1" ] && help && exit
+[ -z "$1" ] && help
 
 # Detect Windows
-[ -d 'env/Scripts' ] && WIN=1 && WIN_ADD="python.exe" && exit
+[ -d 'env/Scripts' ] && WIN=1 && WIN_ADD="python.exe"
 
 # Load the virtual env first
 if [ ! "$WIN" ]; then . env/bin/activate
