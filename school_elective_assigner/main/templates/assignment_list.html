@@ -3,15 +3,18 @@
 
 {% block content %}
 
+{% include 'general_navbar.html' %}
+
 {% comment %} https://getbootstrap.com/docs/5.0/components/accordion/  {% endcomment %}
+<div id="opret_t">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">Opret ny Tildeling</button>
+</div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal" id="opret_t">Opret ny Tildeling</button>
-
-<div class="accordion" id="accordionExample">
+<div class="accordion card-body" id="accordionExample">
 
   {% for assignment in object_list %}
 
-  <div class="accordion-item">
+  <div class="accordion-item col-lg-11 mx-auto">
     <h2 class="accordion-header" id="headingOne">
       {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write a<id> below. {% endcomment %}
       <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#a{{ assignment.id  }}"
