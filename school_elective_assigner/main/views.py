@@ -35,10 +35,12 @@ def assignment(request, item):
   students = Student.objects.filter(assignment=item)
   courses = Course.objects.filter(assignment=item)
   # No direct foreign key to check on :/ :
-  #student_course_requests = Student_Course_Request.objects.filter(pk=item)
-  #student_course_assignments = Student_Course_Assignment.objects.filter(pk=item)
+  # Instead we check that the course matches one of the assignment courses
+  student_course_requests = Student_Course_Request.objects.filter(course__in=courses)
+  student_course_assignments = Student_Course_Assignment.objects.filter(course__in=courses)
   #criteria = Assignment.objects.get(pk=item)
-  #context = {'assignment': assignment}
-  context = {'assignment': assignment, 'students': students, 'courses': courses}
+  context = {'assignment': assignment, 'students': students, 'courses':
+      courses, 'student_course_requests': student_course_requests,
+      'student_course_assignments': student_course_assignments}
 
   return render(request, 'assignment.html', context)

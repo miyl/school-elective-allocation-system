@@ -43,7 +43,7 @@ class Student_Course_Request(models.Model):
     verbose_name='Student Course Request'
 
   def __str__(self):
-    return f"self.student (self.course): self.priority"
+    return str(self.student) + " - " + str(self.course) + ": " + str(self.priority)
 
 # Only has foreign keys
 class Student_Course_Assignment(models.Model):
@@ -54,7 +54,7 @@ class Student_Course_Assignment(models.Model):
     verbose_name='Student Course Assignment'
 
   def __str__(self):
-    return f"self.student (self.course)"
+    return str(self.student) + " - " + str(self.course)
 
 class Criterion(models.Model):
   name = models.CharField(max_length=200)
