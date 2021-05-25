@@ -30,6 +30,40 @@ class AssignmentListView(ListView):
 #
 #   return render(request, 'assignments.html', context)
 
+# The wrapper function for the solver, that should be called when the button to
+# solve is clicked on the website, on some inputted data and with some inputted
+# constraints.
+# See: https://developers.google.com/optimization/mip/integer_opt
+def solve():
+  pass
+  #from ortools.linear_solver import pywraplp
+  #solver = pywraplp.Solver.CreateSolver('SCIP')
+
+  # ADD VALUES TO BE SOLVED
+  # The values below are min and max values
+  #x = solver.IntVar(0.0, 5, 'x')
+  #y = solver.IntVar(0.0, 5, 'y')
+
+  # ADD CONSTRAINTS / CRITERIA
+  # x + 7 * y <= 17.5.
+  #solver.Add(x + 7 * y <= 17.5)
+
+  # DEFINE THE OBJECTIVE
+  # Maximize x + 10 * y.
+  #solver.Maximize(x + 10 * y)
+
+  # RUN THE SOLVER
+  #status = solver.Solve()
+
+  # PRINT SOLUTION
+  #if status == pywraplp.Solver.OPTIMAL:
+  #    print('Solution:')
+  #    print('Objective value =', solver.Objective().Value())
+  #    print('x =', x.solution_value())
+  #    print('y =', y.solution_value())
+  #else:
+  #    print('The problem does not have an optimal solution.')
+
 def assignment(request, item):
   assignment = Assignment.objects.get(pk=item)
   students = Student.objects.filter(assignment=item)
