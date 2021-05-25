@@ -5,7 +5,7 @@
 
 {% comment %} https://getbootstrap.com/docs/5.0/components/accordion/  {% endcomment %}
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Opret ny Tildeling</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">Opret ny Tildeling</button>
 
 <div class="accordion" id="accordionExample">
 
@@ -33,6 +33,25 @@
   </div>
 
   {% endfor %}
+
+<!-- Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createModalLabel">Opret tildeling</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Formular til at oprette tildeling her...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+        <button type="button" class="btn btn-primary">Gem tildeling</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 
