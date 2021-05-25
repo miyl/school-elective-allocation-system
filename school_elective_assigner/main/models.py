@@ -2,7 +2,7 @@ from django.db import models
 
 class Student(models.Model):
   first_name = models.CharField(max_length=200)
-  email_address = models.CharField(max_length=75, null=True, blank=True)
+  email_address = models.CharField(max_length=75)
   login_code = models.CharField(max_length=75, null=True, blank=True)
 
   assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)
@@ -39,6 +39,9 @@ class Student_Course_Request(models.Model):
   course = models.ForeignKey('Course', on_delete=models.CASCADE)
   student = models.ForeignKey('Student', on_delete=models.CASCADE)
 
+  class Meta:
+    verbose_name='Student Course Request'
+
   def __str__(self):
     return f"self.student (self.course): self.priority"
 
@@ -46,6 +49,9 @@ class Student_Course_Request(models.Model):
 class Student_Course_Assignment(models.Model):
   course = models.ForeignKey('Course', on_delete=models.CASCADE)
   student = models.ForeignKey('Student', on_delete=models.CASCADE)
+
+  class Meta:
+    verbose_name='Student Course Assignment'
 
   def __str__(self):
     return f"self.student (self.course)"

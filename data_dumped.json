@@ -1,0 +1,356 @@
+[
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$WjQOcH13mk1o7L4XcaId6X$/ClTJXRAYNRBkGUdgNX76tVmREvG7YgS4R/31kNhddc=",
+    "last_login": "2021-05-25T09:13:13.606Z",
+    "is_superuser": true,
+    "username": "a",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-05-25T09:05:09.902Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "main.student",
+  "pk": 1,
+  "fields": {
+    "first_name": "Egon",
+    "email_address": "egonkea@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 2,
+  "fields": {
+    "first_name": "Benny",
+    "email_address": "2@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 3,
+  "fields": {
+    "first_name": "Kjeld",
+    "email_address": "3@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 4,
+  "fields": {
+    "first_name": "Yvonne",
+    "email_address": "4@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 5,
+  "fields": {
+    "first_name": "Børge",
+    "email_address": "5@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 6,
+  "fields": {
+    "first_name": "Guile",
+    "email_address": "6@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 7,
+  "fields": {
+    "first_name": "Zangief",
+    "email_address": "7@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 8,
+  "fields": {
+    "first_name": "Chun-Li",
+    "email_address": "8@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 9,
+  "fields": {
+    "first_name": "E-Honda",
+    "email_address": "9@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 10,
+  "fields": {
+    "first_name": "Michelle",
+    "email_address": "10@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student",
+  "pk": 11,
+  "fields": {
+    "first_name": "Pokimane Simp",
+    "email_address": "11@example.com",
+    "login_code": null,
+    "assignment": 1
+  }
+},
+{
+  "model": "main.teacher",
+  "pk": 1,
+  "fields": {
+    "full_name": "David Harry",
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.teacher",
+  "pk": 2,
+  "fields": {
+    "full_name": "Jarl",
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.teacher",
+  "pk": 3,
+  "fields": {
+    "full_name": "Asger",
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.teacher",
+  "pk": 4,
+  "fields": {
+    "full_name": "Claus",
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.teacher",
+  "pk": 5,
+  "fields": {
+    "full_name": "Henrik",
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.course",
+  "pk": 1,
+  "fields": {
+    "name_en": "Android development",
+    "name_da": "Android-udvikling",
+    "description_en": "Description",
+    "description_da": "Beskrivelse",
+    "active": true,
+    "deadline": "2021-07-25",
+    "assignment": 1
+  }
+},
+{
+  "model": "main.course",
+  "pk": 2,
+  "fields": {
+    "name_en": "C",
+    "name_da": "C",
+    "description_en": "Description",
+    "description_da": "Beskrivelse",
+    "active": true,
+    "deadline": "2021-07-25",
+    "assignment": 1
+  }
+},
+{
+  "model": "main.course",
+  "pk": 3,
+  "fields": {
+    "name_en": "Python",
+    "name_da": "Python",
+    "description_en": "Description",
+    "description_da": "Beskrivelse",
+    "active": true,
+    "deadline": "2021-07-25",
+    "assignment": 1
+  }
+},
+{
+  "model": "main.course",
+  "pk": 4,
+  "fields": {
+    "name_en": "Angular",
+    "name_da": "Angular",
+    "description_en": "Description",
+    "description_da": "Beskrivelse",
+    "active": true,
+    "deadline": "2021-07-25",
+    "assignment": 1
+  }
+},
+{
+  "model": "main.course",
+  "pk": 5,
+  "fields": {
+    "name_en": "Project course",
+    "name_da": "Projektkursus",
+    "description_en": "Description",
+    "description_da": "Beskrivelse",
+    "active": true,
+    "deadline": "2021-07-25",
+    "assignment": 1
+  }
+},
+{
+  "model": "main.course",
+  "pk": 6,
+  "fields": {
+    "name_en": "Vue",
+    "name_da": "Vue",
+    "description_en": "Description",
+    "description_da": "Beskrivelse",
+    "active": true,
+    "deadline": "2021-07-25",
+    "assignment": 1
+  }
+},
+{
+  "model": "main.course",
+  "pk": 7,
+  "fields": {
+    "name_en": "IT Security",
+    "name_da": "IT Sikkerhed",
+    "description_en": "Description",
+    "description_da": "Beskrivelse",
+    "active": true,
+    "deadline": "2021-07-25",
+    "assignment": 1
+  }
+},
+{
+  "model": "main.student_course_request",
+  "pk": 1,
+  "fields": {
+    "priority": 5,
+    "course": 1,
+    "student": 1
+  }
+},
+{
+  "model": "main.student_course_assignment",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "student": 1
+  }
+},
+{
+  "model": "main.school",
+  "pk": "kea@example.com",
+  "fields": {
+    "name": "KEA",
+    "password": "a",
+    "logo": "",
+    "email_footer": ""
+  }
+},
+{
+  "model": "main.school",
+  "pk": "kts@example.com",
+  "fields": {
+    "name": "KTS",
+    "password": "a",
+    "logo": "",
+    "email_footer": ""
+  }
+},
+{
+  "model": "main.school",
+  "pk": "ku@example.com",
+  "fields": {
+    "name": "KU",
+    "password": "a",
+    "logo": "",
+    "email_footer": ""
+  }
+},
+{
+  "model": "main.assignment",
+  "pk": 1,
+  "fields": {
+    "name": "Datamatiker Sommer 2021",
+    "invitation_email": "",
+    "reminder_email": "",
+    "priority_form_text": "",
+    "emails_sent": false,
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.assignment",
+  "pk": 2,
+  "fields": {
+    "name": "Datamatiker Vinter 2020",
+    "invitation_email": "",
+    "reminder_email": "",
+    "priority_form_text": "",
+    "emails_sent": false,
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.assignment",
+  "pk": 3,
+  "fields": {
+    "name": "Datamatiker Sommer 2020",
+    "invitation_email": "",
+    "reminder_email": "",
+    "priority_form_text": "",
+    "emails_sent": false,
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.assignment",
+  "pk": 4,
+  "fields": {
+    "name": "Datamatiker Vinter 2019",
+    "invitation_email": "",
+    "reminder_email": "",
+    "priority_form_text": "",
+    "emails_sent": false,
+    "school": "kea@example.com"
+  }
+}
+]
