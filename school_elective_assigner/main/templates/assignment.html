@@ -44,10 +44,20 @@
   </div>
 
   <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
-    Valgfag her
+    {% for course in courses %}
+      Name: {{ course.name_en }}<br/>
+      Navn: {{ course.name_da }}<br/>
+      Description: {{ course.description_en }}<br/>
+      Beskrivelse: {{ course.description_da }}<br/>
+      </br/>
+    {% endfor %}
   </div>
   <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
-    Elever her
+    <ul>
+    {% for student in students %}
+    <li>{{ student.first_name }} ({{ student.email_address }})</li>
+    {% endfor %}
+    </ul>
   </div>
 
   <div class="tab-pane fade" id="kriterier" role="tabpanel" aria-labelledby="kriterier-tab">

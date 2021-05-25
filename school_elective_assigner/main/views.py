@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from main.models import Assignment
+from main.models import Assignment, Student, Course, Student_Course_Request, Student_Course_Assignment
 
 def index(request):
    context = {}
@@ -32,6 +32,13 @@ class AssignmentListView(ListView):
 
 def assignment(request, item):
   assignment = Assignment.objects.get(pk=item)
-  context = {'assignment': assignment}
+  students = Student.objects.filter(assignment=item)
+  courses = Course.objects.filter(assignment=item)
+  # No direct foreign key to check on :/ :
+  #student_course_requests = Student_Course_Request.objects.filter(pk=item)
+  #student_course_assignments = Student_Course_Assignment.objects.filter(pk=item)
+  #criteria = Assignment.objects.get(pk=item)
+  #context = {'assignment': assignment}
+  context = {'assignment': assignment, 'students': students, 'courses': courses}
 
   return render(request, 'assignment.html', context)
