@@ -43,7 +43,6 @@
 
   <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
     {% for course in courses %}
-
     <table class="table table-striped">
       <thead>
         <tr>
@@ -66,6 +65,11 @@
     </table>
       {% endfor %}
   </div>
+
+  {% comment %} 
+  Måske burde hver elev ikke have egen table header og istedet være en fælles 
+  header? 
+  {% endcomment %}
   <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
     <ul>
     {% for student in students %}
