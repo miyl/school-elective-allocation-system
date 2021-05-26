@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base_with_general_nav.html' %}
 
 {% block content %}
 
@@ -30,17 +30,16 @@
   <li class="nav-item" style="margin-left: auto;" role="presentation">
     <a class="nav-link" href="{% url 'assignments' %}">Tildelingsoversigt</a>
   </li>
-  <li class="nav-item" role="presentation">
-    <a class="nav-link" href="{% url 'index' %}">Logud</a>
-  </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
 
+  <!-- STATUS -->
   <div class="tab-pane fade show active" id="tildeling" role="tabpanel" aria-labelledby="tildeling-tab">
     Status for tildeling her
   </div>
 
+  <!-- VALGFAG -->
   <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
     {% for course in courses %}
     <table class="table table-striped">
@@ -63,9 +62,38 @@
         </tr>
       </tbody>
     </table>
+    {% endfor %}
+
+    <div class="accordion card-body" id="accordion-courses">
+
+      {% for course in courses %}
+
+      <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="courses-header">
+          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                                                                                   aria-expanded="false"
+                                                                                   aria-controls="a{{ course.id }}">
+            {{ course.name_da }}
+          </button>
+        </h2>
+        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+          aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
+          <div class="accordion-body">
+            {{ course.name_en }}
+            {{ course.name_da }}
+            {{ course.description_en }}
+            {{ course.description_da }}
+          </div>
+        </div>
+      </div>
+
       {% endfor %}
+    </div>
   </div>
 
+  <!-- STUDENTS -->
   {% comment %} 
   Måske burde hver elev ikke have egen table header og istedet være en fælles 
   header? 
@@ -110,15 +138,121 @@
       {% empty %}
       Der er ikke tilføjet elever til tildelingen.
     {% endfor %}
-    </ul>
+
+    <div class="accordion card-body" id="accordion-students">
+
+      {% for student in students %}
+
+      <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="students-header">
+          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
+                                                                                   aria-expanded="false"
+                                                                                   aria-controls="a{{ student.id }}">
+            {{ student.first_name }} {{ student.email_address }}
+          </button>
+        </h2>
+        <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+          aria-labelledby="students-header" data-bs-parent="#accordion-students">
+          <div class="accordion-body">
+            <td>{% for student_course_request in student_course_requests %}
+              {% if student_course_request.student == student %}
+                 {{ student_course_request.priority }}: 
+                 {{ student_course_request.course }}
+              {% endif %}
+              {% endfor %}</td>
+            <td>{% for student_course_assignment in student_course_assignments %}
+              {% if student_course_assignment.student == student %}
+                {{ student_course_assignment.course }}
+              {% endif %}
+            {% endfor %}</td>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
   </div>
 
+  <!-- KRITERIER -->
   <div class="tab-pane fade" id="kriterier" role="tabpanel" aria-labelledby="kriterier-tab">
-    Kriterier her
+    Kriterier skal senere indsættes her
+
+    <div class="accordion card-body" id="accordion-criteria">
+
+      {% for course in courses %}
+
+      <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="criteria-header">
+          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                                                                                   aria-expanded="false"
+                                                                                   aria-controls="a{{ course.id }}">
+            <!--{{ course.name_da }}-->
+          </button>
+        </h2>
+        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+          aria-labelledby="criteria-header" data-bs-parent="#accordion-criteria">
+          <div class="accordion-body">
+            <!--{{ course.name_da }}-->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
   </div>
 
+  
+  <!-- RESULTAT -->
   <div class="tab-pane fade" id="resultat" role="tabpanel" aria-labelledby="resultat-tab">
-    Resultat her
+
+    <div class="accordion card-body" id="student-distribution">
+
+      <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="student-distribution-header">
+          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                                                                                   aria-expanded="false"
+                                                                                   aria-controls="a{{ course.id }}">
+            Elevdistribution
+          </button>
+        </h2>
+        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+          aria-labelledby="student-distribution-header" data-bs-parent="#student-distribution">
+          <div class="accordion-body">
+            <!--{{ course.name_da }}-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="accordion card-body" id="distribution-result">
+
+      <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="distribution-result-header">
+          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                                                                                   aria-expanded="false"
+                                                                                   aria-controls="a{{ course.id }}">
+            Distributionsresultat
+          </button>
+        </h2>
+        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+          aria-labelledby="distribution-result-header" data-bs-parent="#distribution-result">
+          <div class="accordion-body">
+            <!--{{ course.name_da }}-->
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </div>
