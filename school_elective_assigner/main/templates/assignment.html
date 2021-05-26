@@ -4,7 +4,7 @@
 
 {% comment %} https://getbootstrap.com/docs/5.0/components/navs-tabs/#javascript-behavior {% endcomment %}
 
-{{ assignment.name }}
+<h1 class="display-6">{{ assignment.name }}</h1>
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
@@ -35,8 +35,6 @@
   </li>
 </ul>
 
-
-
 <div class="tab-content" id="myTabContent">
 
   <div class="tab-pane fade show active" id="tildeling" role="tabpanel" aria-labelledby="tildeling-tab">
@@ -45,37 +43,65 @@
 
   <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
     {% for course in courses %}
-      Name: {{ course.name_en }}<br/>
-      Navn: {{ course.name_da }}<br/>
-      Description: {{ course.description_en }}<br/>
-      Beskrivelse: {{ course.description_da }}<br/>
-      </br/>
-      {% empty %}
-      Der er ikke oprettet fag for tildelingen.
-    {% endfor %}
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="col-3">Course</th>
+          <th scope="col" class="col-3">Valgfag</th>
+          <th scope="col" class="col-3">Description</th>
+          <th scope="col" class="col-3">Beskrivelse</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>{{ course.name_en }}</td>
+          <td>{{ course.name_da }}</td>
+          <td>{{ course.description_en }}</td>
+          <td>{{ course.description_da }}</td>
+        </tr>
+      </tbody>
+    </table>
+      {% endfor %}
   </div>
   <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
     <ul>
     {% for student in students %}
-      <li>{{ student.first_name }} ({{ student.email_address }})</li>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="col-3">Navn</th>
+          <th scope="col" class="col-3">Email</th>
+          <th scope="col" class="col-3">Efterspurgte Kurser</th>
+          <th scope="col" class="col-3">Tildelte Kurser</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>{{ student.first_name }}</td>
+          <td>({{ student.email_address }})</td>
+          <td>{% for student_course_request in student_course_requests %}
+            {% if student_course_request.student == student %}
+               {{ student_course_request.priority }}: 
+               {{ student_course_request.course }}
+            {% endif %}
+            {% endfor %}</td>
+          <td>{% for student_course_assignment in student_course_assignments %}
+            {% if student_course_assignment.student == student %}
+              {{ student_course_assignment.course }}
+            {% endif %}
+          {% endfor %}</td>
+        </tr>
+      </tbody>
+    </table>
 
       {% comment %}
       This seems pretty messy, but without ajax we need to go through this list from here.
       {% endcomment %}
-      Efterspurgte kurser:<br/>
-      {% for student_course_request in student_course_requests %}
-        {% if student_course_request.student == student %}
-           {{ student_course_request.priority }}: {{ student_course_request.course }}
-        {% endif %}
-      {% endfor %}
-      <br/>
-      Tildelte kurser:<br/>
-      {% for student_course_assignment in student_course_assignments %}
-        {% if student_course_assignment.student == student %}
-          {{ student_course_assignment.course }}
-        {% endif %}
-      {% endfor %}
-      <br/>
 
       {% empty %}
       Der er ikke tilføjet elever til tildelingen.
