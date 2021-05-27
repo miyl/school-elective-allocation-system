@@ -5,17 +5,17 @@
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="student-distribution-header">
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+          <button class="accordion-button  {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#student-distro"
                                                                                    aria-expanded="false"
-                                                                                   aria-controls="a{{ course.id }}">
+                                                                                   aria-controls="student-distro">
             Elevdistribution
           </button>
         </h2>
-        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+        <div id="student-distro" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
           aria-labelledby="student-distribution-header" data-bs-parent="#student-distribution">
           <div class="accordion-body">
-            <!--{{ course.name_da }}-->
+            <!--{{ course.name }}-->
           </div>
         </div>
       </div>
@@ -23,22 +23,22 @@
     </div>
 
 
-    <div class="accordion card-body" id="distribution-result">
+    <div class="accordion card-body" id="distribution-result-container">
 
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="distribution-result-header">
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+          <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#distribution-res"
                                                                                    aria-expanded="false"
-                                                                                   aria-controls="a{{ course.id }}">
+                                                                                   aria-controls="#distribution-res">
             Distributionsresultat
           </button>
         </h2>
-        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+        <div id="distribution-res" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
           aria-labelledby="distribution-result-header" data-bs-parent="#distribution-result">
           <div class="accordion-body">
-            <!--{{ course.name_da }}-->
+            <!--{{ course.name }}-->
           </div>
         </div>
       </div>

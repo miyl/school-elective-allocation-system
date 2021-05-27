@@ -1,28 +1,145 @@
   <div class="tab-pane fade" id="kriterier" role="tabpanel" aria-labelledby="kriterier-tab">
-    Kriterier skal senere indsættes her
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseCriterionModal">Opret valgfag-kriterie</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentCriterionModal">Opret elev-kriterie</button>
 
     <div class="accordion card-body" id="accordion-criteria">
 
-      {% for course in courses %}
+      {% for criterion in criteria %}
 
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="criteria-header">
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
           <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ criterion.id  }}"
                                                                                    aria-expanded="false"
-                                                                                   aria-controls="a{{ course.id }}">
-            <!--{{ course.name_da }}-->
+                                                                                   aria-controls="a{{ criterion.id }}">
+            {{ criterion.name }}
           </button>
         </h2>
-        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+        <div id="a{{ criterion.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
           aria-labelledby="criteria-header" data-bs-parent="#accordion-criteria">
           <div class="accordion-body">
-            <!--{{ course.name_da }}-->
+          ...
           </div>
         </div>
       </div>
 
       {% endfor %}
     </div>
+
+
+    <!-- Course Criterion Modal -->
+    <div class="modal fade" id="courseCriterionModal" tabindex="-1" aria-labelledby="courseCriterionModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="courseCriterionModalLabel">Opret valgfag-kriterie</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="accordion card-body" id="accordion-courses">
+
+              {% for course in courses %}
+
+              <div class="accordion-item col-lg-11 mx-auto">
+                <h2 class="accordion-header" id="courses-header">
+                  {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+                  <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                                                                                           aria-expanded="false"
+                                                                                           aria-controls="a{{ course.id }}">
+                    {{ course.name }}
+                  </button>
+                </h2>
+                <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+                  aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
+                  <div class="accordion-body">
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          <td>{{ course.name }}</td>
+                      </li>
+                      <li class="list-group-item">
+                        <td>{{ course.description }}</td>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {% endfor %}
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <button type="button" class="btn btn-primary">Gem tildeling</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student Criterion Modal -->
+    <div class="modal fade" id="studentCriterionModal" tabindex="-1" aria-labelledby="studentCriterionModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="studentCriterionModalLabel">Opret elev-kriterie</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="accordion card-body" id="accordion-students">
+
+              {% for student in students %}
+
+              <div class="accordion-item col-lg-11 mx-auto">
+                <h2 class="accordion-header" id="students-header">
+                  {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+                  <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
+                                                                                           aria-expanded="false"
+                                                                                           aria-controls="a{{ student.id }}">
+                    {{ student.first_name }} {{ student.email_address }}
+                  </button>
+                </h2>
+                <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+                  aria-labelledby="students-header" data-bs-parent="#accordion-students">
+                  <div class="accordion-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <td>{% for student_course_request in student_course_requests %}
+                          {% if student_course_request.student == student %}
+                             {{ student_course_request.priority }}: 
+                             {{ student_course_request.course }}
+                          {% endif %}
+                          {% endfor %}</td>
+                    </li>
+                      <li class="list-group-item">
+                        <td>
+                        {% for student_course_assignment in student_course_assignments %}
+                        {% if student_course_assignment.student == student %}
+                          {{ student_course_assignment.course }}
+                        {% endif %}
+                      {% endfor %}</td>
+                    </li>
+                  </ul>
+                    
+                  </div>
+                </div>
+              </div>
+
+              {% endfor %}
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <button type="button" class="btn btn-primary">Gem tildeling</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>

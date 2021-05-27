@@ -33,3 +33,11 @@
   padding-top: 2%;
   color: #333333;
 }
+
+.student-course-list li {
+  border: 0;
+}
+
+.student-course-list ol li:not:first-child {
+  list-style-type: decimal!important;
+}

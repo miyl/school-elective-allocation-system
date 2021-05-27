@@ -12,6 +12,9 @@ class Student(models.Model):
   def __str__(self):
     return self.first_name
 
+  class Meta:
+    ordering = ['first_name']
+
 class Teacher(models.Model):
   full_name = models.CharField(max_length=200)
 
@@ -21,17 +24,15 @@ class Teacher(models.Model):
     return self.full_name
 
 class Course(models.Model):
-  name_en = models.CharField(max_length=200)
-  name_da = models.CharField(max_length=200)
-  description_en = models.TextField()
-  description_da = models.TextField()
+  name = models.CharField(max_length=200)
+  description = models.TextField()
   active = models.BooleanField(default=True)
   deadline = models.DateField()
 
   assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)
 
   def __str__(self):
-    return self.name_da
+    return self.name
 
 class Student_Course_Request(models.Model):
   priority = models.PositiveSmallIntegerField()
@@ -41,6 +42,7 @@ class Student_Course_Request(models.Model):
 
   class Meta:
     verbose_name='Student Course Request'
+    ordering = ['-priority']
 
   def __str__(self):
     return str(self.student) + " - " + str(self.course) + ": " + str(self.priority)
