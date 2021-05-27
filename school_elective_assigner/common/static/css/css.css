@@ -21,3 +21,15 @@
   margin-right: -50%;
 }
 
+#addon-form {
+  padding-top: 5%;
+}
+
+#login-title {
+  padding-bottom: 3%;
+}
+
+#r-password {
+  padding-top: 2%;
+  color: #333333;
+}
