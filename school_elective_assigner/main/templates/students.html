@@ -1,0 +1,81 @@
+  {% comment %} 
+  Måske burde hver elev ikke have egen table header og istedet være en fælles 
+  header? 
+  {% endcomment %}
+  <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
+    <ul>
+    {% for student in students %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="col-3">Navn</th>
+          <th scope="col" class="col-3">Email</th>
+          <th scope="col" class="col-3">Efterspurgte Kurser</th>
+          <th scope="col" class="col-3">Tildelte Kurser</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>{{ student.first_name }}</td>
+          <td>({{ student.email_address }})</td>
+          <td>{% for student_course_request in student_course_requests %}
+            {% if student_course_request.student == student %}
+               {{ student_course_request.priority }}: 
+               {{ student_course_request.course }}
+            {% endif %}
+            {% endfor %}</td>
+          <td>{% for student_course_assignment in student_course_assignments %}
+            {% if student_course_assignment.student == student %}
+              {{ student_course_assignment.course }}
+            {% endif %}
+          {% endfor %}</td>
+        </tr>
+      </tbody>
+    </table>
+
+      {% comment %}
+      This seems pretty messy, but without ajax we need to go through this list from here.
+      {% endcomment %}
+
+      {% empty %}
+      Der er ikke tilføjet elever til tildelingen.
+    {% endfor %}
+
+    <div class="accordion card-body" id="accordion-students">
+
+      {% for student in students %}
+
+      <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="students-header">
+          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
+                                                                                   aria-expanded="false"
+                                                                                   aria-controls="a{{ student.id }}">
+            {{ student.first_name }} {{ student.email_address }}
+          </button>
+        </h2>
+        <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+          aria-labelledby="students-header" data-bs-parent="#accordion-students">
+          <div class="accordion-body">
+            <td>{% for student_course_request in student_course_requests %}
+              {% if student_course_request.student == student %}
+                 {{ student_course_request.priority }}: 
+                 {{ student_course_request.course }}
+              {% endif %}
+              {% endfor %}</td>
+            <td>{% for student_course_assignment in student_course_assignments %}
+              {% if student_course_assignment.student == student %}
+                {{ student_course_assignment.course }}
+              {% endif %}
+            {% endfor %}</td>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+

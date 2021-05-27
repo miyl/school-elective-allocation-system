@@ -1,0 +1,52 @@
+  <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
+    {% for course in courses %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="col-3">Course</th>
+          <th scope="col" class="col-3">Valgfag</th>
+          <th scope="col" class="col-3">Description</th>
+          <th scope="col" class="col-3">Beskrivelse</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>{{ course.name_en }}</td>
+          <td>{{ course.name_da }}</td>
+          <td>{{ course.description_en }}</td>
+          <td>{{ course.description_da }}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+
+    <div class="accordion card-body" id="accordion-courses">
+
+      {% for course in courses %}
+
+      <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="courses-header">
+          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                                                                                   aria-expanded="false"
+                                                                                   aria-controls="a{{ course.id }}">
+            {{ course.name_da }}
+          </button>
+        </h2>
+        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+          aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
+          <div class="accordion-body">
+            {{ course.name_en }}
+            {{ course.name_da }}
+            {{ course.description_en }}
+            {{ course.description_da }}
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>

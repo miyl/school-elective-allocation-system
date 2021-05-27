@@ -1,0 +1,28 @@
+  <div class="tab-pane fade" id="kriterier" role="tabpanel" aria-labelledby="kriterier-tab">
+    Kriterier skal senere indsættes her
+
+    <div class="accordion card-body" id="accordion-criteria">
+
+      {% for course in courses %}
+
+      <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="criteria-header">
+          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                                                                                   aria-expanded="false"
+                                                                                   aria-controls="a{{ course.id }}">
+            <!--{{ course.name_da }}-->
+          </button>
+        </h2>
+        <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+          aria-labelledby="criteria-header" data-bs-parent="#accordion-criteria">
+          <div class="accordion-body">
+            <!--{{ course.name_da }}-->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
