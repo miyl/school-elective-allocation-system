@@ -17,10 +17,20 @@
         <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
           aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
           <div class="accordion-body">
-            {{ course.name_en }}
-            {{ course.name_da }}
-            {{ course.description_en }}
-            {{ course.description_da }}
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <td>{{ course.name_en }}</td>
+              </li>
+                <li class="list-group-item">
+                  <td>{{ course.name_da }}</td>
+              </li>
+              <li class="list-group-item">
+                <td>{{ course.description_en }}</td>
+              </li>
+              <li class="list-group-item">
+                <td>{{ course.description_da }}</td>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
