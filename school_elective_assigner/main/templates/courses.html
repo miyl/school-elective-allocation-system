@@ -1,26 +1,4 @@
   <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
-    {% for course in courses %}
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          <th scope="col" class="col-3">Course</th>
-          <th scope="col" class="col-3">Valgfag</th>
-          <th scope="col" class="col-3">Description</th>
-          <th scope="col" class="col-3">Beskrivelse</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row"></th>
-          <td>{{ course.name_en }}</td>
-          <td>{{ course.name_da }}</td>
-          <td>{{ course.description_en }}</td>
-          <td>{{ course.description_da }}</td>
-        </tr>
-      </tbody>
-    </table>
-    {% endfor %}
 
     <div class="accordion card-body" id="accordion-courses">
 

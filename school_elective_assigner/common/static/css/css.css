@@ -13,10 +13,11 @@
 }
 
 #opret_t {
-  position:relative;
+  position: relative;
   align-items: center;
   margin-top: 3%;
   margin-bottom: 1%;
   left: 50%;
   margin-right: -50%;
 }
+
