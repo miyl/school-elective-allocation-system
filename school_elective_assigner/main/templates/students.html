@@ -1,3 +1,5 @@
+{% load static %}
+
   {% comment %} 
   Måske burde hver elev ikke have egen table header og istedet være en fælles 
   header? 
@@ -20,6 +22,7 @@
                                                                                    aria-controls="a{{ student.id }}">
             {{ student.first_name }}<br/>
             {{ student.email_address }}
+            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/alarm.svg' %}" alt="Bootstrap" width="32" height="32">
           </button>
         </h2>
         <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0 %} show {% endif %}"
