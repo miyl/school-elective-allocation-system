@@ -41,3 +41,23 @@
 .student-course-list ol li:not:first-child {
   list-style-type: decimal!important;
 }
+#accordion-courses {
+  padding-top: 3%;
+}
+
+#accordion-students {
+  padding-top: 3%;
+}
+
+#accordion-criteria {
+  padding-top: 3%;
+}
+
+#student-distribution {
+  padding-top: 3%;
+}
+
+#edit-btn {
+  width: 12px;
+  height: 12px;
+}
