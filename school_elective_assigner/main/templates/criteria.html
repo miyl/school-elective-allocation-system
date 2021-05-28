@@ -10,7 +10,7 @@
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="criteria-header">
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-          <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+          <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
                   type="button" data-bs-toggle="collapse" data-bs-target="#a{{ criterion.id  }}"
                                                                                    aria-expanded="false"
                                                                                    aria-controls="a{{ criterion.id }}">
@@ -46,7 +46,7 @@
               <div class="accordion-item col-lg-11 mx-auto">
                 <h2 class="accordion-header" id="courses-header">
                   {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-                  <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
                           type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
                                                                                            aria-expanded="false"
                                                                                            aria-controls="a{{ course.id }}">
@@ -97,7 +97,7 @@
               <div class="accordion-item col-lg-11 mx-auto">
                 <h2 class="accordion-header" id="students-header">
                   {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-                  <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}"
+                  <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
                           type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
                                                                                            aria-expanded="false"
                                                                                            aria-controls="a{{ student.id }}">
@@ -108,22 +108,22 @@
                   aria-labelledby="students-header" data-bs-parent="#accordion-students">
                   <div class="accordion-body">
                     <ul class="list-group">
-                      <li class="list-group-item">
-                        <td>{% for student_course_request in student_course_requests %}
+                      {% for student_course_request in student_course_requests %}
                           {% if student_course_request.student == student %}
+                      <li class="list-group-item">
                              {{ student_course_request.priority }}: 
                              {{ student_course_request.course }}
+                    </li>
                           {% endif %}
-                          {% endfor %}</td>
-                    </li>
+                          {% endfor %}
+                          
+                          {% for student_course_assignment in student_course_assignments %}
+                          {% if student_course_assignment.student == student %}
                       <li class="list-group-item">
-                        <td>
-                        {% for student_course_assignment in student_course_assignments %}
-                        {% if student_course_assignment.student == student %}
                           {{ student_course_assignment.course }}
-                        {% endif %}
-                      {% endfor %}</td>
                     </li>
+                          {% endif %}
+                          {% endfor %}
                   </ul>
                     
                   </div>
