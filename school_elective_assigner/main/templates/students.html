@@ -72,41 +72,47 @@
                   type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
                                                                                    aria-expanded="false"
                                                                                    aria-controls="a{{ student.id }}">
-            {{ student.first_name }}
+            {{ student.first_name }}<br/>
             {{ student.email_address }}
-            <a href=""  class="icon_del" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-            <a href=""  class="icon_del" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href="" class="icon_del" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href="" class="icon_del"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
         <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0 %} show {% endif %}"
           aria-labelledby="students-header" data-bs-parent="#accordion-students">
           <div class="accordion-body">
-            <ul class="list-group">
+            <div class="container-fluid student-course-list">
+            <div class="row">
+            <ol class="list-group col-lg-6">
+              <li class="list-group-item"><h5>Prioritet</h5></li>
               {% for student_course_request in student_course_requests %}
               {% if student_course_request.student == student %}
               <li class="list-group-item">
-                     {{ student_course_request.priority }}: 
-                     {{ student_course_request.course }}
-            </li>
-            {% endif %}
-            {% endfor %} 
-            {% for student_course_assignment in student_course_assignments %}
-            {% if student_course_assignment.student == student %}
-            <li class="list-group-item">
+                   {{ student_course_request.course }}
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ol>
+            <ul class="col-lg-6">
+              <li class="list-group-item"><h5>Tildelt</h5></li>
+              {% for student_course_assignment in student_course_assignments %}
+              {% if student_course_assignment.student == student %}
+              <li class="list-group-item">
                   {{ student_course_assignment.course }}
-            </li>
-            {% endif %}{% endfor %}
-          </ul>
-            
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+            </div>
+            </div>
           </div>
         </div>
       </div>
-
       {% endif %}
 
       {% endfor %}
       </div>
-  </div>
     </div>
+  </div>
 </div>
 

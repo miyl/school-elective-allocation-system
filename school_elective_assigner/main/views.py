@@ -14,23 +14,47 @@ class AssignmentListView(ListView):
 
     model = Assignment
 
+
+
     # This is really the default name of the template it expects, but it
     # looks at the root of the app name (main) by default, so I specify it here
     # to make it look in all template dirs.
     template_name="assignment_list.html"
 
     # If we want to pass additional data to the template
-    #def get_context_data(self, **kwargs):
-    #    # Call the base implementation first to get a context
-    #    context = super().get_context_data(**kwargs)
-    #    # Add in a QuerySet of all the books
-    #    context['book_list'] = Book.objects.all()
-    #    return context
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+
+
+        # CALCULATE THE PROGRESS ON THE ASSIGNMENT (PROGRESS BAR)
+
+        self.progresses = []
+        for asn in Assignment.objects.all():
+          # If results e-mail has been sent there's no need for the subsequent
+          # calculations?
+          progress = 0
+          if asn.results_email_sent:
+            progress = 100
+          else:
+            if Student.objects.filter(assignment=asn).exists():
+              progress += 25
+            if Course.objects.filter(assignment=asn).exists():
+              progress += 25
+            # This seems annoying/silly at this point, maybe a criterion should have a
+            # direct connection with assignment?
+            #if Criterion.objects.filter(assignment=asn).exists():
+            #  progress += 25
+          self.progresses.append(progress)
+
+        context['progresses'] = self.progresses
+        return context
 
 #def assignments(request):
-#   context = {}
+#   assignments = Assignment.objects.all
+#   context = {'assignments': assignments}
 #
-#   return render(request, 'assignments.html', context)
+#   return render(request, 'assignment_list.html', context)
 
 # The wrapper function for the solver, that should be called when the button to
 # solve is clicked on the website, on some inputted data and with some inputted

@@ -21,6 +21,8 @@ if [ "$1" = 'run' ]; then
 elif [ "$1" = 'migrate' ]; then
   $WIN_ADD school_elective_assigner/manage.py makemigrations
   $WIN_ADD school_elective_assigner/manage.py migrate
+elif [ "$1" = 'shell' ]; then
+  $WIN_ADD school_elective_assigner/manage.py shell
 elif [ "$1" = 'dump-db' ]; then
   $WIN_ADD school_elective_assigner/manage.py dumpdata --indent 2 --exclude auth.permission --exclude admin --exclude contenttypes --exclude sessions > data_dumped.json
 elif [ "$1" = 'load-db' ]; then

@@ -1,4 +1,5 @@
 {% extends 'base_with_general_nav.html' %}
+{% load custom_tags %}
 
 {% block content %}
 
@@ -9,7 +10,7 @@
 
 <div class="accordion card-body" id="accordionExample">
 
-  {% for assignment in object_list %}
+  {% for assignment, progress in object_list|zip:progresses %}
 
   <div class="accordion-item col-lg-11 mx-auto">
     <h2 class="accordion-header" id="headingOne">
@@ -23,6 +24,13 @@
     <div id="a{{ assignment.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <!--<p>TODO: Status for om elever, kurser, kriterier osv. er oprettet, som progress bar</p>-->
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: {{progress}}%;"
+                                                       aria-valuenow="{{progress}}"
+                                                                                     aria-valuemin="0"
+                                                                                     aria-valuemax="100">{{progress}}%</div>
+        </div>
+        <br/>
         <p style="text-align: center;"><a class="btn btn-primary" href="{% url 'assignment' assignment.id %}">Gå til tildeling</a></p>
       </div>
     </div>
