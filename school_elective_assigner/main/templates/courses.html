@@ -1,3 +1,5 @@
+{% load bootstrap_icons %}
+
   <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
 
     <div class="accordion card-body" id="accordion-courses">
@@ -19,10 +21,11 @@
           <div class="accordion-body">
               <ul class="list-group">
                 <li class="list-group-item">
-                  <td>{{ course.name }}</td>
+                  {{ course.name }}
+                  {% bs_icon 'alarm' %}
               </li>
               <li class="list-group-item">
-                <td>{{ course.description }}</td>
+                {{ course.description }}
               </li>
             </ul>
           </div>
