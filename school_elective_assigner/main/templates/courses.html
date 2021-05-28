@@ -21,15 +21,18 @@
         <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
           aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
           <div class="accordion-body">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  {{ course.teacher }}
-                  'Empty'
-              </li>
-              <li class="list-group-item">
+              <p>
+                  Teachers: 
+                  {% for teacher in teachers %}
+                  {% comment %} if the current course is a course the teacher teaches {% endcomment %}
+                    {% if course in teacher.courses.all %}
+                    {{ teacher.full_name }} 
+                    {% endif %}
+                  {% endfor %}
+              </p>
+              <p>
                 {{ course.description }}                
-              </li>
-            </ul>
+              </p>
           </div>
         </div>
       </div>

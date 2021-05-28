@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from main.models import Assignment, Student, Course, Student_Course_Request, Student_Course_Assignment
+from main.models import Assignment, Student, Course, Student_Course_Request, Student_Course_Assignment, Teacher
 
 def index(request):
    context = {}
@@ -9,6 +9,8 @@ def index(request):
 
 # A generic view!: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
 class AssignmentListView(ListView):
+    # Obtain the school from which user is logged in
+    # school =
 
     model = Assignment
 
@@ -66,6 +68,10 @@ def solve():
 
 def assignment(request, item):
   assignment = Assignment.objects.get(pk=item)
+  # In the future obtain the school from which user is logged in
+  # Right now it's only used to identify the teachers, but its e-mail address
+  # should also be in # the top menu
+  school = assignment.school
   students = Student.objects.filter(assignment=item)
   courses = Course.objects.filter(assignment=item)
   # No direct foreign key to check on :/ :
@@ -73,8 +79,11 @@ def assignment(request, item):
   student_course_requests = Student_Course_Request.objects.filter(course__in=courses)
   student_course_assignments = Student_Course_Assignment.objects.filter(course__in=courses)
   #criteria = Assignment.objects.get(pk=item)
+
+  teachers = Teacher.objects.filter(school=school)
+
   context = {'assignment': assignment, 'students': students, 'courses':
       courses, 'student_course_requests': student_course_requests,
-      'student_course_assignments': student_course_assignments}
+      'student_course_assignments': student_course_assignments, 'teachers': teachers}
 
   return render(request, 'assignment.html', context)

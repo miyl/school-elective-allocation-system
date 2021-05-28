@@ -18,10 +18,16 @@ class Student(models.Model):
 class Teacher(models.Model):
   full_name = models.CharField(max_length=200)
 
+  # When adding a teacher, it's from the list of teachers from the school
   school = models.ForeignKey('School', on_delete=models.CASCADE)
+  # When listing teachers teaching a course
+  courses = models.ManyToManyField('Course', blank=True)
 
   def __str__(self):
     return self.full_name
+
+  class Meta:
+    ordering = ['full_name']
 
 class Course(models.Model):
   name = models.CharField(max_length=200)

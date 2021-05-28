@@ -132,7 +132,10 @@
   "pk": 1,
   "fields": {
     "full_name": "David Harry",
-    "school": "kea@example.com"
+    "school": "kea@example.com",
+    "courses": [
+      5
+    ]
   }
 },
 {
@@ -140,7 +143,10 @@
   "pk": 2,
   "fields": {
     "full_name": "Jarl",
-    "school": "kea@example.com"
+    "school": "kea@example.com",
+    "courses": [
+      7
+    ]
   }
 },
 {
@@ -148,7 +154,10 @@
   "pk": 3,
   "fields": {
     "full_name": "Asger",
-    "school": "kea@example.com"
+    "school": "kea@example.com",
+    "courses": [
+      2
+    ]
   }
 },
 {
@@ -156,7 +165,10 @@
   "pk": 4,
   "fields": {
     "full_name": "Claus",
-    "school": "kea@example.com"
+    "school": "kea@example.com",
+    "courses": [
+      3
+    ]
   }
 },
 {
@@ -164,7 +176,21 @@
   "pk": 5,
   "fields": {
     "full_name": "Henrik",
-    "school": "kea@example.com"
+    "school": "kea@example.com",
+    "courses": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.teacher",
+  "pk": 6,
+  "fields": {
+    "full_name": "Jon",
+    "school": "kea@example.com",
+    "courses": [
+      1
+    ]
   }
 },
 {
