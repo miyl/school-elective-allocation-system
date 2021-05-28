@@ -62,43 +62,43 @@
   height: 12px;
 }
 
+.icon {
+  position: absolute; 
+}
+
 #icon_edit {
-  position:absolute;
-    right: 11%;
+    right: 2%;
 }
 
 #icon_del {
-  position:absolute;
-    right: 7%;
+    right: 2%;
 }
 
 #icon_edit_crit {
-  position:absolute;
     right: 18%;
 }
 
 #icon_del_crit {
-  position:absolute;
     right: 12%;
 }
 
 
 #icon_edit_res {
-  position: absolute;
     right: 6%;
 }
 
 #icon_del_res {
-  position: absolute;
     right: 4%;
 }
 
 #icon_edit_cou {
-  position: absolute;
-    right: 3%;
+  right: 6%;
 }
 
-#icon_del_cour {
+.icon_absolute {
   position: absolute;
-    right: 0%;
+}
+
+.icon_right_ {
+  right: 4%;
 }

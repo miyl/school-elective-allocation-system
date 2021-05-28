@@ -13,7 +13,10 @@
                                                                                    aria-expanded="false"
                                                                                    aria-controls="a{{ course.id }}">
             {{ course.name }}
+            <a href="" class="icon_del"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href="" class="icon_del"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
+
         </h2>
         <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
           aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
@@ -22,13 +25,9 @@
                 <li class="list-group-item">
                   {{ course.teacher }}
                   'Empty'
-                  <a href=""  id="icon_edit_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-                  <a href=""  id="icon_del_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
               </li>
               <li class="list-group-item">
-                {{ course.description }}
-                <a href=""  id="icon_edit_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-                <a href=""  id="icon_del_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+                {{ course.description }}                
               </li>
             </ul>
           </div>
