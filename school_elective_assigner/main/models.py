@@ -33,7 +33,6 @@ class Course(models.Model):
   name = models.CharField(max_length=200)
   description = models.TextField()
   active = models.BooleanField(default=True)
-  deadline = models.DateField()
 
   assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)
 
@@ -93,6 +92,7 @@ class Assignment(models.Model):
   reminder_email = models.TextField(null=True, blank=True )
   priority_form_text = models.TextField(null=True, blank=True)
   emails_sent = models.BooleanField(default=False)
+  deadline = models.DateField(null=True, blank=True)
 
   school = models.ForeignKey('School', on_delete=models.CASCADE)
 

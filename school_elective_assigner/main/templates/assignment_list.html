@@ -14,7 +14,7 @@
   <div class="accordion-item col-lg-11 mx-auto">
     <h2 class="accordion-header" id="headingOne">
       {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-      <button class="accordion-button bg-secondary text-white {% if forloop.counter0 != 0%} collapsed {% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#a{{ assignment.id  }}"
+      <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#a{{ assignment.id  }}"
                                                                                aria-expanded="false"
                                                                                aria-controls="a{{ assignment.id }}">
         {{ assignment.name }}
@@ -22,12 +22,8 @@
     </h2>
     <div id="a{{ assignment.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the item's accordion body.</strong> It is shown by default, until the collapse plugin adds
-        the appropriate classes that we use to style each element. These classes control the overall appearance, as well
-        as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our
-        default variables. It's also worth noting that just about any HTML can go within the
-        <code>.accordion-body</code>, though the transition does limit overflow.<br/>
-        <a href="{% url 'assignment' assignment.id %}">Gå til tildeling</a>
+        <!--<p>TODO: Status for om elever, kurser, kriterier osv. er oprettet, som progress bar</p>-->
+        <p style="text-align: center;"><a class="btn btn-primary" href="{% url 'assignment' assignment.id %}">Gå til tildeling</a></p>
       </div>
     </div>
   </div>

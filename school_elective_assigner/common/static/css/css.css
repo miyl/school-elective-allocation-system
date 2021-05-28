@@ -102,3 +102,7 @@
 .icon_right_ {
   right: 4%;
 }
+
+#status li {
+  padding: 25px; 
+}

@@ -1,3 +1,11 @@
-  <div class="tab-pane fade show active" id="tildeling" role="tabpanel" aria-labelledby="tildeling-tab">
-    Status for tildeling her
+  <div class="tab-pane fade show active" id="status" role="tabpanel" aria-labelledby="status-tab">
+    <ul class="list-group col-lg-11 mx-auto">
+      <li class="list-group-item">Kurser: {{ courses|length }}</li>
+      <li class="list-group-item">Elever: {{ students|length }}</li>
+      <li class="list-group-item">Kriterier: {{ criteria|length }}</li>
+      <li class="list-group-item">Deadline: {{ assignment.deadline }}</li>
+      <li class="list-group-item">Design prioriteringsside</li>
+      <li class="list-group-item">Design e-mail-invitation</li>
+      <li class="list-group-item">Design e-mail-påmindelse</li>
+    </ul>
   </div>
