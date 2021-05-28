@@ -1,3 +1,4 @@
+{% load static %}  
   <div class="tab-pane fade" id="resultat" role="tabpanel" aria-labelledby="resultat-tab">
 
     <div class="accordion card-body" id="student-distribution">
@@ -10,6 +11,8 @@
                                                                                    aria-expanded="false"
                                                                                    aria-controls="student-distro">
             Elevdistribution
+            <a href=""  id="icon_edit_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href=""  id="icon_del_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
         <div id="student-distro" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
@@ -33,6 +36,8 @@
                                                                                    aria-expanded="false"
                                                                                    aria-controls="#distribution-res">
             Distributionsresultat
+            <a href=""  id="icon_edit_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href=""  id="icon_del_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
         <div id="distribution-res" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"

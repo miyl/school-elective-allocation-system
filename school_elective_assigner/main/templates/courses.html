@@ -1,3 +1,4 @@
+{% load static %}   
   <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
 
     <div class="accordion card-body" id="accordion-courses">
@@ -19,16 +20,20 @@
           <div class="accordion-body">
               <ul class="list-group">
                 <li class="list-group-item">
-                  <td>{{ course.name }}</td>
+                  {{ course.teacher }}
+                  'Empty'
+                  <a href=""  id="icon_edit_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+                  <a href=""  id="icon_del_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
               </li>
               <li class="list-group-item">
-                <td>{{ course.description }}</td>
+                {{ course.description }}
+                <a href=""  id="icon_edit_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+                <a href=""  id="icon_del_res" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-
       {% endfor %}
     </div>
   </div>

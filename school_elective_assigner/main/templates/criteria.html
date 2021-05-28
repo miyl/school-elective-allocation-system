@@ -1,3 +1,5 @@
+{% load static %}
+
   <div class="tab-pane fade" id="kriterier" role="tabpanel" aria-labelledby="kriterier-tab">
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseCriterionModal">Opret valgfag-kriterie</button>
@@ -15,6 +17,7 @@
                                                                                    aria-expanded="false"
                                                                                    aria-controls="a{{ criterion.id }}">
             {{ criterion.name }}
+        
           </button>
         </h2>
         <div id="a{{ criterion.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
@@ -102,6 +105,8 @@
                                                                                            aria-expanded="false"
                                                                                            aria-controls="a{{ student.id }}">
                     {{ student.first_name }} {{ student.email_address }}
+                    <a href=""  id="icon_edit_crit" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+                    <a href=""  id="icon_del_crit" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
                   </button>
                 </h2>
                 <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
