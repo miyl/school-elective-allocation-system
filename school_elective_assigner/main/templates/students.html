@@ -22,8 +22,8 @@
                                                                                    aria-controls="a{{ student.id }}">
             {{ student.first_name }}<br/>
             {{ student.email_address }}
-            <a href="" class="icon_del" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-            <a href="" class="icon_del"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href="" class="icon_edit_stud icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href="" class="icon_del_stud icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
         <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0 %} show {% endif %}"
@@ -74,8 +74,8 @@
                                                                                    aria-controls="a{{ student.id }}">
             {{ student.first_name }}<br/>
             {{ student.email_address }}
-            <a href="" class="icon_del" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-            <a href="" class="icon_del"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href="" class="icon_edit_stud icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
+            <a href="" class="icon_del_stud icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
         <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0 %} show {% endif %}"

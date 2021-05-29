@@ -62,45 +62,40 @@
   height: 12px;
 }
 
-.icon {
-  position: absolute; 
+.icon_edit_stud {
+    right: 14%;
 }
 
-#icon_edit {
-    right: 2%;
+.icon_del_stud {
+    right: 9%;
 }
 
-#icon_del {
-    right: 2%;
+.icon_edit_crit {
+    right: 19%;
 }
 
-#icon_edit_crit {
-    right: 18%;
-}
-
-#icon_del_crit {
+.icon_del_crit {
     right: 12%;
 }
 
-
-#icon_edit_res {
-    right: 6%;
+.icon_edit_res {
+    right: 8%;
 }
 
-#icon_del_res {
-    right: 4%;
+.icon_del_res {
+    right: 5%;
 }
 
-#icon_edit_cou {
-  right: 6%;
+.icon_edit_cour {
+  right: 8%;
+}
+
+.icon_del_cour {
+  right: 5%;
 }
 
 .icon_absolute {
   position: absolute;
-}
-
-.icon_right_ {
-  right: 4%;
 }
 
 #status li {
