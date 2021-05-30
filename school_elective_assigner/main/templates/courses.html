@@ -22,7 +22,7 @@
           aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
           <div class="accordion-body">
               <p>
-                  Teachers: 
+                  Lærere: 
                   {% for teacher in teachers %}
                   {% comment %} if the current course is a course the teacher teaches {% endcomment %}
                     {% if course in teacher.courses.all %}
