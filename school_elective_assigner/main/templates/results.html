@@ -6,7 +6,7 @@
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="student-distribution-header">
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-          <button class="accordion-button  {% if forloop.counter0 != 0%} collapsed {% endif %}"
+          <button class="accordion-button  collapsed"
                   type="button" data-bs-toggle="collapse" data-bs-target="#student-distro"
                                                                                    aria-expanded="false"
                                                                                    aria-controls="student-distro">
@@ -15,7 +15,7 @@
             <a href=""  class="icon_del_res icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
-        <div id="student-distro" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+        <div id="student-distro" class="accordion-collapse collapse show"
           aria-labelledby="student-distribution-header" data-bs-parent="#student-distribution">
           <div class="accordion-body">
             <!--{{ course.name }}-->
@@ -26,21 +26,21 @@
     </div>
 
 
-    <div class="accordion card-body" id="distribution-result-container">
+    <div class="accordion card-body" id="distribution-result">
 
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="distribution-result-header">
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-          <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
+          <button class="accordion-button collapsed"
                   type="button" data-bs-toggle="collapse" data-bs-target="#distribution-res"
                                                                                    aria-expanded="false"
-                                                                                   aria-controls="#distribution-res">
+                                                                                   aria-controls="distribution-res">
             Distributionsresultat
             <a href="" class="icon_edit_res icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
             <a href="" class="icon_del_res icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
-        <div id="distribution-res" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+        <div id="distribution-res" class="accordion-collapse collapse show"
           aria-labelledby="distribution-result-header" data-bs-parent="#distribution-result">
           <div class="accordion-body">
             <div class="progress">

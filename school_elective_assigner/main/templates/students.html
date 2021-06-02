@@ -6,8 +6,14 @@
   {% endcomment %}
   <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
 
+    <div class="opret_t">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentModal">Importer Elever</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentModal">Opret Elev</button>
+    </div>
+
     <div class="container-fluid">
     <div class="row">
+
 
     <div class="accordion card-body col-lg-5" id="accordion-students">
     {% for student in students %}
@@ -116,3 +122,30 @@
   </div>
 </div>
 
+
+
+<!-- Course Criterion Modal -->
+<div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="studentModalLabel">Opret valgfag-kriterie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form method="post" accept-charset="utf-8">
+
+        {% csrf_token %}
+
+        <div class="modal-body">
+          {{studentForm}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+          <input type="submit" value="Gem Studerende" class="btn btn-primary">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from main.models import Assignment, Student, Course, Student_Course_Request, Student_Course_Assignment, Teacher
+from .models import Assignment, Student, Course, Student_Course_Request, Student_Course_Assignment, Teacher
+from .forms import StudentForm
 
 def index(request):
    context = {}
@@ -106,8 +107,23 @@ def assignment(request, item):
 
   teachers = Teacher.objects.filter(school=school)
 
+  # FORMS
+  if request.method == 'GET':
+    studentForm = StudentForm()
+    # Other GET forms from this view here
+  if request.method == 'POST':
+    # TODO: Find way to distinguish which form was submitted here
+    studentForm = StudentForm(request.POST)
+    if studentForm.is_valid():
+      studentForm.save()
+
+
+  # /FORMS
+
   context = {'assignment': assignment, 'students': students, 'courses':
       courses, 'student_course_requests': student_course_requests,
-      'student_course_assignments': student_course_assignments, 'teachers': teachers}
+      'student_course_assignments': student_course_assignments, 'teachers':
+      teachers, 'studentForm': studentForm
+      }
 
   return render(request, 'assignment.html', context)
