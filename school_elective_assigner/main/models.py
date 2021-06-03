@@ -1,5 +1,9 @@
 from django.db import models
 
+TYPES = ((0, "needs to have m out of n courses"), (1, "number of courses"),
+         (2, "needs to have course x, y, z"), (3, "shouldn't have course x, y, z"),
+         (4, "max m out of n courses"))
+
 class Student(models.Model):
   first_name = models.CharField(max_length=200)
   email_address = models.CharField(max_length=75)
@@ -33,6 +37,7 @@ class Course(models.Model):
   name = models.CharField(max_length=200)
   description = models.TextField()
   active = models.BooleanField(default=True)
+  max_capacity = models.PositiveSmallIntegerField(null=True, blank=True)
 
   assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)
 
@@ -64,11 +69,12 @@ class Student_Course_Assignment(models.Model):
     return str(self.student) + " - " + str(self.course)
 
 class Criterion(models.Model):
-  name = models.CharField(max_length=200)
-  type = models.PositiveSmallIntegerField()
+  type = models.PositiveSmallIntegerField(choices=TYPES)
+  all = models.BooleanField(default=False)
 
-  course = models.ForeignKey('Course', on_delete=models.CASCADE, null=True, blank=True)
-  student = models.ForeignKey('Student', on_delete=models.CASCADE, null=True, blank=True)
+  # Skal laves til many to many
+  courses = models.ManyToManyField('Course', blank=True)
+  students = models.ManyToManyField('Student', blank=True)
   assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)
 
   def __str__(self):

@@ -3,8 +3,7 @@
   <div class="tab-pane fade margin_top" id="kriterier" role="tabpanel" aria-labelledby="kriterier-tab">
 
     <div class="opret_t">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#courseCriterionModal">Opret valgfag-kriterie</button>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentCriterionModal">Opret elev-kriterie</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentCriterionModal">Opret kriterie</button>
     </div>
 
     <div class="accordion card-body" id="accordion-criteria">
@@ -25,7 +24,11 @@
         <div id="a{{ criterion.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
           aria-labelledby="criteria-header" data-bs-parent="#accordion-criteria">
           <div class="accordion-body">
-          ...
+            {% comment %} TODO: Display them differently for each type?  {% endcomment %}
+            {{ criterion.type }}
+            {{ criterion.all }}
+            {{ criterion.courses }}
+            {{ criterion.students }}
           </div>
         </div>
       </div>
@@ -34,60 +37,8 @@
     </div>
 
 
-    <!-- Course Criterion Modal -->
-    <div class="modal fade" id="courseCriterionModal" tabindex="-1" aria-labelledby="courseCriterionModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="courseCriterionModalLabel">Opret valgfag-kriterie</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
 
-            <div class="accordion card-body" id="accordion-courses">
-
-              {% for course in courses %}
-
-              <div class="accordion-item col-lg-11 mx-auto">
-                <h2 class="accordion-header" id="courses-header">
-                  {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-                  <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
-                          type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
-                                                                                           aria-expanded="false"
-                                                                                           aria-controls="a{{ course.id }}">
-                    {{ course.name }}
-                    <a href=""  class="icon_edit_crit icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-                    <a href=""  class="icon_del_crit icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-                  </button>
-                </h2>
-                <div id="a{{ course.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
-                  aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
-                  <div class="accordion-body">
-                      <ul class="list-group">
-                        <li class="list-group-item">
-                          <td>{{ course.name }}</td>
-                      </li>
-                      <li class="list-group-item">
-                        <td>{{ course.description }}</td>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {% endfor %}
-            </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <button type="button" class="btn btn-primary">Gem tildeling</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Student Criterion Modal -->
+    <!-- Criterion Modal -->
     <div class="modal fade" id="studentCriterionModal" tabindex="-1" aria-labelledby="studentCriterionModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -116,25 +67,7 @@
                 <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
                   aria-labelledby="students-header" data-bs-parent="#accordion-students">
                   <div class="accordion-body">
-                    <ul class="list-group">
-                      {% for student_course_request in student_course_requests %}
-                          {% if student_course_request.student == student %}
-                      <li class="list-group-item">
-                             {{ student_course_request.priority }}: 
-                             {{ student_course_request.course }}
-                    </li>
-                          {% endif %}
-                          {% endfor %}
-                          
-                          {% for student_course_assignment in student_course_assignments %}
-                          {% if student_course_assignment.student == student %}
-                      <li class="list-group-item">
-                          {{ student_course_assignment.course }}
-                    </li>
-                          {% endif %}
-                          {% endfor %}
-                  </ul>
-                    
+                    {{ criterionForm }}
                   </div>
                 </div>
               </div>
