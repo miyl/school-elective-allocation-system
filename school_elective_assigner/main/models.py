@@ -69,6 +69,7 @@ class Criterion(models.Model):
 
   course = models.ForeignKey('Course', on_delete=models.CASCADE, null=True, blank=True)
   student = models.ForeignKey('Student', on_delete=models.CASCADE, null=True, blank=True)
+  assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)
 
   def __str__(self):
     return self.name

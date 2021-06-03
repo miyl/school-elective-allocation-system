@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from .models import Assignment, Student, Course, Student_Course_Request, Student_Course_Assignment, Teacher
+from .models import (Assignment, Student, Course, Student_Course_Request,
+     Student_Course_Assignment, Teacher, Criterion)
 from .forms import StudentForm
 
 def index(request):
@@ -44,8 +45,8 @@ class AssignmentListView(ListView):
               progress += 25
             # This seems annoying/silly at this point, maybe a criterion should have a
             # direct connection with assignment?
-            #if Criterion.objects.filter(assignment=asn).exists():
-            #  progress += 25
+            if Criterion.objects.filter(assignment=asn).exists():
+              progress += 25
           self.progresses.append(progress)
 
         context['progresses'] = self.progresses
