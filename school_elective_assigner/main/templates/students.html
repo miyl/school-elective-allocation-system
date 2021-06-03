@@ -7,8 +7,8 @@
   <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
 
     <div class="opret_t">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentModal">Importer Elever</button>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentModal">Opret Elev</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#importStudentModal">Importer Elever</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addStudentModal">Opret Elev</button>
     </div>
 
     <div class="container-fluid">
@@ -28,6 +28,7 @@
                                                                                    aria-controls="a{{ student.id }}">
             {{ student.first_name }}<br/>
             {{ student.email_address }}
+
             <a href="" class="icon_edit_stud icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
             <a href="" class="icon_del_stud icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
@@ -124,12 +125,12 @@
 
 
 
-<!-- Course Criterion Modal -->
-<div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+<!-- Add Student Modal -->
+<div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="studentModalLabel">Opret valgfag-kriterie</h5>
+        <h5 class="modal-title" id="addStudentModalLabel">Opret valgfag-kriterie</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -142,10 +143,64 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-          <input type="submit" value="Gem Studerende" class="btn btn-primary">
+          <input type="submit" value="Gem Studerende" name="add-student" class="btn btn-primary">
         </div>
       </form>
 
     </div>
   </div>
 </div>
+
+
+<!-- Import Student Modal -->
+<div class="modal fade" id="importStudentModal" tabindex="-1" aria-labelledby="importStudentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="importStudentModalLabel">Opret valgfag-kriterie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form method="post" accept-charset="utf-8">
+
+        {% csrf_token %}
+
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+          <input type="submit" value="Gem Studerende" name="import-student" class="btn btn-primary">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Edit Student Modal -->
+<div class="modal fade" id="editStudentModal" tabindex="-1" aria-labelledby="editStudentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editStudentModalLabel">Opret valgfag-kriterie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form method="post" accept-charset="utf-8">
+
+        {% csrf_token %}
+
+        <div class="modal-body">
+          {{studentForm}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+          <input type="submit" value="Gem Redigeringer" name="edit-student" class="btn btn-primary">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Delete Student Popup-ish -->

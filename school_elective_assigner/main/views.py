@@ -113,10 +113,11 @@ def assignment(request, item):
     studentForm = StudentForm()
     # Other GET forms from this view here
   if request.method == 'POST':
-    # TODO: Find way to distinguish which form was submitted here
-    studentForm = StudentForm(request.POST)
-    if studentForm.is_valid():
-      studentForm.save()
+    # Identify which form was submitted
+    if 'add-student' in request.POST:
+      studentForm = StudentForm(request.POST)
+      if studentForm.is_valid():
+        studentForm.save()
 
 
   # /FORMS
