@@ -2,3 +2,4 @@
 # so we haven't tested more recent versions which may or may not "just work".
 Django==3.2.3
 ortools==9.0.9048
+django-crispy-forms==1.11.2

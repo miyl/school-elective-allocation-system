@@ -47,35 +47,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-
-            <div class="accordion card-body" id="accordion-students">
-
-              {% for student in students %}
-
-              <div class="accordion-item col-lg-11 mx-auto">
-                <h2 class="accordion-header" id="students-header">
-                  {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-                  <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
-                          type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
-                                                                                           aria-expanded="false"
-                                                                                           aria-controls="a{{ student.id }}">
-                    {{ student.first_name }} {{ student.email_address }}
-                    <a href=""  class="icon_edit_crit icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-                    <a href=""  class="icon_del_crit icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
-                  </button>
-                </h2>
-                <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
-                  aria-labelledby="students-header" data-bs-parent="#accordion-students">
-                  <div class="accordion-body">
-                    {{ criterionForm }}
-                  </div>
-                </div>
-              </div>
-
-              {% endfor %}
-            </div>
-
+            {{ criterionForm }}
           </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
             <button type="button" class="btn btn-primary">Gem tildeling</button>

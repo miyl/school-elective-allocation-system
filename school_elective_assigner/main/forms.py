@@ -1,6 +1,9 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, ChoiceField
 from .models import (Assignment, Student, Course, Student_Course_Request,
      Student_Course_Assignment, Teacher, Criterion)
+
+# We want django admin's ManyToMany boxes instead of django's default
+from django.contrib.admin.widgets import FilteredSelectMultiple
 
 class StudentForm(ModelForm):
   class Meta:
@@ -10,5 +13,7 @@ class StudentForm(ModelForm):
 class CriterionForm(ModelForm):
   class Meta:
     model = Criterion
-    fields = '__all__'
-    #exclude = ('login_code', )
+    exclude = ('assignment', )
+    #students = ChoiceField(widget=FilteredSelectMultiple)
+    filter_horizontal = ('students',)
+    #fields = '__all__'
