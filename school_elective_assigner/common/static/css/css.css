@@ -84,15 +84,19 @@
 }
 
 .icon_edit_cour {
-  right: 8%;
+  right: 12%;
 }
 
 .icon_del_cour {
-  right: 5%;
+  right: 8%;
 }
 
 .icon_absolute {
   position: absolute;
+  border: none;
+  background: transparent;
+  display: inline;
+  z-index: 2
 }
 
 #status li {
