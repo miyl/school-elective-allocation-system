@@ -110,7 +110,6 @@ def assignment(request, item):
 
   # FORMS
 
-  # TODO: Move this into GET when I start handling it's post data
   criterionForm = CriterionForm()
   studentForm = StudentForm()
     # Other GET forms from this view here
@@ -118,6 +117,7 @@ def assignment(request, item):
     # Identify which form was submitted
     if 'add-student' in request.POST:
       studentForm = StudentForm(request.POST)
+      #breakpoint()
       if studentForm.is_valid():
         studentForm.save()
 
