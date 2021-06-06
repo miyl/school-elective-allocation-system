@@ -109,9 +109,10 @@ def assignment(request, item):
   teachers = Teacher.objects.filter(school=school)
 
   # FORMS
+  # TODO: Move this into GET when I start handling it's post data
+  criterionForm = CriterionForm()
   if request.method == 'GET':
     studentForm = StudentForm()
-    criterionForm = CriterionForm()
     # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
