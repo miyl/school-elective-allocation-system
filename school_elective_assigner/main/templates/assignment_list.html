@@ -1,11 +1,12 @@
 {% extends 'base_with_general_nav.html' %}
 {% load custom_tags %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
 {% comment %} https://getbootstrap.com/docs/5.0/components/accordion/  {% endcomment %}
 <div class="opret_t">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">Opret ny Tildeling</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAssignmentModal">Opret ny Tildeling</button>
 </div>
 
 <div class="accordion card-body" id="accordionExample">
@@ -39,28 +40,31 @@
   {% endfor %}
 
 <!-- Modal -->
-<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="createModalLabel">Opret tildeling</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="formGroupExampleInput">Navn på Tildeling:</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Angiv navnet på tildeling">
+  <!-- Add Course Modal -->
+  <div class="modal fade" id="addAssignmentModal" tabindex="-1" aria-labelledby="addAssignmentModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addStudentModalLabel">Opret Tildeling</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <form method="post" accept-charset="utf-8">
+  
+          {% csrf_token %}
+  
+          <div class="modal-body">
+            {{assignmentForm|crispy}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <input type="submit" value="Gem Tildeling" name="add-assignment" class="btn btn-primary">
           </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-        <button type="button" class="btn btn-primary">Gem tildeling</button>
+  
       </div>
     </div>
   </div>
-</div>
 
 </div>
 
