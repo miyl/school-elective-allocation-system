@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from .models import (Assignment, Student, Course, Student_Course_Request,
      Student_Course_Assignment, Teacher, Criterion)
-from .forms import StudentForm, CriterionForm
+from .forms import StudentForm, CriterionForm, CourseForm
 
 def index(request):
    context = {}
@@ -112,6 +112,7 @@ def assignment(request, item):
 
   criterionForm = CriterionForm()
   studentForm = StudentForm()
+  courseForm = CourseForm()
     # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
@@ -120,13 +121,17 @@ def assignment(request, item):
       #breakpoint()
       if studentForm.is_valid():
         studentForm.save()
+    if 'add-course' in request.POST: 
+      courseForm = CourseForm(request.POST)
+      if courseForm.is_valid():
+        courseForm.save()
 
   # /FORMS
 
   context = {'assignment': assignment, 'students': students, 'courses':
       courses, 'student_course_requests': student_course_requests,
       'student_course_assignments': student_course_assignments, 'teachers':
-      teachers, 'studentForm': studentForm, 'criterionForm': criterionForm
+      teachers, 'studentForm': studentForm, 'criterionForm': criterionForm, 'courseForm': courseForm
       }
 
   return render(request, 'assignment.html', context)

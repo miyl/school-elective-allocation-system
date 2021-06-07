@@ -21,3 +21,8 @@ class CriterionForm(ModelForm):
     widgets = {'students': FilteredSelectMultiple("abc", True), 'courses':
         FilteredSelectMultiple("abc", True)}
     #fields = '__all__'
+
+class CourseForm(ModelForm): 
+  class Meta: 
+    model = Course
+    exclude = ( 'active', )
