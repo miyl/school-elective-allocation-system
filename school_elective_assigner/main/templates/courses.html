@@ -12,14 +12,14 @@
 
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="courses-header">
+          <button class="icon_edit_cour icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+          <button  class="icon_del_cour icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
           <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
                   type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
                                                                                    aria-expanded="false"
                                                                                    aria-controls="a{{ course.id }}">
             {{ course.name }}
-              <button class="icon_edit_cour icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
-              <button  class="icon_del_cour icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
           </button>
 
         </h2>
