@@ -12,7 +12,6 @@ def index(request):
 
 def assignments(request):
   assignments = Assignment.objects.all()
-  
 
   progresses = []
   for asn in assignments:
@@ -31,13 +30,16 @@ def assignments(request):
       if Criterion.objects.filter(assignment=asn).exists():
         progress += 25
     progresses.append(progress)
-  
-  assignmentForm = AssignmentForm()
 
-  if 'add-assignment' in request.POST: 
-    assignmentForm = AssignmentForm(request.POST)
-  if assignmentForm.is_valid(): 
-    assignmentForm.save()
+  # FORMS:
+
+  if request.method == 'POST':
+    if 'add-assignment' in request.POST:
+      assignmentForm = AssignmentForm(request.POST)
+      if assignmentForm.is_valid():
+        assignmentForm.save()
+  else: # GET
+    assignmentForm = AssignmentForm()
 
   context = {'assignments': assignments, 'progresses': progresses, 'assignmentForm': assignmentForm}
   return render(request, 'assignment_list.html', context)
@@ -93,22 +95,22 @@ def assignment(request, item):
   teachers = Teacher.objects.filter(school=school)
 
   # FORMS
-
   criterionForm = CriterionForm()
-  studentForm = StudentForm()
-  courseForm = CourseForm()
     # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
     if 'add-student' in request.POST:
       studentForm = StudentForm(request.POST)
-      #breakpoint()
+      # breakpoint()
       if studentForm.is_valid():
         studentForm.save()
     elif 'add-course' in request.POST: 
       courseForm = CourseForm(request.POST)
       if courseForm.is_valid():
         courseForm.save()
+  else: # GET
+    studentForm = StudentForm()
+    courseForm = CourseForm()
 
 
   # /FORMS
@@ -117,7 +119,7 @@ def assignment(request, item):
       courses, 'student_course_requests': student_course_requests,
       'student_course_assignments': student_course_assignments, 'teachers':
       teachers, 'studentForm': studentForm, 'criterionForm': criterionForm, 
-      'courseForm': courseForm, 'assignmentForm': assignmentForm
+      'courseForm': courseForm
       }
 
   return render(request, 'assignment.html', context)
