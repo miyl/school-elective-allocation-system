@@ -37,6 +37,7 @@ def assignments(request):
     if 'add-assignment' in request.POST:
       assignmentForm = AssignmentForm(request.POST)
       if assignmentForm.is_valid():
+        print("VALID")
         assignmentForm.save()
   else: # GET
     assignmentForm = AssignmentForm()
