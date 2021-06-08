@@ -56,6 +56,10 @@
   
           <div class="modal-body">
             {{assignmentForm|crispy}}
+            {% comment %}
+            Give us the school id of the first school, since it's the same for all school 
+            <input name="school" id="id_school" value="{{assignments.0.school.id}}" type="hidden">
+            {% endcomment %}
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>

@@ -16,12 +16,12 @@ class StudentForm(ModelForm):
 class CriterionForm(ModelForm):
   class Meta:
     model = Criterion
-    exclude = ('assignment', )
+    #exclude = ('assignment', )
     #students = ChoiceField(widget=FilteredSelectMultiple)
     #filter_horizontal = ('students',)
     widgets = {'students': FilteredSelectMultiple("abc", True), 'courses':
-        FilteredSelectMultiple("abc", True)}
-    #fields = '__all__'
+        FilteredSelectMultiple("abc", True), 'assignment': HiddenInput()}
+    fields = '__all__'
 
 class CourseForm(ModelForm):
   class Meta:
@@ -35,5 +35,5 @@ class AssignmentForm(ModelForm):
     exclude = ( 'invitation_email', 'reminder_email', 'results_email',
                 'priority_form_text', 'invitation_email_sent', 'reminder_email_sent',
                 'results_email_sent', 'deadline')
-    #widgets = {'school': HiddenInput()}
+    widgets = {'school': HiddenInput()}
     #fields = '__all__'

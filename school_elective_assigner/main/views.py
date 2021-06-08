@@ -11,6 +11,8 @@ def index(request):
 
 
 def assignments(request):
+  # TODO: This is all assignments, not all assignments for the current
+  # user/school which it should be
   assignments = Assignment.objects.all()
 
   progresses = []
@@ -40,7 +42,8 @@ def assignments(request):
         assignmentForm.save()
         return redirect('assignments')
   else: # GET
-    assignmentForm = AssignmentForm()
+    # Ensure that school
+    assignmentForm = AssignmentForm(initial={'school': assignments[0].school})
 
   context = {'assignments': assignments, 'progresses': progresses, 'assignmentForm': assignmentForm}
   return render(request, 'assignment_list.html', context)
@@ -96,9 +99,9 @@ def assignment(request, item):
   teachers = Teacher.objects.filter(school=school)
 
   # FORMS
-  criterionForm = CriterionForm()
-  studentForm = StudentForm()
-  courseForm = CourseForm()
+  criterionForm = CriterionForm(initial={'assignment': assignment})
+  studentForm = StudentForm(initial={'assignment': assignment})
+  courseForm = CourseForm(initial={'assignment': assignment})
   # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
