@@ -60,11 +60,11 @@
 }
 
 .icon_edit_stud {
-    right: 14%;
+    right: 10%;
 }
 
 .icon_del_stud {
-    right: 9%;
+    right: 8%;
 }
 
 .icon_edit_crit {
@@ -76,11 +76,11 @@
 }
 
 .icon_edit_res {
-    right: 8%;
+    right: 5%;
 }
 
 .icon_del_res {
-    right: 5%;
+    right: 3%;
 }
 
 .icon_edit_cour {
@@ -92,12 +92,12 @@
 }
 
 .icon_absolute {
+  display:inline-block;
   position: absolute;
   border: none;
-  display: inline-block;
-  background:transparent;
+  background: transparent;
   opacity: 0.55;
-  z-index: 2;
+  z-index: 4;
 }
 
 #status li {

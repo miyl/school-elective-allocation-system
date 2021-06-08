@@ -18,8 +18,10 @@
     <div class="accordion card-body col-lg-5" id="accordion-students">
     {% for student in students %}
 
-      <div class="accordion-item">
+      <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="students-header">
+          <button class="icon_edit_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#editStudentModal{{student.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+          <button class="icon_del_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteStudentModal{{student.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
           <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
                   type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
@@ -27,8 +29,6 @@
                                                                                    aria-controls="a{{ student.id }}">
             {{ student.first_name }}<br/>
             {{ student.email_address }}
-            <button class="icon_edit_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#editStudentModal{{student.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
-            <button class="icon_del_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteStudentModal{{student.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
           </button>
         </h2>
         <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0 %} show {% endif %}"
