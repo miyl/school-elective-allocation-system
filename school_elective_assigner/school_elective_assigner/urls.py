@@ -22,7 +22,8 @@ from main import views as main_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_views.index, name='index'),
-    path('assignments/', main_views.AssignmentListView.as_view(), name='assignments'),
+    #path('assignments/', main_views.AssignmentListView.as_view(), name='assignments'),
+    path('assignments/', main_views.assignments, name='assignments'),
     path('assignment/<int:item>', main_views.assignment, name='assignment'),
     #path('site', main_views.index, name='index'),
 ]
