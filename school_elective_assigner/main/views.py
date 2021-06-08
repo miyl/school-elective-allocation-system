@@ -12,6 +12,7 @@ def index(request):
 
 def assignments(request):
   assignments = Assignment.objects.all()
+  
 
   progresses = []
   for asn in assignments:
@@ -30,8 +31,15 @@ def assignments(request):
       if Criterion.objects.filter(assignment=asn).exists():
         progress += 25
     progresses.append(progress)
+  
+  assignmentForm = AssignmentForm()
 
-  context = {'assignments': assignments, 'progresses': progresses}
+  if 'add-assignment' in request.POST: 
+    assignmentForm = AssignmentForm(request.POST)
+  if assignmentForm.is_valid(): 
+    assignmentForm.save()
+
+  context = {'assignments': assignments, 'progresses': progresses, 'assignmentForm': assignmentForm}
   return render(request, 'assignment_list.html', context)
 
 # The wrapper function for the solver, that should be called when the button to
@@ -89,7 +97,6 @@ def assignment(request, item):
   criterionForm = CriterionForm()
   studentForm = StudentForm()
   courseForm = CourseForm()
-  assignmentForm = AssignmentForm()
     # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
@@ -102,10 +109,7 @@ def assignment(request, item):
       courseForm = CourseForm(request.POST)
       if courseForm.is_valid():
         courseForm.save()
-    elif 'add-assignment' in request.POST: 
-      assignmentForm = AssignmentForm(request.POST)
-      if assignmentForm.is_valid(): 
-        assignmentForm.save()
+
 
   # /FORMS
 
