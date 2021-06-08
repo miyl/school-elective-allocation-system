@@ -107,6 +107,9 @@ def assignment(request, item):
       # breakpoint()
       if studentForm.is_valid():
         studentForm.save()
+    elif 'delete-student' in request.POST:
+      studentID = request.POST.get('studentid', None);
+      Student.objects.filter(id=studentID).delete()
     elif 'add-course' in request.POST: 
       courseForm = CourseForm(request.POST)
       if courseForm.is_valid():
