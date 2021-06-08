@@ -14,9 +14,10 @@ Password: a
 
 ```bash
 1. git clone url                   # cloner repo
-2. python -m venv env              # opretter et virtual env
-2. . env/Scripts/activate          # enter virtual env
-4. pip install -r requirements.txt # installer pakker i virtual env
+2. cd school-elective-allocation-system # tilgå repo
+3. python -m venv env              # opretter et virtual env
+4. . env/Scripts/activate          # enter virtual env
+5. pip install -r requirements.txt # installer pakker i virtual env
 ```
 
 #### Run

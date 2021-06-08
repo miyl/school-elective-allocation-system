@@ -1,62 +1,49 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from .models import (Assignment, Student, Course, Student_Course_Request,
      Student_Course_Assignment, Teacher, Criterion)
 from .forms import StudentForm, CriterionForm, CourseForm, AssignmentForm
 
 def index(request):
-   context = {}
+  context = {}
 
-   return render(request, 'index.html', context)
-
-# A generic view!: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
-class AssignmentListView(ListView):
-    # Obtain the school from which user is logged in
-    # school =
-
-    model = Assignment
+  return render(request, 'index.html', context)
 
 
+def assignments(request):
+  assignments = Assignment.objects.all()
 
-    # This is really the default name of the template it expects, but it
-    # looks at the root of the app name (main) by default, so I specify it here
-    # to make it look in all template dirs.
-    template_name="assignment_list.html"
+  progresses = []
+  for asn in assignments:
+    # If results e-mail has been sent there's no need for the subsequent
+    # calculations?
+    progress = 0
+    if asn.results_email_sent:
+      progress = 100
+    else:
+      if Student.objects.filter(assignment=asn).exists():
+        progress += 25
+      if Course.objects.filter(assignment=asn).exists():
+        progress += 25
+      # This seems annoying/silly at this point, maybe a criterion should have a
+      # direct connection with assignment?
+      if Criterion.objects.filter(assignment=asn).exists():
+        progress += 25
+    progresses.append(progress)
 
-    # If we want to pass additional data to the template
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super().get_context_data(**kwargs)
+  # FORMS:
 
+  if request.method == 'POST':
+    if 'add-assignment' in request.POST:
+      assignmentForm = AssignmentForm(request.POST)
+      if assignmentForm.is_valid():
+        assignmentForm.save()
+        return redirect('assignments')
+  else: # GET
+    assignmentForm = AssignmentForm()
 
-        # CALCULATE THE PROGRESS ON THE ASSIGNMENT (PROGRESS BAR)
-
-        self.progresses = []
-        for asn in Assignment.objects.all():
-          # If results e-mail has been sent there's no need for the subsequent
-          # calculations?
-          progress = 0
-          if asn.results_email_sent:
-            progress = 100
-          else:
-            if Student.objects.filter(assignment=asn).exists():
-              progress += 25
-            if Course.objects.filter(assignment=asn).exists():
-              progress += 25
-            # This seems annoying/silly at this point, maybe a criterion should have a
-            # direct connection with assignment?
-            if Criterion.objects.filter(assignment=asn).exists():
-              progress += 25
-          self.progresses.append(progress)
-
-        context['progresses'] = self.progresses
-        return context
-
-#def assignments(request):
-#   assignments = Assignment.objects.all
-#   context = {'assignments': assignments}
-#
-#   return render(request, 'assignment_list.html', context)
+  context = {'assignments': assignments, 'progresses': progresses, 'assignmentForm': assignmentForm}
+  return render(request, 'assignment_list.html', context)
 
 # The wrapper function for the solver, that should be called when the button to
 # solve is clicked on the website, on some inputted data and with some inputted
@@ -109,27 +96,22 @@ def assignment(request, item):
   teachers = Teacher.objects.filter(school=school)
 
   # FORMS
-
   criterionForm = CriterionForm()
   studentForm = StudentForm()
   courseForm = CourseForm()
-  assignmentForm = AssignmentForm()
-    # Other GET forms from this view here
+  # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
     if 'add-student' in request.POST:
       studentForm = StudentForm(request.POST)
-      #breakpoint()
+      # breakpoint()
       if studentForm.is_valid():
         studentForm.save()
-    if 'add-course' in request.POST: 
+    elif 'add-course' in request.POST: 
       courseForm = CourseForm(request.POST)
       if courseForm.is_valid():
         courseForm.save()
-    if 'add-assignment' in request.POST: 
-      assignmentForm = AssignmentForm(request.POST)
-      if assignmentForm.is_valid(): 
-        assignmentForm.save()
+
 
   # /FORMS
 
@@ -137,7 +119,51 @@ def assignment(request, item):
       courses, 'student_course_requests': student_course_requests,
       'student_course_assignments': student_course_assignments, 'teachers':
       teachers, 'studentForm': studentForm, 'criterionForm': criterionForm, 
-      'courseForm': courseForm, 'assignmentForm': assignmentForm
-      }
+      'courseForm': courseForm
+  }
 
   return render(request, 'assignment.html', context)
+
+
+# A generic view!: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
+#class AssignmentListView(ListView):
+#    # Obtain the school from which user is logged in
+#    # school =
+#
+#    model = Assignment
+#
+#
+#
+#    # This is really the default name of the template it expects, but it
+#    # looks at the root of the app name (main) by default, so I specify it here
+#    # to make it look in all template dirs.
+#    template_name="assignment_list.html"
+#
+#    # If we want to pass additional data to the template
+#    def get_context_data(self, **kwargs):
+#        # Call the base implementation first to get a context
+#        context = super().get_context_data(**kwargs)
+#
+#
+#        # CALCULATE THE PROGRESS ON THE ASSIGNMENT (PROGRESS BAR)
+#
+#        self.progresses = []
+#        for asn in Assignment.objects.all():
+#          # If results e-mail has been sent there's no need for the subsequent
+#          # calculations?
+#          progress = 0
+#          if asn.results_email_sent:
+#            progress = 100
+#          else:
+#            if Student.objects.filter(assignment=asn).exists():
+#              progress += 25
+#            if Course.objects.filter(assignment=asn).exists():
+#              progress += 25
+#            # This seems annoying/silly at this point, maybe a criterion should have a
+#            # direct connection with assignment?
+#            if Criterion.objects.filter(assignment=asn).exists():
+#              progress += 25
+#          self.progresses.append(progress)
+#
+#        context['progresses'] = self.progresses
+#        return context
