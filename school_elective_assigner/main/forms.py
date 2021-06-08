@@ -23,16 +23,16 @@ class CriterionForm(ModelForm):
         FilteredSelectMultiple("abc", True)}
     #fields = '__all__'
 
-class CourseForm(ModelForm): 
-  class Meta: 
+class CourseForm(ModelForm):
+  class Meta:
     model = Course
     exclude = ( 'active', )
 
-class AssignmentForm(ModelForm): 
-  class Meta: 
-    model = Course
+class AssignmentForm(ModelForm):
+  class Meta:
+    model = Assignment
     exclude = ( 'invitation_email', 'reminder_email', 'results_email', 
                 'priority_form_text', 'invitation_email_sent', 'reminder_email_sent', 
                 'results_email_sent', )
-    #fields = '__all__'
     widgets = {'school': HiddenInput()}
+    #fields = '__all__'

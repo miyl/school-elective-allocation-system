@@ -122,11 +122,11 @@ def assignment(request, item):
       #breakpoint()
       if studentForm.is_valid():
         studentForm.save()
-    if 'add-course' in request.POST: 
+    elif 'add-course' in request.POST: 
       courseForm = CourseForm(request.POST)
       if courseForm.is_valid():
         courseForm.save()
-    if 'add-assignment' in request.POST: 
+    elif 'add-assignment' in request.POST: 
       assignmentForm = AssignmentForm(request.POST)
       if assignmentForm.is_valid(): 
         assignmentForm.save()
