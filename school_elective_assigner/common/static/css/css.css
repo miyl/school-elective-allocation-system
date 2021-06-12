@@ -61,10 +61,13 @@
 
 .icon_edit_stud {
     right: 10%;
+    transform: translate(-60%);
 }
 
 .icon_del_stud {
     right: 8%;
+    transform: translate(-45%);
+
 }
 
 .icon_edit_crit {
@@ -84,11 +87,13 @@
 }
 
 .icon_edit_cour {
-  right: 10%;
+  right: 9.5%;
+  transform: translate(-10%);
 }
 
 .icon_del_cour {
-  right: 8%;
+  right: 7.5%;
+  transform: translate(-30%);
 }
 
 .icon_absolute {
