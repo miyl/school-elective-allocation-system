@@ -1,5 +1,6 @@
 {% extends 'base_with_general_nav.html' %}
 {% load custom_tags %}
+{% load static %}  
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -17,6 +18,8 @@
 
   <div class="accordion-item col-lg-11 mx-auto">
     <h2 class="accordion-header" id="headingOne">
+      <button class="icon_edit_assign icon_absolute" data-bs-toggle="modal" data-bs-target="#editAssignmentModal{{asignment.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+      <button class="icon_del_assign icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteAssignmentModal{{assignment.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
       {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
       <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#a{{ assignment.id  }}"
                                                                                aria-expanded="false"
@@ -38,6 +41,55 @@
       </div>
     </div>
   </div>
+
+      <!-- Edit Assignment Modal -->
+      <div class="modal fade" id="editAssignmentModal{{assignment.id}}" tabindex="-1" aria-labelledby="editAssignmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editAssignmentModalLabel">Rediger {{Assignment}}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post" accept-charset="utf-8">
+
+              {% csrf_token %}
+
+              <div class="modal-body">
+                {{assignmentForm|crispy}}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                <input type="submit" value="Gem redigeringer" name="edit-assignment" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Delete Assignment Modal -->
+    <div class="modal fade" id="deleteAssignmentModal{{assignment.id}}" tabindex="-1" aria-labelledby="deleteAssignmentModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteAssignmentModalLabel">Slet {{assignment}}<h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form method="post" accept-charset="utf-8">
+            <div class="modal-body">
+                Er du sikker?
+                {% csrf_token %}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+              <input type="hidden" name="assignmentid" value="{{assignment.id}}">
+              <input type="submit" value="Slet tildeling" name="delete-assignment" class="btn btn-danger">  
+            </div> 
+            </form>
+        </div>
+      </div>
+    </div>
+
 
   {% endfor %}
 

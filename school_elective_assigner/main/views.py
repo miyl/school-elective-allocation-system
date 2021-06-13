@@ -34,6 +34,8 @@ def assignments(request):
     progresses.append(progress)
 
   # FORMS:
+  # TODO: Set the correct school based on login
+  assignmentForm = AssignmentForm(initial={'school': assignments[0].school})
 
   if request.method == 'POST':
     if 'add-assignment' in request.POST:
@@ -41,9 +43,11 @@ def assignments(request):
       if assignmentForm.is_valid():
         assignmentForm.save()
         return redirect('assignments')
-  else: # GET
-    # Ensure that school
-    assignmentForm = AssignmentForm(initial={'school': assignments[0].school})
+    elif 'delete-assignment' in request.POST: 
+      assignmentID = request.POST.get('assignmentid', None); 
+      Assignment.objects.filter(id=assignmentID).delete()
+      return redirect('assignments')
+
 
   context = {'assignments': assignments, 'progresses': progresses, 'assignmentForm': assignmentForm}
   return render(request, 'assignment_list.html', context)
@@ -117,6 +121,10 @@ def assignment(request, item):
       courseForm = CourseForm(request.POST)
       if courseForm.is_valid():
         courseForm.save()
+    elif 'delete-course' in request.POST: 
+      courseID = request.POST.get('courseid', None); 
+      Course.objects.filter(id=courseID).delete()
+      
 
 
   # /FORMS

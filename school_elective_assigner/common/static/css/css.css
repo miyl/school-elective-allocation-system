@@ -96,6 +96,16 @@
   transform: translate(-30%);
 }
 
+.icon_edit_assign {
+  right: 9.5%;
+  transform: translate(-10%);
+}
+
+.icon_del_assign {
+  right: 7.5%;
+  transform: translate(-30%);
+}
+
 .icon_absolute {
   display:inline-block;
   position: absolute;
