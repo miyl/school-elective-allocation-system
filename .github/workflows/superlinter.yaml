@@ -1,0 +1,27 @@
+# Whatever name you want for the runner
+name: Super-Linter
+
+# What event should trigger these jobs
+on: push
+
+# A list of all jobs / tasks to run on the above event
+jobs:
+  super-lint:
+    # Whatever name you want for this linter
+    name: Lint code base
+    # What platform should the job be run on?
+    runs-on: ubuntu-latest
+    steps:
+      # First checkout the code before running the linter on it
+      # Whatever name you want for this step
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Then run superlinter, which is a linter for all sorts of formats:
+      # https://github.com/github/super-linter
+      - name: SuperLinter
+        uses: github/super-linter@v4
+      # Some settings for the super-linter
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
