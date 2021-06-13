@@ -12,8 +12,8 @@
 
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="courses-header">
-          <button class="icon_edit_cour icon_absolute" data-bs-target="#editCourseModal{{course.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
-          <button  class="icon_del_cour icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+          <button class="icon_edit_cour icon_absolute" data-bs-toggle="modal" data-bs-target="#editCourseModal{{course.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+          <button class="icon_del_cour icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteCourseModal{{course.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
           <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
                   type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
@@ -41,6 +41,32 @@
           </div>
         </div>
       </div>
+
+      
+      <!-- Edit Course Modal -->
+      <div class="modal fade" id="editCourseModal{{course.id}}" tabindex="-1" aria-labelledby="editCourseModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editCourseModalLabel">Rediger {{course}}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post" accept-charset="utf-8">
+
+              {% csrf_token %}
+
+              <div class="modal-body">
+                {{courseForm|crispy}}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                <input type="submit" value="Gem Redigeringer" name="edit-course" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
       {% endfor %}
     </div>
   </div>
@@ -50,7 +76,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="addStudentModalLabel">Opret Fag</h5>
+          <h5 class="modal-title" id="addCourseModalLabel">Opret Fag</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
   
@@ -71,31 +97,9 @@
     </div>
   </div>
 
-  <!-- Edit Course Modal -->
-  <div class="modal fade" id="editCourseModal{{course.id}}" tabindex="-1" aria-labelledby="editCourseModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="editCourseModalLabel">Rediger {{course}}</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form method="post" accept-charset="utf-8">
 
-          {% csrf_token %}
-
-          <div class="modal-body">
-            {{courseForm|crispy}}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <input type="submit" value="Gem Redigeringer" name="edit-course" class="btn btn-primary">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-    <!-- Delete Course Modal -->
+  <!-- Delete Course Modal -->
+  <!--
   <div class="modal fade" id="deleteCourseModal{{course.id}}" tabindex="-1" aria-labelledby="deleteCourseModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -114,3 +118,4 @@
       </div>
     </div>
   </div>
+  -->  
