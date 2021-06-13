@@ -2,6 +2,8 @@
 
 KEA Datamatiker Final Project June 2021
 
+[![GitHub Super-Linter](https://github.com/miyl/school-elective-allocation-system/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 ## Guide
 
 The included testing database has the following super user available:  

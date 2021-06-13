@@ -1,14 +1,23 @@
 # Whatever name you want for the runner
-name: Super-Linter
+# This is the default action name which the image 
+# in the README defaults to assuming
+# https://github.com/github/super-linter#add-super-linter-badge-in-your-repository-readme
+name: Lint Code Base
 
 # What event should trigger these jobs
-on: push
+on: 
+  push:
+    # Ignore other people's libraries (code we don't maintain)
+    # Note: Linting will still run on these unfortunately, but changes 
+    # within these files won't trigger a new job / linting
+    paths-ignore:
+      - 'school_elective_assigner/common/static/libs/**'
 
 # A list of all jobs / tasks to run on the above event
 jobs:
   super-lint:
-    # Whatever name you want for this linter
-    name: Lint code base
+    # Whatever name you want for this linter job.
+    name: Lint Code Base
     # What platform should the job be run on?
     runs-on: ubuntu-latest
     steps:
