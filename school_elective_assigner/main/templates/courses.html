@@ -67,9 +67,30 @@
         </div>
       </div>
 
-      {% endfor %}
-    </div>
+
+  <!-- Delete Course Modal -->
+  <div class="modal fade" id="deleteCourseModal{{course.id}}" tabindex="-1" aria-labelledby="deleteCourseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteCourseModalLabel">Slet {{course}}</div>h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form method="post" accept-charset="utf-8">
+          <div class="modal-body">
+              {% csrf_token %}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <input type="hidden" name="courseid" value="{{course.id}}">
+            <input type="submit" value="Slet fag" name="delete-course" class="btn btn-danger">  
+          </div> 
+          </form>
+      </div>
   </div>
+
+
+      {% endfor %}
 
   <!-- Add Course Modal -->
   <div class="modal fade" id="addCourseModal" tabindex="-1" aria-labelledby="addCourseModalLabel" aria-hidden="true">
@@ -97,25 +118,5 @@
     </div>
   </div>
 
-
-  <!-- Delete Course Modal -->
-  <!--
-  <div class="modal fade" id="deleteCourseModal{{course.id}}" tabindex="-1" aria-labelledby="deleteCourseModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteCourseModalLabel">Slet {{course}}</div>h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form method="post" accept-charset="utf-8">
-          {% csrf_token %}
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <input type="hidden" name="courseid" value="{{course.id}}">
-            <input type="submit" value="Slet fag" name="delete-course" class="btn btn-danger">  
-          </div> 
-        </form>
-      </div>
-    </div>
   </div>
-  -->  
+</div>

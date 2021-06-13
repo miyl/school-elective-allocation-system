@@ -39,69 +39,69 @@
             <ol class="list-group col-lg-6">
               <li class="list-group-item"><h5>Prioritet</h5></li>
               {% for student_course_request in student_course_requests %}
-              {% if student_course_request.student == student %}
-              <li class="list-group-item">
-                   {{ student_course_request.course }}
-              </li>
-              {% endif %}
+                {% if student_course_request.student == student %}
+                <li class="list-group-item">
+                     {{ student_course_request.course }}
+                </li>
+                {% endif %}
               {% endfor %}
             </ol>
             <ul class="col-lg-6">
               <li class="list-group-item"><h5>Tildelt</h5></li>
               {% for student_course_assignment in student_course_assignments %}
-              {% if student_course_assignment.student == student %}
-              <li class="list-group-item">
-                  {{ student_course_assignment.course }}
-              </li>
-              {% endif %}
-              
-                            <!-- Edit Student Modal -->
-              <div class="modal fade" id="editStudentModal{{student.id}}" tabindex="-1" aria-labelledby="editStudentModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="editStudentModalLabel">Rediger {{student}}</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <form method="post" accept-charset="utf-8">
-
-                      {% csrf_token %}
-
-                      <div class="modal-body">
-                        {{studentForm|crispy}}
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                        <input type="submit" value="Gem Redigeringer" name="edit-student" class="btn btn-primary">
-                      </div>
-                    </form>
-
-                  </div>
-                </div>
-              </div>
-
-              <!-- Delete Student Popup-ish -->
-              <div class="modal fade" id="deleteStudentModal{{student.id}}" tabindex="-1" aria-labelledby="deleteStudentModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="deleteStudentModalLabel">Slet {{student}}</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <form method="post" accept-charset="utf-8">
-                      {% csrf_token %}
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                        <input type="hidden" name="studentid" value="{{student.id}}">
-                        <input type="submit" value="Slet student" name="delete-student" class="btn btn-danger">  
-                      </div> 
-                    </form>
-                  </div>
-                </div>
-              </div>
-
+                {% if student_course_assignment.student == student %}
+                <li class="list-group-item">
+                    {{ student_course_assignment.course }}
+                </li>
+                {% endif %}
               {% endfor %}
+                
+                <!-- Edit Student Modal -->
+                <div class="modal fade" id="editStudentModal{{student.id}}" tabindex="-1" aria-labelledby="editStudentModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="editStudentModalLabel">Rediger {{student}}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <form method="post" accept-charset="utf-8">
+
+                        {% csrf_token %}
+
+                        <div class="modal-body">
+                          {{studentForm|crispy}}
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                          <input type="submit" value="Gem Redigeringer" name="edit-student" class="btn btn-primary">
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Delete Student Popup-ish -->
+                <div class="modal fade" id="deleteStudentModal{{student.id}}" tabindex="-1" aria-labelledby="deleteStudentModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="deleteStudentModalLabel">Slet {{student}}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <form method="post" accept-charset="utf-8">
+                        {% csrf_token %}
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                          <input type="hidden" name="studentid" value="{{student.id}}">
+                          <input type="submit" value="Slet student" name="delete-student" class="btn btn-danger">  
+                        </div> 
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
             </ul>
             </div>
             </div>
