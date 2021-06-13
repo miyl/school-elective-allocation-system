@@ -8,54 +8,55 @@
   <div class="tab-pane fade" id="elever" role="tabpanel" aria-labelledby="elever-tab">
 
     <div class="opret_t">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#importStudentModal">Importer Elever</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#importStudentsModal">Importer Elever</button>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addStudentModal">Opret Elev</button>
     </div>
 
     <div class="container-fluid">
     <div class="row">
 
-    <div class="accordion card-body col-lg-5" id="accordion-students">
-    {% for student in students %}
+      <div class="accordion card-body col-lg-5" id="accordion-students">
+      {% for student in students %}
 
-      <div class="accordion-item col-lg-11 mx-auto">
-        <h2 class="accordion-header" id="students-header">
-          <button class="icon_edit_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#editStudentModal{{student.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
-          <button class="icon_del_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteStudentModal{{student.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
-          {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-          <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
-                                                                                   aria-expanded="false"
-                                                                                   aria-controls="a{{ student.id }}">
-            {{ student.first_name }}<br/>
-            {{ student.email_address }}
-          </button>
-        </h2>
-        <div id="a{{ student.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0 %} show {% endif %}"
-          aria-labelledby="students-header" data-bs-parent="#accordion-students">
-          <div class="accordion-body">
-            <div class="container-fluid student-course-list">
-            <div class="row">
-            <ol class="list-group col-lg-6">
-              <li class="list-group-item"><h5>Prioritet</h5></li>
-              {% for student_course_request in student_course_requests %}
-                {% if student_course_request.student == student %}
-                <li class="list-group-item">
-                     {{ student_course_request.course }}
-                </li>
-                {% endif %}
-              {% endfor %}
-            </ol>
-            <ul class="col-lg-6">
-              <li class="list-group-item"><h5>Tildelt</h5></li>
-              {% for student_course_assignment in student_course_assignments %}
-                {% if student_course_assignment.student == student %}
-                <li class="list-group-item">
-                    {{ student_course_assignment.course }}
-                </li>
-                {% endif %}
-              {% endfor %}
-                
+        <div class="accordion-item col-lg-11 mx-auto">
+          <h2 class="accordion-header" id="students-header">
+            <button class="icon_edit_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#editStudentModal{{student.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+            <button class="icon_del_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteStudentModal{{student.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+            {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+            <button class="accordion-button collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#a{{ student.id  }}"
+                    aria-expanded="false"
+                    aria-controls="a{{ student.id }}">
+              {{ student.first_name }}<br/>
+              {{ student.email_address }}
+            </button>
+          </h2>
+          <div id="a{{ student.id }}" class="accordion-collapse collapse"
+            aria-labelledby="students-header" data-bs-parent="#accordion-students">
+            <div class="accordion-body">
+              <div class="container-fluid student-course-list">
+              <div class="row">
+              <ol class="list-group col-lg-6">
+                <li class="list-group-item"><h5>Prioritet</h5></li>
+                {% for student_course_request in student_course_requests %}
+                  {% if student_course_request.student == student %}
+                  <li class="list-group-item">
+                       {{ student_course_request.course }}
+                  </li>
+                  {% endif %}
+                {% endfor %}
+              </ol>
+              <ul class="col-lg-6">
+                <li class="list-group-item"><h5>Tildelt</h5></li>
+                {% for student_course_assignment in student_course_assignments %}
+                  {% if student_course_assignment.student == student %}
+                  <li class="list-group-item">
+                      {{ student_course_assignment.course }}
+                  </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+                  
                 <!-- Edit Student Modal -->
                 <div class="modal fade" id="editStudentModal{{student.id}}" tabindex="-1" aria-labelledby="editStudentModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
@@ -67,9 +68,8 @@
 
                       <form method="post" accept-charset="utf-8">
 
-                        {% csrf_token %}
-
                         <div class="modal-body">
+                          {% csrf_token %}
                           {{studentForm|crispy}}
                         </div>
                         <div class="modal-footer">
@@ -102,19 +102,18 @@
                   </div>
                 </div>
 
-            </ul>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+              </div> <!-- Row -->
+              </div> <!-- Container -->
+            </div> <!-- Accordion body -->
+          </div> <!-- Accordion collapse -->
+        </div> <!-- Accordion item -->
+      
 
       {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+      </div> <!-- Accordion card-body -->
+    </div> <!-- Row -->
+  </div> <!-- Container -->
+</div> <!-- Tab pane -->
 
 
 
@@ -146,11 +145,11 @@
 
 
 <!-- Import Student Modal -->
-<div class="modal fade" id="importStudentModal" tabindex="-1" aria-labelledby="importStudentModalLabel" aria-hidden="true">
+<div class="modal fade" id="importStudentsModal" tabindex="-1" aria-labelledby="importStudentsModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="importStudentModalLabel">Importer Elever</h5>
+        <h5 class="modal-title" id="importStudentsModalLabel">Importer Elever</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
