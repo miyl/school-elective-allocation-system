@@ -34,3 +34,5 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Only lint new or changed files - not the entire codebase every time
+          VALIDATE_ALL_CODEBASE: false
