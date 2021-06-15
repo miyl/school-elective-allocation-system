@@ -121,6 +121,11 @@ def assignment(request, item):
       courseForm = CourseForm(request.POST)
       if courseForm.is_valid():
         courseForm.save()
+    elif 'edit-course' in request.POST:
+      courseID = request.POST.get('courseid', None); 
+      Course.objects.filter(id=courseID).get()
+      if courseForm.is_valid():
+        courseForm.save()
     elif 'delete-course' in request.POST: 
       courseID = request.POST.get('courseid', None); 
       Course.objects.filter(id=courseID).delete()
