@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
-from .models import (Assignment, Student, Course, Student_Course_Request,
-     Student_Course_Assignment, Teacher, Criterion)
+from .models import (Assignment, Student, Course,
+     Student_Course_Association, Teacher, Criterion)
 from .forms import StudentForm, CriterionForm, CourseForm, AssignmentForm
 
 def index(request):
@@ -96,8 +96,7 @@ def assignment(request, item):
   courses = Course.objects.filter(assignment=item)
   # No direct foreign key to check on :/ :
   # Instead we check that the course matches one of the assignment courses
-  student_course_requests = Student_Course_Request.objects.filter(course__in=courses)
-  student_course_assignments = Student_Course_Assignment.objects.filter(course__in=courses)
+  student_course_associations = Student_Course_Association.objects.filter(course__in=courses)
   #criteria = Assignment.objects.get(pk=item)
 
   teachers = Teacher.objects.filter(school=school)
@@ -134,10 +133,9 @@ def assignment(request, item):
   # /FORMS
 
   context = {'assignment': assignment, 'students': students, 'courses':
-      courses, 'student_course_requests': student_course_requests,
-      'student_course_assignments': student_course_assignments, 'teachers':
-      teachers, 'studentForm': studentForm, 'criterionForm': criterionForm, 
-      'courseForm': courseForm
+      courses, 'student_course_associations': student_course_associations,
+      'teachers': teachers, 'studentForm': studentForm,
+      'criterionForm': criterionForm, 'courseForm': courseForm
   }
 
   return render(request, 'assignment.html', context)

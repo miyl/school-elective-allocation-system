@@ -1,7 +1,7 @@
 from django.contrib.admin import widgets
 from django.forms import ModelForm, ChoiceField, HiddenInput
-from .models import (Assignment, Student, Course, Student_Course_Request,
-     Student_Course_Assignment, Teacher, Criterion)
+from .models import (Assignment, Student, Course, Student_Course_Association,
+     Teacher, Criterion)
 
 # We want django admin's ManyToMany boxes instead of django's default
 from django.contrib.admin.widgets import FilteredSelectMultiple

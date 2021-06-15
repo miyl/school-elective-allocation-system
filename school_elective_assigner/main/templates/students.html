@@ -36,27 +36,28 @@
             <div class="accordion-body">
               <div class="container-fluid student-course-list">
               <div class="row">
-              <ol class="list-group col-lg-6">
-                <li class="list-group-item"><h5>Prioritet</h5></li>
-                {% for student_course_request in student_course_requests %}
-                  {% if student_course_request.student == student %}
-                  <li class="list-group-item">
-                       {{ student_course_request.course }}
-                  </li>
+              <table class='table table-striped'>
+                <thead class='thead-dark'>
+                  <tr>
+                    <td><h5>Prioritet</h5></td>
+                    <td><h5>Tildelt</h5></td>
+                  </tr>
+                </thead>
+                {% for student_course_association in student_course_associations %}
+                  {% if student_course_association.student == student %}
+                    <tr>
+                      <td>
+                          {{ student_course_association.course }}
+                      </td>
+                      <td>
+                        {% if student_course_association.assigned %}
+                          <img src="/static/libs/node/node_modules/bootstrap-icons/icons/check-circle.svg" alt="Bootstrap" width="20" height="20">
+                        {% endif %}
+                      </td>
+                    </tr>
                   {% endif %}
                 {% endfor %}
-              </ol>
-              <ul class="col-lg-6">
-                <li class="list-group-item"><h5>Tildelt</h5></li>
-                {% for student_course_assignment in student_course_assignments %}
-                  {% if student_course_assignment.student == student %}
-                  <li class="list-group-item">
-                      {{ student_course_assignment.course }}
-                  </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-
+              </table>
               </div> <!-- Row -->
               </div> <!-- Container -->
             </div> <!-- Accordion body -->

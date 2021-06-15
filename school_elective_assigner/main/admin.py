@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (
-  Student, Teacher, Course, Student_Course_Request,
-  Student_Course_Assignment, Criterion, School, Assignment)
+  Student, Teacher, Course, Student_Course_Association,
+  Criterion, School, Assignment)
 
 # Register your models here.
 
@@ -17,11 +17,7 @@ class TeacherAdmin(admin.ModelAdmin):
 class CourseAdmin(admin.ModelAdmin):
   pass
 
-@admin.register(Student_Course_Request)
-class Student_Course_RequestAdmin(admin.ModelAdmin):
-  pass
-
-@admin.register(Student_Course_Assignment)
+@admin.register(Student_Course_Association)
 class Student_Course_AssignmentAdmin(admin.ModelAdmin):
   pass
 

@@ -44,29 +44,19 @@ class Course(models.Model):
   def __str__(self):
     return self.name
 
-class Student_Course_Request(models.Model):
+class Student_Course_Association(models.Model):
   priority = models.PositiveSmallIntegerField()
 
   course = models.ForeignKey('Course', on_delete=models.CASCADE)
   student = models.ForeignKey('Student', on_delete=models.CASCADE)
+  assigned = models.BooleanField(default=False)
 
   class Meta:
-    verbose_name='Student Course Request'
+    verbose_name='Student Course Association'
     ordering = ['-priority']
 
   def __str__(self):
     return str(self.student) + " - " + str(self.course) + ": " + str(self.priority)
-
-# Only has foreign keys
-class Student_Course_Assignment(models.Model):
-  course = models.ForeignKey('Course', on_delete=models.CASCADE)
-  student = models.ForeignKey('Student', on_delete=models.CASCADE)
-
-  class Meta:
-    verbose_name='Student Course Assignment'
-
-  def __str__(self):
-    return str(self.student) + " - " + str(self.course)
 
 class Criterion(models.Model):
   type = models.PositiveSmallIntegerField(choices=TYPES)
