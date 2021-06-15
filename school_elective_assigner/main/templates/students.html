@@ -56,57 +56,57 @@
                   {% endif %}
                 {% endfor %}
               </ul>
-                  
-                <!-- Edit Student Modal -->
-                <div class="modal fade" id="editStudentModal{{student.id}}" tabindex="-1" aria-labelledby="editStudentModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="editStudentModalLabel">Rediger {{student}}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-
-                      <form method="post" accept-charset="utf-8">
-
-                        <div class="modal-body">
-                          {% csrf_token %}
-                          {{studentForm|crispy}}
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                          <input type="submit" value="Gem Redigeringer" name="edit-student" class="btn btn-primary">
-                        </div>
-                      </form>
-
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Delete Student Popup-ish -->
-                <div class="modal fade" id="deleteStudentModal{{student.id}}" tabindex="-1" aria-labelledby="deleteStudentModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="deleteStudentModalLabel">Slet {{student}}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <form method="post" accept-charset="utf-8">
-                        {% csrf_token %}
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                          <input type="hidden" name="studentid" value="{{student.id}}">
-                          <input type="submit" value="Slet student" name="delete-student" class="btn btn-danger">  
-                        </div> 
-                      </form>
-                    </div>
-                  </div>
-                </div>
 
               </div> <!-- Row -->
               </div> <!-- Container -->
             </div> <!-- Accordion body -->
           </div> <!-- Accordion collapse -->
         </div> <!-- Accordion item -->
+                  
+        <!-- Edit Student Modal -->
+        <div class="modal fade" id="editStudentModal{{student.id}}" tabindex="-1" aria-labelledby="editStudentModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editStudentModalLabel">Rediger {{student}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post" accept-charset="utf-8">
+
+                {% csrf_token %}
+
+                <div class="modal-body">
+                  {{studentForm|crispy}}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                  <input type="submit" value="Gem Redigeringer" name="edit-student" class="btn btn-primary">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delete Student Popup-ish -->
+        <div class="modal fade" id="deleteStudentModal{{student.id}}" tabindex="-1"
+                                                                      aria-labelledby="deleteStudentModalLabel{{student.id}}" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteStudentModalLabel{{student.id}}">Slet {{student}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post" accept-charset="utf-8">
+                {% csrf_token %}
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                  <input type="hidden" name="studentid" value="{{student.id}}">
+                  <input type="submit" value="Slet student" name="delete-student" class="btn btn-danger">  
+                </div> 
+              </form>
+            </div>
+          </div>
+        </div>
       
 
       {% endfor %}
