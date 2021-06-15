@@ -61,12 +61,10 @@
 
 .icon_edit_stud {
     right: 10%;
-    transform: translate(-60%);
 }
 
 .icon_del_stud {
     right: 8%;
-    transform: translate(-45%);
 
 }
 
@@ -79,35 +77,31 @@
 }
 
 .icon_edit_res {
-    right: 5%;
+    right: 7%;
 }
 
 .icon_del_res {
-    right: 3%;
+    right: 4%;
 }
 
 .icon_edit_cour {
-  right: 9.5%;
-  transform: translate(-10%);
+  right: 11.5%;
 }
 
 .icon_del_cour {
-  right: 7.5%;
-  transform: translate(-30%);
+  right: 8.5%;
 }
 
 .icon_edit_assign {
   right: 11.5%;
-  transform: translate(-10%);
 }
 
 .icon_del_assign {
-  right: 8.5%;
-  transform: translate(-30%);
+  right: 9%;
 }
 
 .icon_absolute {
-  display:inline-block;
+  display: inline-block;
   position: absolute;
   border: none;
   background: transparent;
@@ -121,4 +115,8 @@
 
 .margin_top {
   margin-top: 3%;
+}
+
+.icon_view_pri_side {
+  right: 3%
 }

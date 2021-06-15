@@ -1,11 +1,18 @@
+{% load static %}  
   <div class="tab-pane fade show active margin_top" id="status" role="tabpanel" aria-labelledby="status-tab">
     <ul class="list-group col-lg-10 mx-auto">
       <li class="list-group-item">Kurser: {{ courses|length }}</li>
       <li class="list-group-item">Elever: {{ students|length }}</li>
       <li class="list-group-item">Kriterier: {{ criteria|length }}</li>
       <li class="list-group-item">Deadline: {{ assignment.deadline }}</li>
-      <li class="list-group-item">Design prioriteringsside</li>
-      <li class="list-group-item">Design e-mail-invitation</li>
-      <li class="list-group-item">Design e-mail-påmindelse</li>
+      <li class="list-group-item">Design prioriteringsside
+        <button class="icon_view_pri_side icon_absolute" data-bs-toggle="modal" data-bs-target=""><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+      </li>
+      <li class="list-group-item">Design e-mail-invitation
+        <button class="icon_view_pri_side icon_absolute" data-bs-toggle="modal" data-bs-target=""><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+      </li>
+      <li class="list-group-item">Design e-mail-påmindelse
+        <button class="icon_view_pri_side icon_absolute" data-bs-toggle="modal" data-bs-target=""><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+      </li>
     </ul>
   </div>
