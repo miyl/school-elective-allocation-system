@@ -183,3 +183,45 @@ def assignment(request, item):
 #
 #        context['progresses'] = self.progresses
 #        return context
+
+
+
+# Export student course assignments
+# https://docs.djangoproject.com/en/3.2/howto/outputting-csv/
+import csv
+
+from django.http import StreamingHttpResponse
+
+class Echo:
+    """An object that implements just the write method of the file-like
+    interface.
+    """
+    def write(self, value):
+        """Write the value by returning it, instead of storing in a buffer."""
+        return value
+
+def dl_csv(request, item):
+    """A view that streams a large CSV file."""
+
+    assignment = Assignment.objects.get(pk=item)
+    students = Student.objects.filter(assignment=item)
+    # No direct foreign key to check on :/ :
+    # Instead we check that the course matches one of the assignment courses
+    #student_course_associations = Student_Course_Association.objects.filter(student__in=students).order_by('student')
+    student_course_associations = Student_Course_Association.objects.filter(student__in=students)
+    rows = []
+    for st in students:
+      courses_assigned = []
+      for sca in student_course_associations:
+        if sca.student == st and sca.assigned:
+          courses_assigned.append(sca.course.name)
+
+      rows.append((st.email_address, ",".join(courses_assigned)))
+
+    pseudo_buffer = Echo()
+    writer = csv.writer(pseudo_buffer)
+    return StreamingHttpResponse(
+        (writer.writerow(row) for row in rows),
+        content_type="text/csv",
+        headers={'Content-Disposition': 'attachment; filename="courses-assigned.csv"'},
+    )
