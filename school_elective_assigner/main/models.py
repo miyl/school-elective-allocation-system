@@ -53,7 +53,7 @@ class Student_Course_Association(models.Model):
 
   class Meta:
     verbose_name='Student Course Association'
-    ordering = ['-priority']
+    ordering = ['priority']
 
   def __str__(self):
     return str(self.student) + " - " + str(self.course) + ": " + str(self.priority)
