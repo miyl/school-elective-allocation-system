@@ -2039,1996 +2039,6 @@
 },
 {
   "model": "main.student",
-  "pk": 401,
-  "fields": {
-    "first_name": "Snebjørn Vanceer",
-    "email_address": "Snebjørn Vanceer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 402,
-  "fields": {
-    "first_name": "Jonne Abinessen",
-    "email_address": "Jonne Abinessen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 403,
-  "fields": {
-    "first_name": "Idun Sibesen",
-    "email_address": "Idun Sibesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 404,
-  "fields": {
-    "first_name": "Elesser Annjaer",
-    "email_address": "Elesser Annjaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 405,
-  "fields": {
-    "first_name": "Fazile Yasminsen",
-    "email_address": "Fazile Yasminsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 406,
-  "fields": {
-    "first_name": "Ese Camoner",
-    "email_address": "Ese Camoner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 407,
-  "fields": {
-    "first_name": "Inarose Lemafsen",
-    "email_address": "Inarose Lemafsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 408,
-  "fields": {
-    "first_name": "Pablo Tedsen",
-    "email_address": "Pablo Tedsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 409,
-  "fields": {
-    "first_name": "Find Ksenijaer",
-    "email_address": "Find Ksenijaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 410,
-  "fields": {
-    "first_name": "Cristina Eqrasen",
-    "email_address": "Cristina Eqrasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 411,
-  "fields": {
-    "first_name": "Saswin Yunzesen",
-    "email_address": "Saswin Yunzesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 412,
-  "fields": {
-    "first_name": "Aleksandrovna Benonisen",
-    "email_address": "Aleksandrovna Benonisen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 413,
-  "fields": {
-    "first_name": "Fjölnir Sathurijansen",
-    "email_address": "Fjölnir Sathurijansen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 414,
-  "fields": {
-    "first_name": "Nicki Jaxonsen",
-    "email_address": "Nicki Jaxonsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 415,
-  "fields": {
-    "first_name": "Juka Ammaraer",
-    "email_address": "Juka Ammaraer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 416,
-  "fields": {
-    "first_name": "Zenani Namer",
-    "email_address": "Zenani Namer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 417,
-  "fields": {
-    "first_name": "Frilo Neliuser",
-    "email_address": "Frilo Neliuser@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 418,
-  "fields": {
-    "first_name": "Siranne Sanaasen",
-    "email_address": "Siranne Sanaasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 419,
-  "fields": {
-    "first_name": "Lihua Melisen",
-    "email_address": "Lihua Melisen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 420,
-  "fields": {
-    "first_name": "Pelo Yacquubsen",
-    "email_address": "Pelo Yacquubsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 421,
-  "fields": {
-    "first_name": "Satheesh Komronsen",
-    "email_address": "Satheesh Komronsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 422,
-  "fields": {
-    "first_name": "Julijann Malioer",
-    "email_address": "Julijann Malioer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 423,
-  "fields": {
-    "first_name": "Sviatoslav Cumarer",
-    "email_address": "Sviatoslav Cumarer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 424,
-  "fields": {
-    "first_name": "Maalita Adiyaer",
-    "email_address": "Maalita Adiyaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 425,
-  "fields": {
-    "first_name": "Ísól Chandraer",
-    "email_address": "Ísól Chandraer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 426,
-  "fields": {
-    "first_name": "Utham Zakaullahsen",
-    "email_address": "Utham Zakaullahsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 427,
-  "fields": {
-    "first_name": "Millash Amiliesen",
-    "email_address": "Millash Amiliesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 428,
-  "fields": {
-    "first_name": "Mosbah Patricker",
-    "email_address": "Mosbah Patricker@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 429,
-  "fields": {
-    "first_name": "Cecilia Ameenaher",
-    "email_address": "Cecilia Ameenaher@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 430,
-  "fields": {
-    "first_name": "Lidan Hernsen",
-    "email_address": "Lidan Hernsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 431,
-  "fields": {
-    "first_name": "Azma Mihlaser",
-    "email_address": "Azma Mihlaser@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 432,
-  "fields": {
-    "first_name": "Setayesh Hellenesen",
-    "email_address": "Setayesh Hellenesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 433,
-  "fields": {
-    "first_name": "Mowgli Kuukuer",
-    "email_address": "Mowgli Kuukuer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 434,
-  "fields": {
-    "first_name": "Lavrs Elahisen",
-    "email_address": "Lavrs Elahisen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 435,
-  "fields": {
-    "first_name": "Jørg Lousen",
-    "email_address": "Jørg Lousen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 436,
-  "fields": {
-    "first_name": "Cilie Vamansen",
-    "email_address": "Cilie Vamansen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 437,
-  "fields": {
-    "first_name": "Danna Svenågeer",
-    "email_address": "Danna Svenågeer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 438,
-  "fields": {
-    "first_name": "Naniqua Gülüzarer",
-    "email_address": "Naniqua Gülüzarer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 439,
-  "fields": {
-    "first_name": "Ivalo Marilyner",
-    "email_address": "Ivalo Marilyner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 440,
-  "fields": {
-    "first_name": "Jashanpreet Boroujer",
-    "email_address": "Jashanpreet Boroujer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 441,
-  "fields": {
-    "first_name": "Hild Suser",
-    "email_address": "Hild Suser@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 442,
-  "fields": {
-    "first_name": "Britain Avonsen",
-    "email_address": "Britain Avonsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 443,
-  "fields": {
-    "first_name": "Otilija Deynazer",
-    "email_address": "Otilija Deynazer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 444,
-  "fields": {
-    "first_name": "Janny Zakieer",
-    "email_address": "Janny Zakieer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 445,
-  "fields": {
-    "first_name": "Bukurije Arijuser",
-    "email_address": "Bukurije Arijuser@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 446,
-  "fields": {
-    "first_name": "Ünal Bioner",
-    "email_address": "Ünal Bioner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 447,
-  "fields": {
-    "first_name": "Nawin Chinemeremer",
-    "email_address": "Nawin Chinemeremer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 448,
-  "fields": {
-    "first_name": "Qirrat Meriamsen",
-    "email_address": "Qirrat Meriamsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 449,
-  "fields": {
-    "first_name": "Adeel Vrindasen",
-    "email_address": "Adeel Vrindasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 450,
-  "fields": {
-    "first_name": "Gaëlle Zbyszkosen",
-    "email_address": "Gaëlle Zbyszkosen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 451,
-  "fields": {
-    "first_name": "Mylis Rudyer",
-    "email_address": "Mylis Rudyer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 452,
-  "fields": {
-    "first_name": "Huxi Khatabsen",
-    "email_address": "Huxi Khatabsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 453,
-  "fields": {
-    "first_name": "Mileja Neikaer",
-    "email_address": "Mileja Neikaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 454,
-  "fields": {
-    "first_name": "Lavrits Aurialer",
-    "email_address": "Lavrits Aurialer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 455,
-  "fields": {
-    "first_name": "Arianah Subhahsen",
-    "email_address": "Arianah Subhahsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 456,
-  "fields": {
-    "first_name": "Idah Shantésen",
-    "email_address": "Idah Shantésen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 457,
-  "fields": {
-    "first_name": "Hezha Inorer",
-    "email_address": "Hezha Inorer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 458,
-  "fields": {
-    "first_name": "Omowonuola Sofiemajer",
-    "email_address": "Omowonuola Sofiemajer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 459,
-  "fields": {
-    "first_name": "Sigfrede Hensiasen",
-    "email_address": "Sigfrede Hensiasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 460,
-  "fields": {
-    "first_name": "Alexandros Mettemarriesen",
-    "email_address": "Alexandros Mettemarriesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 461,
-  "fields": {
-    "first_name": "Alira Asemsen",
-    "email_address": "Alira Asemsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 462,
-  "fields": {
-    "first_name": "Dortine Ogbemudiasen",
-    "email_address": "Dortine Ogbemudiasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 463,
-  "fields": {
-    "first_name": "Isaias Figliaer",
-    "email_address": "Isaias Figliaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 464,
-  "fields": {
-    "first_name": "Maica Wardanisen",
-    "email_address": "Maica Wardanisen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 465,
-  "fields": {
-    "first_name": "Steffani Franchsen",
-    "email_address": "Steffani Franchsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 466,
-  "fields": {
-    "first_name": "Samsor Hazhaer",
-    "email_address": "Samsor Hazhaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 467,
-  "fields": {
-    "first_name": "Nishwin Kiwalier",
-    "email_address": "Nishwin Kiwalier@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 468,
-  "fields": {
-    "first_name": "Curtis Suraer",
-    "email_address": "Curtis Suraer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 469,
-  "fields": {
-    "first_name": "Fridamarie Gunashsen",
-    "email_address": "Fridamarie Gunashsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 470,
-  "fields": {
-    "first_name": "Sprint Nociner",
-    "email_address": "Sprint Nociner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 471,
-  "fields": {
-    "first_name": "Priskilla Alvildeer",
-    "email_address": "Priskilla Alvildeer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 472,
-  "fields": {
-    "first_name": "Jedediah Olalereer",
-    "email_address": "Jedediah Olalereer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 473,
-  "fields": {
-    "first_name": "Dorah Nazeniner",
-    "email_address": "Dorah Nazeniner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 474,
-  "fields": {
-    "first_name": "Marquard Erqinger",
-    "email_address": "Marquard Erqinger@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 475,
-  "fields": {
-    "first_name": "Sibtain Arviesen",
-    "email_address": "Sibtain Arviesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 476,
-  "fields": {
-    "first_name": "Ewuradwoa Rumater",
-    "email_address": "Ewuradwoa Rumater@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 477,
-  "fields": {
-    "first_name": "Bijørcka Elizer",
-    "email_address": "Bijørcka Elizer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 478,
-  "fields": {
-    "first_name": "Elliinemariae Shejlasen",
-    "email_address": "Elliinemariae Shejlasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 479,
-  "fields": {
-    "first_name": "Milon Sajider",
-    "email_address": "Milon Sajider@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 480,
-  "fields": {
-    "first_name": "Felora Morissasen",
-    "email_address": "Felora Morissasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 481,
-  "fields": {
-    "first_name": "Karmiga Aylinaer",
-    "email_address": "Karmiga Aylinaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 482,
-  "fields": {
-    "first_name": "Wanjiku Aslinesen",
-    "email_address": "Wanjiku Aslinesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 483,
-  "fields": {
-    "first_name": "Ismini Heyaber",
-    "email_address": "Ismini Heyaber@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 484,
-  "fields": {
-    "first_name": "Boanna Belesasen",
-    "email_address": "Boanna Belesasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 485,
-  "fields": {
-    "first_name": "Trym Sólveigsen",
-    "email_address": "Trym Sólveigsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 486,
-  "fields": {
-    "first_name": "Assinat Metzeniaer",
-    "email_address": "Assinat Metzeniaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 487,
-  "fields": {
-    "first_name": "Ezriel Anaëler",
-    "email_address": "Ezriel Anaëler@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 488,
-  "fields": {
-    "first_name": "Phuoc Gyrilder",
-    "email_address": "Phuoc Gyrilder@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 489,
-  "fields": {
-    "first_name": "Ondieneke Kaesen",
-    "email_address": "Ondieneke Kaesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 490,
-  "fields": {
-    "first_name": "Ardel Solbjørgsen",
-    "email_address": "Ardel Solbjørgsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 491,
-  "fields": {
-    "first_name": "Salavdi Christoffer",
-    "email_address": "Salavdi Christoffer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 492,
-  "fields": {
-    "first_name": "Nasra Renaser",
-    "email_address": "Nasra Renaser@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 493,
-  "fields": {
-    "first_name": "Selda Maikaer",
-    "email_address": "Selda Maikaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 494,
-  "fields": {
-    "first_name": "Nilofar Karinneer",
-    "email_address": "Nilofar Karinneer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 495,
-  "fields": {
-    "first_name": "Ujana Salinjaer",
-    "email_address": "Ujana Salinjaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 496,
-  "fields": {
-    "first_name": "Seung Óðinnsen",
-    "email_address": "Seung Óðinnsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 497,
-  "fields": {
-    "first_name": "Léticia Tóbiassen",
-    "email_address": "Léticia Tóbiassen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 498,
-  "fields": {
-    "first_name": "Reza Nataljasen",
-    "email_address": "Reza Nataljasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 499,
-  "fields": {
-    "first_name": "Ajda Filucca Neseer",
-    "email_address": "Ajda Filucca Neseer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 500,
-  "fields": {
-    "first_name": "Mino Ameyáer",
-    "email_address": "Mino Ameyáer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 501,
-  "fields": {
-    "first_name": "Nimco Muskasen",
-    "email_address": "Nimco Muskasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 502,
-  "fields": {
-    "first_name": "Merida Neryssen",
-    "email_address": "Merida Neryssen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 503,
-  "fields": {
-    "first_name": "Nesli Yadgarer",
-    "email_address": "Nesli Yadgarer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 504,
-  "fields": {
-    "first_name": "Princess Melanijaer",
-    "email_address": "Princess Melanijaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 505,
-  "fields": {
-    "first_name": "Waclaw Nournisaer",
-    "email_address": "Waclaw Nournisaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 506,
-  "fields": {
-    "first_name": "Heinhtet Oluwadamifolasen",
-    "email_address": "Heinhtet Oluwadamifolasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 507,
-  "fields": {
-    "first_name": "Diart Theradaer",
-    "email_address": "Diart Theradaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 508,
-  "fields": {
-    "first_name": "Emaliih Idunaer",
-    "email_address": "Emaliih Idunaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 509,
-  "fields": {
-    "first_name": "Marlenemaija Tammesen",
-    "email_address": "Marlenemaija Tammesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 510,
-  "fields": {
-    "first_name": "Ingelina Barisen",
-    "email_address": "Ingelina Barisen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 511,
-  "fields": {
-    "first_name": "Kalliopi Lesen",
-    "email_address": "Kalliopi Lesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 512,
-  "fields": {
-    "first_name": "Maleeha Scarleter",
-    "email_address": "Maleeha Scarleter@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 513,
-  "fields": {
-    "first_name": "Dmitrij Jonatthaner",
-    "email_address": "Dmitrij Jonatthaner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 514,
-  "fields": {
-    "first_name": "Richardt Saayier",
-    "email_address": "Richardt Saayier@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 515,
-  "fields": {
-    "first_name": "Ute Mahisen",
-    "email_address": "Ute Mahisen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 516,
-  "fields": {
-    "first_name": "Boel Róaer",
-    "email_address": "Boel Róaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 517,
-  "fields": {
-    "first_name": "Beda Abraazer",
-    "email_address": "Beda Abraazer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 518,
-  "fields": {
-    "first_name": "Nieklas Renèeer",
-    "email_address": "Nieklas Renèeer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 519,
-  "fields": {
-    "first_name": "Dalniya Jasminesen",
-    "email_address": "Dalniya Jasminesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 520,
-  "fields": {
-    "first_name": "Suchen Zeeshaner",
-    "email_address": "Suchen Zeeshaner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 521,
-  "fields": {
-    "first_name": "Emannuelle Panditasen",
-    "email_address": "Emannuelle Panditasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 522,
-  "fields": {
-    "first_name": "Bentebet Frenkyer",
-    "email_address": "Bentebet Frenkyer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 523,
-  "fields": {
-    "first_name": "Anay Chanieler",
-    "email_address": "Anay Chanieler@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 524,
-  "fields": {
-    "first_name": "Reinna Isiaher",
-    "email_address": "Reinna Isiaher@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 525,
-  "fields": {
-    "first_name": "Qolam Laweker",
-    "email_address": "Qolam Laweker@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 526,
-  "fields": {
-    "first_name": "Chadia Selmersen",
-    "email_address": "Chadia Selmersen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 527,
-  "fields": {
-    "first_name": "Tianyou Corinthasen",
-    "email_address": "Tianyou Corinthasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 528,
-  "fields": {
-    "first_name": "Dynnes Lisemariasen",
-    "email_address": "Dynnes Lisemariasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 529,
-  "fields": {
-    "first_name": "Nadrey Chimaer",
-    "email_address": "Nadrey Chimaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 530,
-  "fields": {
-    "first_name": "Belma Rashidaer",
-    "email_address": "Belma Rashidaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 531,
-  "fields": {
-    "first_name": "Dennise Ninwetasen",
-    "email_address": "Dennise Ninwetasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 532,
-  "fields": {
-    "first_name": "Xemgin Omransen",
-    "email_address": "Xemgin Omransen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 533,
-  "fields": {
-    "first_name": "Danayt Ilmier",
-    "email_address": "Danayt Ilmier@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 534,
-  "fields": {
-    "first_name": "Naimisha Leeanner",
-    "email_address": "Naimisha Leeanner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 535,
-  "fields": {
-    "first_name": "Libaan Sudeysier",
-    "email_address": "Libaan Sudeysier@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 536,
-  "fields": {
-    "first_name": "Jolle Emrahnsen",
-    "email_address": "Jolle Emrahnsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 537,
-  "fields": {
-    "first_name": "Ghassan Lansanaer",
-    "email_address": "Ghassan Lansanaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 538,
-  "fields": {
-    "first_name": "Loong Zagroser",
-    "email_address": "Loong Zagroser@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 539,
-  "fields": {
-    "first_name": "Ammund Shakilasen",
-    "email_address": "Ammund Shakilasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 540,
-  "fields": {
-    "first_name": "Mohamedburhan Nissaner",
-    "email_address": "Mohamedburhan Nissaner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 541,
-  "fields": {
-    "first_name": "Johannes Tchaisen",
-    "email_address": "Johannes Tchaisen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 542,
-  "fields": {
-    "first_name": "Adonias Asminer",
-    "email_address": "Adonias Asminer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 543,
-  "fields": {
-    "first_name": "Nicolás Vitaliysen",
-    "email_address": "Nicolás Vitaliysen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 544,
-  "fields": {
-    "first_name": "Torstein Golrizer",
-    "email_address": "Torstein Golrizer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 545,
-  "fields": {
-    "first_name": "Lizetta Niniolusen",
-    "email_address": "Lizetta Niniolusen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 546,
-  "fields": {
-    "first_name": "Tuperna Eduer",
-    "email_address": "Tuperna Eduer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 547,
-  "fields": {
-    "first_name": "Enfa Friboer",
-    "email_address": "Enfa Friboer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 548,
-  "fields": {
-    "first_name": "Mendija Lugher",
-    "email_address": "Mendija Lugher@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 549,
-  "fields": {
-    "first_name": "Athari Yoanasen",
-    "email_address": "Athari Yoanasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 550,
-  "fields": {
-    "first_name": "Bowie Qaderer",
-    "email_address": "Bowie Qaderer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 551,
-  "fields": {
-    "first_name": "Andie Bogger",
-    "email_address": "Andie Bogger@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 552,
-  "fields": {
-    "first_name": "Imme Zhasminer",
-    "email_address": "Imme Zhasminer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 553,
-  "fields": {
-    "first_name": "Lela Maksimiliansen",
-    "email_address": "Lela Maksimiliansen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 554,
-  "fields": {
-    "first_name": "Hedda Aiyannaher",
-    "email_address": "Hedda Aiyannaher@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 555,
-  "fields": {
-    "first_name": "Thorer Arvidasen",
-    "email_address": "Thorer Arvidasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 556,
-  "fields": {
-    "first_name": "Lilyas Akilesher",
-    "email_address": "Lilyas Akilesher@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 557,
-  "fields": {
-    "first_name": "Cjanell Zolsen",
-    "email_address": "Cjanell Zolsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 558,
-  "fields": {
-    "first_name": "Fatheen Embleer",
-    "email_address": "Fatheen Embleer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 559,
-  "fields": {
-    "first_name": "Witolda Merdinaer",
-    "email_address": "Witolda Merdinaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 560,
-  "fields": {
-    "first_name": "Doureid Tirdadsen",
-    "email_address": "Doureid Tirdadsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 561,
-  "fields": {
-    "first_name": "Butoyi Haïléer",
-    "email_address": "Butoyi Haïléer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 562,
-  "fields": {
-    "first_name": "Milya Huzaifasen",
-    "email_address": "Milya Huzaifasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 563,
-  "fields": {
-    "first_name": "Cilia Sejersen",
-    "email_address": "Cilia Sejersen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 564,
-  "fields": {
-    "first_name": "Umamah Waasemsen",
-    "email_address": "Umamah Waasemsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 565,
-  "fields": {
-    "first_name": "Dàibhidh Seanixsen",
-    "email_address": "Dàibhidh Seanixsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 566,
-  "fields": {
-    "first_name": "Mitat Refiasen",
-    "email_address": "Mitat Refiasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 567,
-  "fields": {
-    "first_name": "Rafaella Nattaliesen",
-    "email_address": "Rafaella Nattaliesen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 568,
-  "fields": {
-    "first_name": "Zeyneb Aleksandrsen",
-    "email_address": "Zeyneb Aleksandrsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 569,
-  "fields": {
-    "first_name": "Nasreen Kamilijasen",
-    "email_address": "Nasreen Kamilijasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 570,
-  "fields": {
-    "first_name": "Nayaab Daghsen",
-    "email_address": "Nayaab Daghsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 571,
-  "fields": {
-    "first_name": "Bento Parinaazsen",
-    "email_address": "Bento Parinaazsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 572,
-  "fields": {
-    "first_name": "Julija Khpulwaker",
-    "email_address": "Julija Khpulwaker@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 573,
-  "fields": {
-    "first_name": "Thoas Bubaer",
-    "email_address": "Thoas Bubaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 574,
-  "fields": {
-    "first_name": "Yaroslava Anezer",
-    "email_address": "Yaroslava Anezer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 575,
-  "fields": {
-    "first_name": "Kibe Lexier",
-    "email_address": "Kibe Lexier@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 576,
-  "fields": {
-    "first_name": "Reign Ashfaqueer",
-    "email_address": "Reign Ashfaqueer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 577,
-  "fields": {
-    "first_name": "Kanyechukwu Pemasen",
-    "email_address": "Kanyechukwu Pemasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 578,
-  "fields": {
-    "first_name": "Thomasine Hesedsen",
-    "email_address": "Thomasine Hesedsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 579,
-  "fields": {
-    "first_name": "Hans-Peter Thinasen",
-    "email_address": "Hans-Peter Thinasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 580,
-  "fields": {
-    "first_name": "Cillius Ægirer",
-    "email_address": "Cillius Ægirer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 581,
-  "fields": {
-    "first_name": "Mattías Abhiramer",
-    "email_address": "Mattías Abhiramer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 582,
-  "fields": {
-    "first_name": "Zyhrie Kristinnaer",
-    "email_address": "Zyhrie Kristinnaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 583,
-  "fields": {
-    "first_name": "Farheel Ævarer",
-    "email_address": "Farheel Ævarer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 584,
-  "fields": {
-    "first_name": "Mahshed Halimer",
-    "email_address": "Mahshed Halimer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 585,
-  "fields": {
-    "first_name": "Saeed Eljesaer",
-    "email_address": "Saeed Eljesaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 586,
-  "fields": {
-    "first_name": "Fotini Nonier",
-    "email_address": "Fotini Nonier@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 587,
-  "fields": {
-    "first_name": "Mirhan Eliecerer",
-    "email_address": "Mirhan Eliecerer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 588,
-  "fields": {
-    "first_name": "Lowe Bolqeiser",
-    "email_address": "Lowe Bolqeiser@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 589,
-  "fields": {
-    "first_name": "Sati Ferasen",
-    "email_address": "Sati Ferasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 590,
-  "fields": {
-    "first_name": "Norden Thorsteiner",
-    "email_address": "Norden Thorsteiner@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 591,
-  "fields": {
-    "first_name": "Lopunyak Hjarnsen",
-    "email_address": "Lopunyak Hjarnsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 592,
-  "fields": {
-    "first_name": "Lucius Inthuer",
-    "email_address": "Lucius Inthuer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 593,
-  "fields": {
-    "first_name": "Dodi Akeensen",
-    "email_address": "Dodi Akeensen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 594,
-  "fields": {
-    "first_name": "Salifyanji Mojoer",
-    "email_address": "Salifyanji Mojoer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 595,
-  "fields": {
-    "first_name": "Solomun Pranisaer",
-    "email_address": "Solomun Pranisaer@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 596,
-  "fields": {
-    "first_name": "Uthayakumar Herrisen",
-    "email_address": "Uthayakumar Herrisen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 597,
-  "fields": {
-    "first_name": "Tareena Arnulvsen",
-    "email_address": "Tareena Arnulvsen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 598,
-  "fields": {
-    "first_name": "Margelius Hóraldursen",
-    "email_address": "Margelius Hóraldursen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
-  "pk": 599,
-  "fields": {
-    "first_name": "Akim Stephaniasen",
-    "email_address": "Akim Stephaniasen@example.com",
-    "login_code": null,
-    "assignment": 2
-  }
-},
-{
-  "model": "main.student",
   "pk": 600,
   "fields": {
     "first_name": "Anéah Akselsen",
@@ -5033,1996 +3043,6 @@
   "fields": {
     "first_name": "Oline Nasiruler",
     "email_address": "Oline Nasiruler@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 701,
-  "fields": {
-    "first_name": "Sverri Christentzeer",
-    "email_address": "Sverri Christentzeer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 702,
-  "fields": {
-    "first_name": "Deanpenn Tristanasen",
-    "email_address": "Deanpenn Tristanasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 703,
-  "fields": {
-    "first_name": "Ejolf Syper",
-    "email_address": "Ejolf Syper@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 704,
-  "fields": {
-    "first_name": "Tutte Zitongsen",
-    "email_address": "Tutte Zitongsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 705,
-  "fields": {
-    "first_name": "Abdilatif Khaleshiaer",
-    "email_address": "Abdilatif Khaleshiaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 706,
-  "fields": {
-    "first_name": "Zafina Khizarer",
-    "email_address": "Zafina Khizarer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 707,
-  "fields": {
-    "first_name": "Juuliska Abdulraufsen",
-    "email_address": "Juuliska Abdulraufsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 708,
-  "fields": {
-    "first_name": "Akorede Aahaaner",
-    "email_address": "Akorede Aahaaner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 709,
-  "fields": {
-    "first_name": "Skylar Rexer",
-    "email_address": "Skylar Rexer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 710,
-  "fields": {
-    "first_name": "Gunvald Itielsen",
-    "email_address": "Gunvald Itielsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 711,
-  "fields": {
-    "first_name": "Zif Casmiraer",
-    "email_address": "Zif Casmiraer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 712,
-  "fields": {
-    "first_name": "Becca Naaer",
-    "email_address": "Becca Naaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 713,
-  "fields": {
-    "first_name": "Melael Baracksen",
-    "email_address": "Melael Baracksen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 714,
-  "fields": {
-    "first_name": "Eckardt Sampadaer",
-    "email_address": "Eckardt Sampadaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 715,
-  "fields": {
-    "first_name": "Tovelucka Albertinussen",
-    "email_address": "Tovelucka Albertinussen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 716,
-  "fields": {
-    "first_name": "Katelynn Aluelsen",
-    "email_address": "Katelynn Aluelsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 717,
-  "fields": {
-    "first_name": "Tanzeel Sidselier",
-    "email_address": "Tanzeel Sidselier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 718,
-  "fields": {
-    "first_name": "Wansheng Nukaakasen",
-    "email_address": "Wansheng Nukaakasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 719,
-  "fields": {
-    "first_name": "Laurance Phailinsen",
-    "email_address": "Laurance Phailinsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 720,
-  "fields": {
-    "first_name": "Alessandra Cicilijasen",
-    "email_address": "Alessandra Cicilijasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 721,
-  "fields": {
-    "first_name": "Fron Weronikasen",
-    "email_address": "Fron Weronikasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 722,
-  "fields": {
-    "first_name": "Linn Mannahsen",
-    "email_address": "Linn Mannahsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 723,
-  "fields": {
-    "first_name": "Abdelqadeem Kibalosen",
-    "email_address": "Abdelqadeem Kibalosen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 724,
-  "fields": {
-    "first_name": "Alvar Canyonsen",
-    "email_address": "Alvar Canyonsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 725,
-  "fields": {
-    "first_name": "Sheq Devider",
-    "email_address": "Sheq Devider@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 726,
-  "fields": {
-    "first_name": "Misgina Annalivaer",
-    "email_address": "Misgina Annalivaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 727,
-  "fields": {
-    "first_name": "Nuet Fehimsen",
-    "email_address": "Nuet Fehimsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 728,
-  "fields": {
-    "first_name": "Mursaleen Jassminasen",
-    "email_address": "Mursaleen Jassminasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 729,
-  "fields": {
-    "first_name": "Titt Marlensen",
-    "email_address": "Titt Marlensen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 730,
-  "fields": {
-    "first_name": "Mætte Castielsen",
-    "email_address": "Mætte Castielsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 731,
-  "fields": {
-    "first_name": "Anneli Selassieer",
-    "email_address": "Anneli Selassieer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 732,
-  "fields": {
-    "first_name": "Kiyomi Gutier",
-    "email_address": "Kiyomi Gutier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 733,
-  "fields": {
-    "first_name": "Eljesa Mantrassen",
-    "email_address": "Eljesa Mantrassen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 734,
-  "fields": {
-    "first_name": "Agahnifor Keremer",
-    "email_address": "Agahnifor Keremer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 735,
-  "fields": {
-    "first_name": "Tippi Nelaser",
-    "email_address": "Tippi Nelaser@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 736,
-  "fields": {
-    "first_name": "Cazpar Lorainesen",
-    "email_address": "Cazpar Lorainesen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 737,
-  "fields": {
-    "first_name": "Tajus Ellidaer",
-    "email_address": "Tajus Ellidaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 738,
-  "fields": {
-    "first_name": "Roshhat Alfriedesen",
-    "email_address": "Roshhat Alfriedesen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 739,
-  "fields": {
-    "first_name": "Samasti Wernasen",
-    "email_address": "Samasti Wernasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 740,
-  "fields": {
-    "first_name": "Nann Miravaer",
-    "email_address": "Nann Miravaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 741,
-  "fields": {
-    "first_name": "Rali Alvidasen",
-    "email_address": "Rali Alvidasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 742,
-  "fields": {
-    "first_name": "Emias Marchellesen",
-    "email_address": "Emias Marchellesen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 743,
-  "fields": {
-    "first_name": "Yabsra Hamodisen",
-    "email_address": "Yabsra Hamodisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 744,
-  "fields": {
-    "first_name": "Ondine Leoneer",
-    "email_address": "Ondine Leoneer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 745,
-  "fields": {
-    "first_name": "Obi Mokaiasen",
-    "email_address": "Obi Mokaiasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 746,
-  "fields": {
-    "first_name": "Flemmingray Nivarsen",
-    "email_address": "Flemmingray Nivarsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 747,
-  "fields": {
-    "first_name": "Elef Aishasen",
-    "email_address": "Elef Aishasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 748,
-  "fields": {
-    "first_name": "Sayanth Anestissen",
-    "email_address": "Sayanth Anestissen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 749,
-  "fields": {
-    "first_name": "Thong Minorisen",
-    "email_address": "Thong Minorisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 750,
-  "fields": {
-    "first_name": "Miko Wahaber",
-    "email_address": "Miko Wahaber@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 751,
-  "fields": {
-    "first_name": "Jia Ziliner",
-    "email_address": "Jia Ziliner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 752,
-  "fields": {
-    "first_name": "Janemaria Shinosen",
-    "email_address": "Janemaria Shinosen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 753,
-  "fields": {
-    "first_name": "Petje Ulrikesen",
-    "email_address": "Petje Ulrikesen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 754,
-  "fields": {
-    "first_name": "Bengt Eliaer",
-    "email_address": "Bengt Eliaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 755,
-  "fields": {
-    "first_name": "Walenty Gregorser",
-    "email_address": "Walenty Gregorser@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 756,
-  "fields": {
-    "first_name": "Muno Adolfinesen",
-    "email_address": "Muno Adolfinesen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 757,
-  "fields": {
-    "first_name": "Lathusa Torsteiner",
-    "email_address": "Lathusa Torsteiner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 758,
-  "fields": {
-    "first_name": "Pasqal Joudier",
-    "email_address": "Pasqal Joudier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 759,
-  "fields": {
-    "first_name": "Zuhrah Yalienasen",
-    "email_address": "Zuhrah Yalienasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 760,
-  "fields": {
-    "first_name": "Seiko Sigurter",
-    "email_address": "Seiko Sigurter@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 761,
-  "fields": {
-    "first_name": "Gerrith Steinnsen",
-    "email_address": "Gerrith Steinnsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 762,
-  "fields": {
-    "first_name": "Eldur Santosher",
-    "email_address": "Eldur Santosher@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 763,
-  "fields": {
-    "first_name": "Nader Wilbersen",
-    "email_address": "Nader Wilbersen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 764,
-  "fields": {
-    "first_name": "Hatip Jossen",
-    "email_address": "Hatip Jossen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 765,
-  "fields": {
-    "first_name": "Aavansh Davensen",
-    "email_address": "Aavansh Davensen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 766,
-  "fields": {
-    "first_name": "Warsama Betimsen",
-    "email_address": "Warsama Betimsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 767,
-  "fields": {
-    "first_name": "Rojhat Reduansen",
-    "email_address": "Rojhat Reduansen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 768,
-  "fields": {
-    "first_name": "Natnael Pavsen",
-    "email_address": "Natnael Pavsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 769,
-  "fields": {
-    "first_name": "Orestis Castellaer",
-    "email_address": "Orestis Castellaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 770,
-  "fields": {
-    "first_name": "Magdullah Diandiansen",
-    "email_address": "Magdullah Diandiansen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 771,
-  "fields": {
-    "first_name": "Darek Shahrzader",
-    "email_address": "Darek Shahrzader@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 772,
-  "fields": {
-    "first_name": "Solange Danilosen",
-    "email_address": "Solange Danilosen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 773,
-  "fields": {
-    "first_name": "Bedri Inuaer",
-    "email_address": "Bedri Inuaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 774,
-  "fields": {
-    "first_name": "Jace Vivianneer",
-    "email_address": "Jace Vivianneer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 775,
-  "fields": {
-    "first_name": "Ifrah Athishansen",
-    "email_address": "Ifrah Athishansen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 776,
-  "fields": {
-    "first_name": "Jagger Elyansen",
-    "email_address": "Jagger Elyansen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 777,
-  "fields": {
-    "first_name": "Xerxes Frederikksen",
-    "email_address": "Xerxes Frederikksen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 778,
-  "fields": {
-    "first_name": "Zelicia Miamaiaer",
-    "email_address": "Zelicia Miamaiaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 779,
-  "fields": {
-    "first_name": "Zarlasht Nalineer",
-    "email_address": "Zarlasht Nalineer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 780,
-  "fields": {
-    "first_name": "Pinar Rukajasen",
-    "email_address": "Pinar Rukajasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 781,
-  "fields": {
-    "first_name": "Guxi Zefiaer",
-    "email_address": "Guxi Zefiaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 782,
-  "fields": {
-    "first_name": "Alja Tubanursen",
-    "email_address": "Alja Tubanursen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 783,
-  "fields": {
-    "first_name": "Hanefi Sørinsen",
-    "email_address": "Hanefi Sørinsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 784,
-  "fields": {
-    "first_name": "Millemay Nehler",
-    "email_address": "Millemay Nehler@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 785,
-  "fields": {
-    "first_name": "Ermuunbileg Devarshisen",
-    "email_address": "Ermuunbileg Devarshisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 786,
-  "fields": {
-    "first_name": "Medox Thureer",
-    "email_address": "Medox Thureer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 787,
-  "fields": {
-    "first_name": "Xinan Riannasen",
-    "email_address": "Xinan Riannasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 788,
-  "fields": {
-    "first_name": "Daniar Ndalukaer",
-    "email_address": "Daniar Ndalukaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 789,
-  "fields": {
-    "first_name": "Baker Miqueler",
-    "email_address": "Baker Miqueler@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 790,
-  "fields": {
-    "first_name": "Djasper Deeqsen",
-    "email_address": "Djasper Deeqsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 791,
-  "fields": {
-    "first_name": "Aydina Märtaer",
-    "email_address": "Aydina Märtaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 792,
-  "fields": {
-    "first_name": "Kiona Kathysen",
-    "email_address": "Kiona Kathysen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 793,
-  "fields": {
-    "first_name": "Marijana Joruner",
-    "email_address": "Marijana Joruner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 794,
-  "fields": {
-    "first_name": "Idacaroline Gyðjaer",
-    "email_address": "Idacaroline Gyðjaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 795,
-  "fields": {
-    "first_name": "Thinna Vanadier",
-    "email_address": "Thinna Vanadier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 796,
-  "fields": {
-    "first_name": "Segë Suheylasen",
-    "email_address": "Segë Suheylasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 797,
-  "fields": {
-    "first_name": "Helli Mahzebsen",
-    "email_address": "Helli Mahzebsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 798,
-  "fields": {
-    "first_name": "Karen-Lisbeth Aristossen",
-    "email_address": "Karen-Lisbeth Aristossen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 799,
-  "fields": {
-    "first_name": "Vally Dàibhidhsen",
-    "email_address": "Vally Dàibhidhsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 800,
-  "fields": {
-    "first_name": "Razdan Nikkosen",
-    "email_address": "Razdan Nikkosen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 801,
-  "fields": {
-    "first_name": "Nils-Erik Samiéler",
-    "email_address": "Nils-Erik Samiéler@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 802,
-  "fields": {
-    "first_name": "Ashvitha Zharaer",
-    "email_address": "Ashvitha Zharaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 803,
-  "fields": {
-    "first_name": "Ah Alciraer",
-    "email_address": "Ah Alciraer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 804,
-  "fields": {
-    "first_name": "Gianluca Moskansen",
-    "email_address": "Gianluca Moskansen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 805,
-  "fields": {
-    "first_name": "Gittemarija Itsukisen",
-    "email_address": "Gittemarija Itsukisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 806,
-  "fields": {
-    "first_name": "Evaana Atzersen",
-    "email_address": "Evaana Atzersen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 807,
-  "fields": {
-    "first_name": "Malou Sylvanoer",
-    "email_address": "Malou Sylvanoer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 808,
-  "fields": {
-    "first_name": "Arthira Piaaliceer",
-    "email_address": "Arthira Piaaliceer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 809,
-  "fields": {
-    "first_name": "Zeyad Rufaeler",
-    "email_address": "Zeyad Rufaeler@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 810,
-  "fields": {
-    "first_name": "Terry Igaer",
-    "email_address": "Terry Igaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 811,
-  "fields": {
-    "first_name": "Myriam Suyansen",
-    "email_address": "Myriam Suyansen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 812,
-  "fields": {
-    "first_name": "Janice Ianiser",
-    "email_address": "Janice Ianiser@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 813,
-  "fields": {
-    "first_name": "Bailey Avalinner",
-    "email_address": "Bailey Avalinner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 814,
-  "fields": {
-    "first_name": "Arlina Léanesen",
-    "email_address": "Arlina Léanesen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 815,
-  "fields": {
-    "first_name": "Tomaz Moeidurer",
-    "email_address": "Tomaz Moeidurer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 816,
-  "fields": {
-    "first_name": "Jakobine Hijiraer",
-    "email_address": "Jakobine Hijiraer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 817,
-  "fields": {
-    "first_name": "Varinka Edoner",
-    "email_address": "Varinka Edoner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 818,
-  "fields": {
-    "first_name": "Bagus Leannier",
-    "email_address": "Bagus Leannier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 819,
-  "fields": {
-    "first_name": "Idrez Réjuser",
-    "email_address": "Idrez Réjuser@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 820,
-  "fields": {
-    "first_name": "Musette Jaronsen",
-    "email_address": "Musette Jaronsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 821,
-  "fields": {
-    "first_name": "Bor Joernsen",
-    "email_address": "Bor Joernsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 822,
-  "fields": {
-    "first_name": "Stela Ellioner",
-    "email_address": "Stela Ellioner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 823,
-  "fields": {
-    "first_name": "Nyakeh Xatûner",
-    "email_address": "Nyakeh Xatûner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 824,
-  "fields": {
-    "first_name": "Zulihan Tristoner",
-    "email_address": "Zulihan Tristoner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 825,
-  "fields": {
-    "first_name": "Aviuna Nismasen",
-    "email_address": "Aviuna Nismasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 826,
-  "fields": {
-    "first_name": "Lisemarih Tayyibesen",
-    "email_address": "Lisemarih Tayyibesen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 827,
-  "fields": {
-    "first_name": "Karola Jordankaer",
-    "email_address": "Karola Jordankaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 828,
-  "fields": {
-    "first_name": "Nasriin Ethlaer",
-    "email_address": "Nasriin Ethlaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 829,
-  "fields": {
-    "first_name": "Lona Marieanner",
-    "email_address": "Lona Marieanner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 830,
-  "fields": {
-    "first_name": "Imalea Lawender",
-    "email_address": "Imalea Lawender@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 831,
-  "fields": {
-    "first_name": "Ellienora Salitiper",
-    "email_address": "Ellienora Salitiper@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 832,
-  "fields": {
-    "first_name": "Tord Oluwabemiwoer",
-    "email_address": "Tord Oluwabemiwoer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 833,
-  "fields": {
-    "first_name": "Ferdaws Abdeer",
-    "email_address": "Ferdaws Abdeer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 834,
-  "fields": {
-    "first_name": "Simiyu Adinsen",
-    "email_address": "Simiyu Adinsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 835,
-  "fields": {
-    "first_name": "Sirin Bafrinsen",
-    "email_address": "Sirin Bafrinsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 836,
-  "fields": {
-    "first_name": "Stasa Bakoolsen",
-    "email_address": "Stasa Bakoolsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 837,
-  "fields": {
-    "first_name": "Delinde Tiposen",
-    "email_address": "Delinde Tiposen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 838,
-  "fields": {
-    "first_name": "Marillin Rajisen",
-    "email_address": "Marillin Rajisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 839,
-  "fields": {
-    "first_name": "Ayoub Fibier",
-    "email_address": "Ayoub Fibier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 840,
-  "fields": {
-    "first_name": "Kauthar Charaner",
-    "email_address": "Kauthar Charaner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 841,
-  "fields": {
-    "first_name": "Roxanne Muslimasen",
-    "email_address": "Roxanne Muslimasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 842,
-  "fields": {
-    "first_name": "Steffanie Mikolajer",
-    "email_address": "Steffanie Mikolajer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 843,
-  "fields": {
-    "first_name": "Ezatullah Ruizhisen",
-    "email_address": "Ezatullah Ruizhisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 844,
-  "fields": {
-    "first_name": "Marenthe Máirínsen",
-    "email_address": "Marenthe Máirínsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 845,
-  "fields": {
-    "first_name": "Mena Sanghitaer",
-    "email_address": "Mena Sanghitaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 846,
-  "fields": {
-    "first_name": "Esben Tejomayasen",
-    "email_address": "Esben Tejomayasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 847,
-  "fields": {
-    "first_name": "Jax Luhendesen",
-    "email_address": "Jax Luhendesen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 848,
-  "fields": {
-    "first_name": "Shahizar Dinnamilleer",
-    "email_address": "Shahizar Dinnamilleer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 849,
-  "fields": {
-    "first_name": "Hocine Betlehemsen",
-    "email_address": "Hocine Betlehemsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 850,
-  "fields": {
-    "first_name": "Saye Demiser",
-    "email_address": "Saye Demiser@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 851,
-  "fields": {
-    "first_name": "Miranur Cimberlysen",
-    "email_address": "Miranur Cimberlysen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 852,
-  "fields": {
-    "first_name": "Almalinda Shafier",
-    "email_address": "Almalinda Shafier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 853,
-  "fields": {
-    "first_name": "Abide Saidater",
-    "email_address": "Abide Saidater@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 854,
-  "fields": {
-    "first_name": "Anabirgit Afanwisen",
-    "email_address": "Anabirgit Afanwisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 855,
-  "fields": {
-    "first_name": "Saraki Esgirer",
-    "email_address": "Saraki Esgirer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 856,
-  "fields": {
-    "first_name": "Tamkeen Ayakaer",
-    "email_address": "Tamkeen Ayakaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 857,
-  "fields": {
-    "first_name": "Medeea Claudiaisabeller",
-    "email_address": "Medeea Claudiaisabeller@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 858,
-  "fields": {
-    "first_name": "Lanny Lieselsen",
-    "email_address": "Lanny Lieselsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 859,
-  "fields": {
-    "first_name": "Liv Shesalinaer",
-    "email_address": "Liv Shesalinaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 860,
-  "fields": {
-    "first_name": "Bindu Gentrimsen",
-    "email_address": "Bindu Gentrimsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 861,
-  "fields": {
-    "first_name": "Naiara Zygmunder",
-    "email_address": "Naiara Zygmunder@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 862,
-  "fields": {
-    "first_name": "Afaan Umisen",
-    "email_address": "Afaan Umisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 863,
-  "fields": {
-    "first_name": "Alvine Lasciniussen",
-    "email_address": "Alvine Lasciniussen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 864,
-  "fields": {
-    "first_name": "Kyler Barkaser",
-    "email_address": "Kyler Barkaser@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 865,
-  "fields": {
-    "first_name": "Mekonnen Tamirer",
-    "email_address": "Mekonnen Tamirer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 866,
-  "fields": {
-    "first_name": "Sam Geirer",
-    "email_address": "Sam Geirer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 867,
-  "fields": {
-    "first_name": "Egnon Mejleer",
-    "email_address": "Egnon Mejleer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 868,
-  "fields": {
-    "first_name": "Hting Alanasen",
-    "email_address": "Hting Alanasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 869,
-  "fields": {
-    "first_name": "Saeida Ilmeeyater",
-    "email_address": "Saeida Ilmeeyater@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 870,
-  "fields": {
-    "first_name": "Melius Assadullaher",
-    "email_address": "Melius Assadullaher@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 871,
-  "fields": {
-    "first_name": "Denia Racersen",
-    "email_address": "Denia Racersen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 872,
-  "fields": {
-    "first_name": "Yike Djowaner",
-    "email_address": "Yike Djowaner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 873,
-  "fields": {
-    "first_name": "Helia Zierer",
-    "email_address": "Helia Zierer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 874,
-  "fields": {
-    "first_name": "Blerona Síminer",
-    "email_address": "Blerona Síminer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 875,
-  "fields": {
-    "first_name": "Annmette Ayloer",
-    "email_address": "Annmette Ayloer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 876,
-  "fields": {
-    "first_name": "Legolas Birteer",
-    "email_address": "Legolas Birteer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 877,
-  "fields": {
-    "first_name": "Ramund Taymiyasen",
-    "email_address": "Ramund Taymiyasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 878,
-  "fields": {
-    "first_name": "Reka Amiyassen",
-    "email_address": "Reka Amiyassen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 879,
-  "fields": {
-    "first_name": "Teemu Jaaqoobsen",
-    "email_address": "Teemu Jaaqoobsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 880,
-  "fields": {
-    "first_name": "Aamina Fehmisen",
-    "email_address": "Aamina Fehmisen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 881,
-  "fields": {
-    "first_name": "Lina Thoreer",
-    "email_address": "Lina Thoreer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 882,
-  "fields": {
-    "first_name": "Ghanem Rikkelieer",
-    "email_address": "Ghanem Rikkelieer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 883,
-  "fields": {
-    "first_name": "Gittemira Eldasen",
-    "email_address": "Gittemira Eldasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 884,
-  "fields": {
-    "first_name": "Laurrah Güldalier",
-    "email_address": "Laurrah Güldalier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 885,
-  "fields": {
-    "first_name": "Yijun Loreleysen",
-    "email_address": "Yijun Loreleysen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 886,
-  "fields": {
-    "first_name": "Darri Shithaer",
-    "email_address": "Darri Shithaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 887,
-  "fields": {
-    "first_name": "Aragorn Vitaliysen",
-    "email_address": "Aragorn Vitaliysen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 888,
-  "fields": {
-    "first_name": "Zofie Sønnøveer",
-    "email_address": "Zofie Sønnøveer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 889,
-  "fields": {
-    "first_name": "Daria Asiyaer",
-    "email_address": "Daria Asiyaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 890,
-  "fields": {
-    "first_name": "Duanur Eivaer",
-    "email_address": "Duanur Eivaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 891,
-  "fields": {
-    "first_name": "Inesa Celichaer",
-    "email_address": "Inesa Celichaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 892,
-  "fields": {
-    "first_name": "Sannividja Kristinnamariasen",
-    "email_address": "Sannividja Kristinnamariasen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 893,
-  "fields": {
-    "first_name": "Eqra Nanomier",
-    "email_address": "Eqra Nanomier@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 894,
-  "fields": {
-    "first_name": "Ogulcan Aaiyanaer",
-    "email_address": "Ogulcan Aaiyanaer@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 895,
-  "fields": {
-    "first_name": "Adriano Mundhirsen",
-    "email_address": "Adriano Mundhirsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 896,
-  "fields": {
-    "first_name": "Chantell Ashtoner",
-    "email_address": "Chantell Ashtoner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 897,
-  "fields": {
-    "first_name": "Jindra Muratsen",
-    "email_address": "Jindra Muratsen@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 898,
-  "fields": {
-    "first_name": "Djennie Oseretiner",
-    "email_address": "Djennie Oseretiner@example.com",
-    "login_code": null,
-    "assignment": 3
-  }
-},
-{
-  "model": "main.student",
-  "pk": 899,
-  "fields": {
-    "first_name": "Milio Meythemer",
-    "email_address": "Milio Meythemer@example.com",
     "login_code": null,
     "assignment": 3
   }
@@ -8038,1996 +4058,6 @@
   }
 },
 {
-  "model": "main.student",
-  "pk": 1001,
-  "fields": {
-    "first_name": "Arnannguaq Nayaber",
-    "email_address": "Arnannguaq Nayaber@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1002,
-  "fields": {
-    "first_name": "Sebasthian Anoushaysen",
-    "email_address": "Sebasthian Anoushaysen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1003,
-  "fields": {
-    "first_name": "Hehla Huudsen",
-    "email_address": "Hehla Huudsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1004,
-  "fields": {
-    "first_name": "Isiah Bessieer",
-    "email_address": "Isiah Bessieer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1005,
-  "fields": {
-    "first_name": "Cianna Manoocherer",
-    "email_address": "Cianna Manoocherer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1006,
-  "fields": {
-    "first_name": "Davids Hiwotiesen",
-    "email_address": "Davids Hiwotiesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1007,
-  "fields": {
-    "first_name": "Nadiaadowaa Saamier",
-    "email_address": "Nadiaadowaa Saamier@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1008,
-  "fields": {
-    "first_name": "Unnar Damittaer",
-    "email_address": "Unnar Damittaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1009,
-  "fields": {
-    "first_name": "Jaquelina Fjerer",
-    "email_address": "Jaquelina Fjerer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1010,
-  "fields": {
-    "first_name": "Abhiansh Tuliosen",
-    "email_address": "Abhiansh Tuliosen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1011,
-  "fields": {
-    "first_name": "Natasia Kannaer",
-    "email_address": "Natasia Kannaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1012,
-  "fields": {
-    "first_name": "Rûbar Cheilasen",
-    "email_address": "Rûbar Cheilasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1013,
-  "fields": {
-    "first_name": "Semanur Festoer",
-    "email_address": "Semanur Festoer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1014,
-  "fields": {
-    "first_name": "Madhav Pendosen",
-    "email_address": "Madhav Pendosen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1015,
-  "fields": {
-    "first_name": "Oke Tahreemer",
-    "email_address": "Oke Tahreemer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1016,
-  "fields": {
-    "first_name": "Yunshu Almonsen",
-    "email_address": "Yunshu Almonsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1017,
-  "fields": {
-    "first_name": "Schott Kodasen",
-    "email_address": "Schott Kodasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1018,
-  "fields": {
-    "first_name": "Eylul Ayawaer",
-    "email_address": "Eylul Ayawaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1019,
-  "fields": {
-    "first_name": "Teona Kayalvizhisen",
-    "email_address": "Teona Kayalvizhisen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1020,
-  "fields": {
-    "first_name": "Cinnober Eugeneer",
-    "email_address": "Cinnober Eugeneer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1021,
-  "fields": {
-    "first_name": "Anamarija Tikluer",
-    "email_address": "Anamarija Tikluer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1022,
-  "fields": {
-    "first_name": "Rienk Athitsen",
-    "email_address": "Rienk Athitsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1023,
-  "fields": {
-    "first_name": "Mylo Solangeer",
-    "email_address": "Mylo Solangeer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1024,
-  "fields": {
-    "first_name": "Mengzhi Anamarionsen",
-    "email_address": "Mengzhi Anamarionsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1025,
-  "fields": {
-    "first_name": "Lixiang Salomasen",
-    "email_address": "Lixiang Salomasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1026,
-  "fields": {
-    "first_name": "Nathalee Hjarnisen",
-    "email_address": "Nathalee Hjarnisen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1027,
-  "fields": {
-    "first_name": "Ulv Peemsen",
-    "email_address": "Ulv Peemsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1028,
-  "fields": {
-    "first_name": "Clotilda Adriannasen",
-    "email_address": "Clotilda Adriannasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1029,
-  "fields": {
-    "first_name": "Rhenie Kirrstener",
-    "email_address": "Rhenie Kirrstener@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1030,
-  "fields": {
-    "first_name": "Yndt Illayahsen",
-    "email_address": "Yndt Illayahsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1031,
-  "fields": {
-    "first_name": "Lakshan Bengerder",
-    "email_address": "Lakshan Bengerder@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1032,
-  "fields": {
-    "first_name": "Ahmedeeg Malakeher",
-    "email_address": "Ahmedeeg Malakeher@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1033,
-  "fields": {
-    "first_name": "Samma Dikshaer",
-    "email_address": "Samma Dikshaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1034,
-  "fields": {
-    "first_name": "Nocin Devoraher",
-    "email_address": "Nocin Devoraher@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1035,
-  "fields": {
-    "first_name": "Onurhan Tayyamer",
-    "email_address": "Onurhan Tayyamer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1036,
-  "fields": {
-    "first_name": "Maloo Tahasen",
-    "email_address": "Maloo Tahasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1037,
-  "fields": {
-    "first_name": "Rüzgar Rivaansher",
-    "email_address": "Rüzgar Rivaansher@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1038,
-  "fields": {
-    "first_name": "Dzeida Dzhelaler",
-    "email_address": "Dzeida Dzhelaler@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1039,
-  "fields": {
-    "first_name": "Jashan Jaasserer",
-    "email_address": "Jashan Jaasserer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1040,
-  "fields": {
-    "first_name": "Muhittin Nameer",
-    "email_address": "Muhittin Nameer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1041,
-  "fields": {
-    "first_name": "Nono Randyer",
-    "email_address": "Nono Randyer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1042,
-  "fields": {
-    "first_name": "Amulya Mónicaer",
-    "email_address": "Amulya Mónicaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1043,
-  "fields": {
-    "first_name": "Tarahollie Ephremsen",
-    "email_address": "Tarahollie Ephremsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1044,
-  "fields": {
-    "first_name": "Ayana Lozaer",
-    "email_address": "Ayana Lozaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1045,
-  "fields": {
-    "first_name": "Harbin Fonyuyer",
-    "email_address": "Harbin Fonyuyer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1046,
-  "fields": {
-    "first_name": "Clarah Eibrittsen",
-    "email_address": "Clarah Eibrittsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1047,
-  "fields": {
-    "first_name": "Mikai Kulasingamer",
-    "email_address": "Mikai Kulasingamer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1048,
-  "fields": {
-    "first_name": "Hugo Vezirer",
-    "email_address": "Hugo Vezirer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1049,
-  "fields": {
-    "first_name": "Malala Franchsen",
-    "email_address": "Malala Franchsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1050,
-  "fields": {
-    "first_name": "Ruz Aksasen",
-    "email_address": "Ruz Aksasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1051,
-  "fields": {
-    "first_name": "Ahlan Hunger",
-    "email_address": "Ahlan Hunger@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1052,
-  "fields": {
-    "first_name": "Koumakoyo Agastyaer",
-    "email_address": "Koumakoyo Agastyaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1053,
-  "fields": {
-    "first_name": "Vila Ayaansen",
-    "email_address": "Vila Ayaansen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1054,
-  "fields": {
-    "first_name": "Aila Arthiwarasen",
-    "email_address": "Aila Arthiwarasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1055,
-  "fields": {
-    "first_name": "Malan Thovassen",
-    "email_address": "Malan Thovassen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1056,
-  "fields": {
-    "first_name": "Rehaan Eilachakrasen",
-    "email_address": "Rehaan Eilachakrasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1057,
-  "fields": {
-    "first_name": "Mercury Akaper",
-    "email_address": "Mercury Akaper@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1058,
-  "fields": {
-    "first_name": "Polin Fallulasen",
-    "email_address": "Polin Fallulasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1059,
-  "fields": {
-    "first_name": "Halldis Theijser",
-    "email_address": "Halldis Theijser@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1060,
-  "fields": {
-    "first_name": "Jannika Otchasen",
-    "email_address": "Jannika Otchasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1061,
-  "fields": {
-    "first_name": "Gaspard Thaer",
-    "email_address": "Gaspard Thaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1062,
-  "fields": {
-    "first_name": "Buraq Yetsen",
-    "email_address": "Buraq Yetsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1063,
-  "fields": {
-    "first_name": "Alin Roslesen",
-    "email_address": "Alin Roslesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1064,
-  "fields": {
-    "first_name": "Yvona Akinasen",
-    "email_address": "Yvona Akinasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1065,
-  "fields": {
-    "first_name": "Lat Bamer",
-    "email_address": "Lat Bamer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1066,
-  "fields": {
-    "first_name": "Emiliah Jusefsen",
-    "email_address": "Emiliah Jusefsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1067,
-  "fields": {
-    "first_name": "Alaiza Meilaniesen",
-    "email_address": "Alaiza Meilaniesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1068,
-  "fields": {
-    "first_name": "Abrahamthaitak Hertmansen",
-    "email_address": "Abrahamthaitak Hertmansen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1069,
-  "fields": {
-    "first_name": "Elof Idamariasen",
-    "email_address": "Elof Idamariasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1070,
-  "fields": {
-    "first_name": "Concha Ewaldisen",
-    "email_address": "Concha Ewaldisen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1071,
-  "fields": {
-    "first_name": "Nickoline Margreter",
-    "email_address": "Nickoline Margreter@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1072,
-  "fields": {
-    "first_name": "Emilijan Manashisen",
-    "email_address": "Emilijan Manashisen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1073,
-  "fields": {
-    "first_name": "Marha Kukusen",
-    "email_address": "Marha Kukusen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1074,
-  "fields": {
-    "first_name": "Þórkatla Gullisen",
-    "email_address": "Þórkatla Gullisen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1075,
-  "fields": {
-    "first_name": "Zaïra Josephinsen",
-    "email_address": "Zaïra Josephinsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1076,
-  "fields": {
-    "first_name": "Anthonia Riyanshier",
-    "email_address": "Anthonia Riyanshier@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1077,
-  "fields": {
-    "first_name": "Elinna Jabbarder",
-    "email_address": "Elinna Jabbarder@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1078,
-  "fields": {
-    "first_name": "Huy Malayner",
-    "email_address": "Huy Malayner@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1079,
-  "fields": {
-    "first_name": "Camillya Elvisasen",
-    "email_address": "Camillya Elvisasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1080,
-  "fields": {
-    "first_name": "Elle Farhangsen",
-    "email_address": "Elle Farhangsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1081,
-  "fields": {
-    "first_name": "Ingemar Syeedaer",
-    "email_address": "Ingemar Syeedaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1082,
-  "fields": {
-    "first_name": "Tilas Katsoer",
-    "email_address": "Tilas Katsoer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1083,
-  "fields": {
-    "first_name": "Raida Betoulsen",
-    "email_address": "Raida Betoulsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1084,
-  "fields": {
-    "first_name": "Alexan Obaidaer",
-    "email_address": "Alexan Obaidaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1085,
-  "fields": {
-    "first_name": "Lira Kevaner",
-    "email_address": "Lira Kevaner@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1086,
-  "fields": {
-    "first_name": "Alesha Madeleineer",
-    "email_address": "Alesha Madeleineer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1087,
-  "fields": {
-    "first_name": "Ild Laurentiner",
-    "email_address": "Ild Laurentiner@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1088,
-  "fields": {
-    "first_name": "Fahrudin Lamyaier",
-    "email_address": "Fahrudin Lamyaier@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1089,
-  "fields": {
-    "first_name": "Tatjanamaija Megertuer",
-    "email_address": "Tatjanamaija Megertuer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1090,
-  "fields": {
-    "first_name": "Sjales Vestersen",
-    "email_address": "Sjales Vestersen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1091,
-  "fields": {
-    "first_name": "Niels-Christian Abosen",
-    "email_address": "Niels-Christian Abosen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1092,
-  "fields": {
-    "first_name": "Kasja Kaihaner",
-    "email_address": "Kasja Kaihaner@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1093,
-  "fields": {
-    "first_name": "Lore Eliazsen",
-    "email_address": "Lore Eliazsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1094,
-  "fields": {
-    "first_name": "Afak Jaqubsen",
-    "email_address": "Afak Jaqubsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1095,
-  "fields": {
-    "first_name": "Elling Lyriaer",
-    "email_address": "Elling Lyriaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1096,
-  "fields": {
-    "first_name": "Thanaa Norshamer",
-    "email_address": "Thanaa Norshamer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1097,
-  "fields": {
-    "first_name": "Ibtisan Jonussen",
-    "email_address": "Ibtisan Jonussen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1098,
-  "fields": {
-    "first_name": "Hutham Mattyer",
-    "email_address": "Hutham Mattyer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1099,
-  "fields": {
-    "first_name": "Tabita Caterinasen",
-    "email_address": "Tabita Caterinasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1100,
-  "fields": {
-    "first_name": "Kuki Neniciaer",
-    "email_address": "Kuki Neniciaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1101,
-  "fields": {
-    "first_name": "Amrit Anuschkasen",
-    "email_address": "Amrit Anuschkasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1102,
-  "fields": {
-    "first_name": "Ofelia Pouranger",
-    "email_address": "Ofelia Pouranger@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1103,
-  "fields": {
-    "first_name": "Timoteo Ellindsen",
-    "email_address": "Timoteo Ellindsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1104,
-  "fields": {
-    "first_name": "Kornphichet Vølvesen",
-    "email_address": "Kornphichet Vølvesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1105,
-  "fields": {
-    "first_name": "Geir Ömersen",
-    "email_address": "Geir Ömersen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1106,
-  "fields": {
-    "first_name": "Rabiah Dorthysen",
-    "email_address": "Rabiah Dorthysen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1107,
-  "fields": {
-    "first_name": "Hassanah Aszgerer",
-    "email_address": "Hassanah Aszgerer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1108,
-  "fields": {
-    "first_name": "Yilmaz Saalimer",
-    "email_address": "Yilmaz Saalimer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1109,
-  "fields": {
-    "first_name": "Alsou Yousen",
-    "email_address": "Alsou Yousen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1110,
-  "fields": {
-    "first_name": "Karianne Alleyaher",
-    "email_address": "Karianne Alleyaher@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1111,
-  "fields": {
-    "first_name": "Stisser Maryer",
-    "email_address": "Stisser Maryer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1112,
-  "fields": {
-    "first_name": "Yumie Thokesen",
-    "email_address": "Yumie Thokesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1113,
-  "fields": {
-    "first_name": "Dejlan Bebser",
-    "email_address": "Dejlan Bebser@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1114,
-  "fields": {
-    "first_name": "Duzette Thórsen",
-    "email_address": "Duzette Thórsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1115,
-  "fields": {
-    "first_name": "Randiea Uraniasen",
-    "email_address": "Randiea Uraniasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1116,
-  "fields": {
-    "first_name": "Sheronika Serbinesen",
-    "email_address": "Sheronika Serbinesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1117,
-  "fields": {
-    "first_name": "Payton Lordsen",
-    "email_address": "Payton Lordsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1118,
-  "fields": {
-    "first_name": "Dawidek Oveer",
-    "email_address": "Dawidek Oveer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1119,
-  "fields": {
-    "first_name": "Eliash Jovansen",
-    "email_address": "Eliash Jovansen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1120,
-  "fields": {
-    "first_name": "Nazir Pariyasen",
-    "email_address": "Nazir Pariyasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1121,
-  "fields": {
-    "first_name": "Ahriman Dennisesen",
-    "email_address": "Ahriman Dennisesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1122,
-  "fields": {
-    "first_name": "Cresta Thinasen",
-    "email_address": "Cresta Thinasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1123,
-  "fields": {
-    "first_name": "Mire Jawadsen",
-    "email_address": "Mire Jawadsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1124,
-  "fields": {
-    "first_name": "Primula Elsiesen",
-    "email_address": "Primula Elsiesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1125,
-  "fields": {
-    "first_name": "Kaiyi Noorydeensen",
-    "email_address": "Kaiyi Noorydeensen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1126,
-  "fields": {
-    "first_name": "Cooper Sunandaer",
-    "email_address": "Cooper Sunandaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1127,
-  "fields": {
-    "first_name": "Awdel Kolyer",
-    "email_address": "Awdel Kolyer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1128,
-  "fields": {
-    "first_name": "Edris Deepeshsingsen",
-    "email_address": "Edris Deepeshsingsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1129,
-  "fields": {
-    "first_name": "Vasco Aglaiaer",
-    "email_address": "Vasco Aglaiaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1130,
-  "fields": {
-    "first_name": "Hirthik Cecillysen",
-    "email_address": "Hirthik Cecillysen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1131,
-  "fields": {
-    "first_name": "Hewad Marlinsen",
-    "email_address": "Hewad Marlinsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1132,
-  "fields": {
-    "first_name": "Tirdur Zinediner",
-    "email_address": "Tirdur Zinediner@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1133,
-  "fields": {
-    "first_name": "Laurette Zanetteer",
-    "email_address": "Laurette Zanetteer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1134,
-  "fields": {
-    "first_name": "Naiamaria Irthaer",
-    "email_address": "Naiamaria Irthaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1135,
-  "fields": {
-    "first_name": "Sarmad Arnaqsen",
-    "email_address": "Sarmad Arnaqsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1136,
-  "fields": {
-    "first_name": "Brormand Jivansen",
-    "email_address": "Brormand Jivansen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1137,
-  "fields": {
-    "first_name": "Shuq Yakeensen",
-    "email_address": "Shuq Yakeensen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1138,
-  "fields": {
-    "first_name": "Abdulbaset Sädesen",
-    "email_address": "Abdulbaset Sädesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1139,
-  "fields": {
-    "first_name": "Ibraaheem Guiliansen",
-    "email_address": "Ibraaheem Guiliansen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1140,
-  "fields": {
-    "first_name": "Rielise Basantsen",
-    "email_address": "Rielise Basantsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1141,
-  "fields": {
-    "first_name": "Siljemaria Brúnóer",
-    "email_address": "Siljemaria Brúnóer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1142,
-  "fields": {
-    "first_name": "Santhuru Junhaosen",
-    "email_address": "Santhuru Junhaosen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1143,
-  "fields": {
-    "first_name": "Neelam Heyangsen",
-    "email_address": "Neelam Heyangsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1144,
-  "fields": {
-    "first_name": "Nella Stinemariasen",
-    "email_address": "Nella Stinemariasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1145,
-  "fields": {
-    "first_name": "Dorje Kittersen",
-    "email_address": "Dorje Kittersen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1146,
-  "fields": {
-    "first_name": "Angellicka Mortazasen",
-    "email_address": "Angellicka Mortazasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1147,
-  "fields": {
-    "first_name": "Tipu Joyannsen",
-    "email_address": "Tipu Joyannsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1148,
-  "fields": {
-    "first_name": "Ameria Hjörtursen",
-    "email_address": "Ameria Hjörtursen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1149,
-  "fields": {
-    "first_name": "Marikke Anemoneer",
-    "email_address": "Marikke Anemoneer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1150,
-  "fields": {
-    "first_name": "Nesa Xaishsen",
-    "email_address": "Nesa Xaishsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1151,
-  "fields": {
-    "first_name": "Assante Lenkaer",
-    "email_address": "Assante Lenkaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1152,
-  "fields": {
-    "first_name": "Ranulf Fomaer",
-    "email_address": "Ranulf Fomaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1153,
-  "fields": {
-    "first_name": "Majze Vinaysen",
-    "email_address": "Majze Vinaysen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1154,
-  "fields": {
-    "first_name": "Hazin Tidasen",
-    "email_address": "Hazin Tidasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1155,
-  "fields": {
-    "first_name": "Maryrose Paarthsen",
-    "email_address": "Maryrose Paarthsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1156,
-  "fields": {
-    "first_name": "Nastja Beheshtasen",
-    "email_address": "Nastja Beheshtasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1157,
-  "fields": {
-    "first_name": "Ayaansh Olympiasen",
-    "email_address": "Ayaansh Olympiasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1158,
-  "fields": {
-    "first_name": "Villfred Venkesen",
-    "email_address": "Villfred Venkesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1159,
-  "fields": {
-    "first_name": "Dariel Sissiljaer",
-    "email_address": "Dariel Sissiljaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1160,
-  "fields": {
-    "first_name": "Ethly Litikeshsen",
-    "email_address": "Ethly Litikeshsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1161,
-  "fields": {
-    "first_name": "Tóri Villansen",
-    "email_address": "Tóri Villansen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1162,
-  "fields": {
-    "first_name": "Nassali Yashmithsen",
-    "email_address": "Nassali Yashmithsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1163,
-  "fields": {
-    "first_name": "Nirari Tanakaer",
-    "email_address": "Nirari Tanakaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1164,
-  "fields": {
-    "first_name": "Litzie Tiiviishaer",
-    "email_address": "Litzie Tiiviishaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1165,
-  "fields": {
-    "first_name": "Walder Donoer",
-    "email_address": "Walder Donoer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1166,
-  "fields": {
-    "first_name": "Indirani Khyberer",
-    "email_address": "Indirani Khyberer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1167,
-  "fields": {
-    "first_name": "Jacqulin Erdeer",
-    "email_address": "Jacqulin Erdeer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1168,
-  "fields": {
-    "first_name": "Leaticia Kissier",
-    "email_address": "Leaticia Kissier@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1169,
-  "fields": {
-    "first_name": "Vanilje Oriker",
-    "email_address": "Vanilje Oriker@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1170,
-  "fields": {
-    "first_name": "Aggellos Johaner",
-    "email_address": "Aggellos Johaner@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1171,
-  "fields": {
-    "first_name": "Thorbjørn Belliser",
-    "email_address": "Thorbjørn Belliser@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1172,
-  "fields": {
-    "first_name": "Gökmen Sedinesen",
-    "email_address": "Gökmen Sedinesen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1173,
-  "fields": {
-    "first_name": "Advaith Fariker",
-    "email_address": "Advaith Fariker@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1174,
-  "fields": {
-    "first_name": "Lilyann Vladimirer",
-    "email_address": "Lilyann Vladimirer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1175,
-  "fields": {
-    "first_name": "Onosereme Faddasen",
-    "email_address": "Onosereme Faddasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1176,
-  "fields": {
-    "first_name": "Olu Ngalulasen",
-    "email_address": "Olu Ngalulasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1177,
-  "fields": {
-    "first_name": "Carhen Esmalinasen",
-    "email_address": "Carhen Esmalinasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1178,
-  "fields": {
-    "first_name": "Joshika Þórhildurer",
-    "email_address": "Joshika Þórhildurer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1179,
-  "fields": {
-    "first_name": "Majbrit Helinsen",
-    "email_address": "Majbrit Helinsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1180,
-  "fields": {
-    "first_name": "Ansuya Nakatsilier",
-    "email_address": "Ansuya Nakatsilier@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1181,
-  "fields": {
-    "first_name": "Marsella Marie-Luiseer",
-    "email_address": "Marsella Marie-Luiseer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1182,
-  "fields": {
-    "first_name": "Serhii Haawoer",
-    "email_address": "Serhii Haawoer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1183,
-  "fields": {
-    "first_name": "Wassim Anandasen",
-    "email_address": "Wassim Anandasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1184,
-  "fields": {
-    "first_name": "Berendt Zanayaer",
-    "email_address": "Berendt Zanayaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1185,
-  "fields": {
-    "first_name": "Zio Reginer",
-    "email_address": "Zio Reginer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1186,
-  "fields": {
-    "first_name": "Cellina Rosabelsen",
-    "email_address": "Cellina Rosabelsen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1187,
-  "fields": {
-    "first_name": "Isabell Aanissen",
-    "email_address": "Isabell Aanissen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1188,
-  "fields": {
-    "first_name": "Methe Paimansen",
-    "email_address": "Methe Paimansen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1189,
-  "fields": {
-    "first_name": "Ethen Rakshiter",
-    "email_address": "Ethen Rakshiter@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1190,
-  "fields": {
-    "first_name": "Riko Lecker",
-    "email_address": "Riko Lecker@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1191,
-  "fields": {
-    "first_name": "Sejan Laherisen",
-    "email_address": "Sejan Laherisen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1192,
-  "fields": {
-    "first_name": "Zarnoor Odlever",
-    "email_address": "Zarnoor Odlever@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1193,
-  "fields": {
-    "first_name": "Vegavaniilla Haimasen",
-    "email_address": "Vegavaniilla Haimasen@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1194,
-  "fields": {
-    "first_name": "Sava Cananer",
-    "email_address": "Sava Cananer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1195,
-  "fields": {
-    "first_name": "Arûné Ilinaher",
-    "email_address": "Arûné Ilinaher@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1196,
-  "fields": {
-    "first_name": "Memphis Lauritser",
-    "email_address": "Memphis Lauritser@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1197,
-  "fields": {
-    "first_name": "Mesang Dioer",
-    "email_address": "Mesang Dioer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1198,
-  "fields": {
-    "first_name": "Sigurður Annemiaer",
-    "email_address": "Sigurður Annemiaer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
-  "model": "main.student",
-  "pk": 1199,
-  "fields": {
-    "first_name": "Ebu Chaudryer",
-    "email_address": "Ebu Chaudryer@example.com",
-    "login_code": null,
-    "assignment": 4
-  }
-},
-{
   "model": "main.teacher",
   "pk": 1,
   "fields": {
@@ -10177,7 +4207,7 @@
     "priority": 7,
     "course": 7,
     "student": 0,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10187,7 +4217,7 @@
     "priority": 6,
     "course": 3,
     "student": 0,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10197,7 +4227,7 @@
     "priority": 5,
     "course": 6,
     "student": 0,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10247,7 +4277,7 @@
     "priority": 7,
     "course": 3,
     "student": 1,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10257,7 +4287,7 @@
     "priority": 5,
     "course": 1,
     "student": 1,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10267,7 +4297,7 @@
     "priority": 6,
     "course": 6,
     "student": 1,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10327,7 +4357,7 @@
     "priority": 7,
     "course": 1,
     "student": 2,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10337,7 +4367,7 @@
     "priority": 6,
     "course": 6,
     "student": 2,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10347,7 +4377,7 @@
     "priority": 5,
     "course": 4,
     "student": 2,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10387,7 +4417,7 @@
     "priority": 5,
     "course": 3,
     "student": 3,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10407,7 +4437,7 @@
     "priority": 6,
     "course": 5,
     "student": 3,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10447,7 +4477,7 @@
     "priority": 7,
     "course": 7,
     "student": 3,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10457,7 +4487,7 @@
     "priority": 5,
     "course": 5,
     "student": 4,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10467,7 +4497,7 @@
     "priority": 6,
     "course": 7,
     "student": 4,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10477,7 +4507,7 @@
     "priority": 7,
     "course": 2,
     "student": 4,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10557,7 +4587,7 @@
     "priority": 4,
     "course": 3,
     "student": 5,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10567,7 +4597,7 @@
     "priority": 7,
     "course": 6,
     "student": 5,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10577,7 +4607,7 @@
     "priority": 6,
     "course": 4,
     "student": 5,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10627,7 +4657,7 @@
     "priority": 6,
     "course": 7,
     "student": 6,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10637,7 +4667,7 @@
     "priority": 5,
     "course": 5,
     "student": 6,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10647,7 +4677,7 @@
     "priority": 7,
     "course": 3,
     "student": 6,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10677,7 +4707,7 @@
     "priority": 5,
     "course": 4,
     "student": 7,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10687,7 +4717,7 @@
     "priority": 7,
     "course": 1,
     "student": 7,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10717,7 +4747,7 @@
     "priority": 6,
     "course": 6,
     "student": 7,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10737,7 +4767,7 @@
     "priority": 6,
     "course": 3,
     "student": 8,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10767,7 +4797,7 @@
     "priority": 7,
     "course": 1,
     "student": 8,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10777,7 +4807,7 @@
     "priority": 5,
     "course": 6,
     "student": 8,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10827,7 +4857,7 @@
     "priority": 7,
     "course": 1,
     "student": 9,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10847,7 +4877,7 @@
     "priority": 6,
     "course": 6,
     "student": 9,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10857,7 +4887,7 @@
     "priority": 5,
     "course": 5,
     "student": 9,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10877,7 +4907,7 @@
     "priority": 7,
     "course": 4,
     "student": 10,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10907,7 +4937,7 @@
     "priority": 6,
     "course": 2,
     "student": 10,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10917,7 +4947,7 @@
     "priority": 5,
     "course": 5,
     "student": 10,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10947,7 +4977,7 @@
     "priority": 5,
     "course": 4,
     "student": 11,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10977,7 +5007,7 @@
     "priority": 6,
     "course": 2,
     "student": 11,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -10987,7 +5017,7 @@
     "priority": 7,
     "course": 7,
     "student": 11,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11017,7 +5047,7 @@
     "priority": 7,
     "course": 1,
     "student": 12,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11057,7 +5087,7 @@
     "priority": 5,
     "course": 5,
     "student": 12,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11067,7 +5097,7 @@
     "priority": 6,
     "course": 6,
     "student": 12,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11117,7 +5147,7 @@
     "priority": 5,
     "course": 7,
     "student": 13,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11127,7 +5157,7 @@
     "priority": 7,
     "course": 5,
     "student": 13,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11137,7 +5167,7 @@
     "priority": 6,
     "course": 4,
     "student": 13,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11167,7 +5197,7 @@
     "priority": 5,
     "course": 7,
     "student": 14,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11177,7 +5207,7 @@
     "priority": 6,
     "course": 6,
     "student": 14,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11187,7 +5217,7 @@
     "priority": 7,
     "course": 2,
     "student": 14,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11227,7 +5257,7 @@
     "priority": 6,
     "course": 1,
     "student": 15,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11247,7 +5277,7 @@
     "priority": 5,
     "course": 7,
     "student": 15,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11267,7 +5297,7 @@
     "priority": 7,
     "course": 5,
     "student": 15,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11307,7 +5337,7 @@
     "priority": 5,
     "course": 7,
     "student": 16,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11337,7 +5367,7 @@
     "priority": 7,
     "course": 4,
     "student": 16,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11347,7 +5377,7 @@
     "priority": 6,
     "course": 1,
     "student": 16,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11407,7 +5437,7 @@
     "priority": 7,
     "course": 1,
     "student": 17,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11417,7 +5447,7 @@
     "priority": 6,
     "course": 2,
     "student": 17,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11427,7 +5457,7 @@
     "priority": 5,
     "course": 4,
     "student": 17,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11447,7 +5477,7 @@
     "priority": 5,
     "course": 1,
     "student": 18,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11467,7 +5497,7 @@
     "priority": 6,
     "course": 3,
     "student": 18,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11477,7 +5507,7 @@
     "priority": 7,
     "course": 2,
     "student": 18,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11507,7 +5537,7 @@
     "priority": 6,
     "course": 5,
     "student": 19,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11537,7 +5567,7 @@
     "priority": 7,
     "course": 1,
     "student": 19,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11547,7 +5577,7 @@
     "priority": 5,
     "course": 4,
     "student": 19,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11597,7 +5627,7 @@
     "priority": 6,
     "course": 3,
     "student": 20,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11617,7 +5647,7 @@
     "priority": 7,
     "course": 4,
     "student": 20,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11627,7 +5657,7 @@
     "priority": 5,
     "course": 6,
     "student": 20,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11677,7 +5707,7 @@
     "priority": 6,
     "course": 5,
     "student": 21,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11697,7 +5727,7 @@
     "priority": 7,
     "course": 1,
     "student": 21,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11707,7 +5737,7 @@
     "priority": 5,
     "course": 4,
     "student": 21,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11717,7 +5747,7 @@
     "priority": 6,
     "course": 5,
     "student": 22,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11727,7 +5757,7 @@
     "priority": 4,
     "course": 6,
     "student": 22,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11767,7 +5797,7 @@
     "priority": 7,
     "course": 4,
     "student": 22,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11797,7 +5827,7 @@
     "priority": 5,
     "course": 6,
     "student": 23,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11807,7 +5837,7 @@
     "priority": 7,
     "course": 5,
     "student": 23,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11847,7 +5877,7 @@
     "priority": 6,
     "course": 7,
     "student": 23,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11857,7 +5887,7 @@
     "priority": 6,
     "course": 1,
     "student": 24,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11877,7 +5907,7 @@
     "priority": 5,
     "course": 5,
     "student": 24,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11917,7 +5947,7 @@
     "priority": 7,
     "course": 6,
     "student": 24,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11927,7 +5957,7 @@
     "priority": 5,
     "course": 6,
     "student": 25,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11957,7 +5987,7 @@
     "priority": 7,
     "course": 4,
     "student": 25,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11967,7 +5997,7 @@
     "priority": 6,
     "course": 5,
     "student": 25,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -11997,7 +6027,7 @@
     "priority": 7,
     "course": 3,
     "student": 26,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12047,7 +6077,7 @@
     "priority": 6,
     "course": 5,
     "student": 26,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12057,7 +6087,7 @@
     "priority": 5,
     "course": 1,
     "student": 26,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12067,7 +6097,7 @@
     "priority": 7,
     "course": 1,
     "student": 27,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12087,7 +6117,7 @@
     "priority": 5,
     "course": 7,
     "student": 27,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12117,7 +6147,7 @@
     "priority": 6,
     "course": 5,
     "student": 27,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12147,7 +6177,7 @@
     "priority": 7,
     "course": 4,
     "student": 28,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12187,7 +6217,7 @@
     "priority": 6,
     "course": 3,
     "student": 28,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12197,7 +6227,7 @@
     "priority": 4,
     "course": 5,
     "student": 28,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12207,7 +6237,7 @@
     "priority": 5,
     "course": 1,
     "student": 29,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12227,7 +6257,7 @@
     "priority": 6,
     "course": 7,
     "student": 29,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12267,7 +6297,7 @@
     "priority": 7,
     "course": 5,
     "student": 29,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12277,7 +6307,7 @@
     "priority": 4,
     "course": 3,
     "student": 30,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12297,7 +6327,7 @@
     "priority": 6,
     "course": 4,
     "student": 30,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12327,7 +6357,7 @@
     "priority": 7,
     "course": 6,
     "student": 30,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12357,7 +6387,7 @@
     "priority": 7,
     "course": 5,
     "student": 31,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12367,7 +6397,7 @@
     "priority": 4,
     "course": 1,
     "student": 31,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12377,7 +6407,7 @@
     "priority": 6,
     "course": 3,
     "student": 31,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12417,7 +6447,7 @@
     "priority": 7,
     "course": 7,
     "student": 32,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12427,7 +6457,7 @@
     "priority": 6,
     "course": 6,
     "student": 32,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12457,7 +6487,7 @@
     "priority": 5,
     "course": 1,
     "student": 32,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12487,7 +6517,7 @@
     "priority": 5,
     "course": 4,
     "student": 33,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12507,7 +6537,7 @@
     "priority": 7,
     "course": 7,
     "student": 33,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12517,7 +6547,7 @@
     "priority": 6,
     "course": 1,
     "student": 33,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12567,7 +6597,7 @@
     "priority": 4,
     "course": 3,
     "student": 34,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12577,7 +6607,7 @@
     "priority": 6,
     "course": 6,
     "student": 34,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12607,7 +6637,7 @@
     "priority": 7,
     "course": 7,
     "student": 34,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12647,7 +6677,7 @@
     "priority": 6,
     "course": 4,
     "student": 35,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12677,7 +6707,7 @@
     "priority": 7,
     "course": 1,
     "student": 35,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12687,7 +6717,7 @@
     "priority": 4,
     "course": 7,
     "student": 35,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12697,7 +6727,7 @@
     "priority": 7,
     "course": 4,
     "student": 36,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12737,7 +6767,7 @@
     "priority": 4,
     "course": 1,
     "student": 36,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12757,7 +6787,7 @@
     "priority": 6,
     "course": 5,
     "student": 36,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12777,7 +6807,7 @@
     "priority": 7,
     "course": 1,
     "student": 37,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12807,7 +6837,7 @@
     "priority": 6,
     "course": 2,
     "student": 37,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12817,7 +6847,7 @@
     "priority": 5,
     "course": 4,
     "student": 37,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12867,7 +6897,7 @@
     "priority": 6,
     "course": 5,
     "student": 38,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12887,7 +6917,7 @@
     "priority": 5,
     "course": 4,
     "student": 38,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12897,7 +6927,7 @@
     "priority": 7,
     "course": 1,
     "student": 38,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12907,7 +6937,7 @@
     "priority": 6,
     "course": 1,
     "student": 39,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12917,7 +6947,7 @@
     "priority": 7,
     "course": 6,
     "student": 39,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12927,7 +6957,7 @@
     "priority": 5,
     "course": 4,
     "student": 39,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -12987,7 +7017,7 @@
     "priority": 7,
     "course": 7,
     "student": 40,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13017,7 +7047,7 @@
     "priority": 5,
     "course": 4,
     "student": 40,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13037,7 +7067,7 @@
     "priority": 6,
     "course": 6,
     "student": 40,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13047,7 +7077,7 @@
     "priority": 6,
     "course": 2,
     "student": 41,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13057,7 +7087,7 @@
     "priority": 5,
     "course": 5,
     "student": 41,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13067,7 +7097,7 @@
     "priority": 7,
     "course": 7,
     "student": 41,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13137,7 +7167,7 @@
     "priority": 6,
     "course": 4,
     "student": 42,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13147,7 +7177,7 @@
     "priority": 5,
     "course": 6,
     "student": 42,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13157,7 +7187,7 @@
     "priority": 7,
     "course": 7,
     "student": 42,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13187,7 +7217,7 @@
     "priority": 6,
     "course": 3,
     "student": 43,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13197,7 +7227,7 @@
     "priority": 5,
     "course": 4,
     "student": 43,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13217,7 +7247,7 @@
     "priority": 7,
     "course": 7,
     "student": 43,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13297,7 +7327,7 @@
     "priority": 6,
     "course": 3,
     "student": 44,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13307,7 +7337,7 @@
     "priority": 7,
     "course": 2,
     "student": 44,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13317,7 +7347,7 @@
     "priority": 5,
     "course": 5,
     "student": 44,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13337,7 +7367,7 @@
     "priority": 6,
     "course": 1,
     "student": 45,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13347,7 +7377,7 @@
     "priority": 5,
     "course": 4,
     "student": 45,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13357,7 +7387,7 @@
     "priority": 7,
     "course": 3,
     "student": 45,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13417,7 +7447,7 @@
     "priority": 6,
     "course": 5,
     "student": 46,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13427,7 +7457,7 @@
     "priority": 5,
     "course": 6,
     "student": 46,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13447,7 +7477,7 @@
     "priority": 7,
     "course": 4,
     "student": 46,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13477,7 +7507,7 @@
     "priority": 5,
     "course": 7,
     "student": 47,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13507,7 +7537,7 @@
     "priority": 7,
     "course": 1,
     "student": 47,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13527,7 +7557,7 @@
     "priority": 6,
     "course": 6,
     "student": 47,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13537,7 +7567,7 @@
     "priority": 7,
     "course": 6,
     "student": 48,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13547,7 +7577,7 @@
     "priority": 5,
     "course": 5,
     "student": 48,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13597,7 +7627,7 @@
     "priority": 6,
     "course": 3,
     "student": 48,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13627,7 +7657,7 @@
     "priority": 5,
     "course": 6,
     "student": 49,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13637,7 +7667,7 @@
     "priority": 6,
     "course": 5,
     "student": 49,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13647,7 +7677,7 @@
     "priority": 7,
     "course": 2,
     "student": 49,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13677,7 +7707,7 @@
     "priority": 6,
     "course": 7,
     "student": 50,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13687,7 +7717,7 @@
     "priority": 5,
     "course": 1,
     "student": 50,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13717,7 +7747,7 @@
     "priority": 7,
     "course": 5,
     "student": 50,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13767,7 +7797,7 @@
     "priority": 7,
     "course": 1,
     "student": 51,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13777,7 +7807,7 @@
     "priority": 4,
     "course": 4,
     "student": 51,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13797,7 +7827,7 @@
     "priority": 6,
     "course": 5,
     "student": 51,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13817,7 +7847,7 @@
     "priority": 5,
     "course": 6,
     "student": 52,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13857,7 +7887,7 @@
     "priority": 6,
     "course": 5,
     "student": 52,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13867,7 +7897,7 @@
     "priority": 7,
     "course": 4,
     "student": 52,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13917,7 +7947,7 @@
     "priority": 6,
     "course": 1,
     "student": 53,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13927,7 +7957,7 @@
     "priority": 5,
     "course": 5,
     "student": 53,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13937,7 +7967,7 @@
     "priority": 7,
     "course": 6,
     "student": 53,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13967,7 +7997,7 @@
     "priority": 5,
     "course": 5,
     "student": 54,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -13987,7 +8017,7 @@
     "priority": 7,
     "course": 3,
     "student": 54,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14017,7 +8047,7 @@
     "priority": 6,
     "course": 2,
     "student": 54,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14047,7 +8077,7 @@
     "priority": 7,
     "course": 2,
     "student": 55,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14067,7 +8097,7 @@
     "priority": 5,
     "course": 4,
     "student": 55,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14087,7 +8117,7 @@
     "priority": 6,
     "course": 7,
     "student": 55,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14107,7 +8137,7 @@
     "priority": 6,
     "course": 2,
     "student": 56,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14117,7 +8147,7 @@
     "priority": 7,
     "course": 6,
     "student": 56,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14147,7 +8177,7 @@
     "priority": 5,
     "course": 3,
     "student": 56,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14167,7 +8197,7 @@
     "priority": 7,
     "course": 5,
     "student": 57,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14177,7 +8207,7 @@
     "priority": 5,
     "course": 6,
     "student": 57,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14217,7 +8247,7 @@
     "priority": 6,
     "course": 1,
     "student": 57,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14237,7 +8267,7 @@
     "priority": 6,
     "course": 3,
     "student": 58,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14287,7 +8317,7 @@
     "priority": 5,
     "course": 7,
     "student": 58,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14297,7 +8327,7 @@
     "priority": 7,
     "course": 6,
     "student": 58,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14307,7 +8337,7 @@
     "priority": 6,
     "course": 1,
     "student": 59,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14347,7 +8377,7 @@
     "priority": 5,
     "course": 5,
     "student": 59,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14367,7 +8397,7 @@
     "priority": 7,
     "course": 4,
     "student": 59,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14397,7 +8427,7 @@
     "priority": 7,
     "course": 5,
     "student": 60,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14427,7 +8457,7 @@
     "priority": 6,
     "course": 6,
     "student": 60,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14437,7 +8467,7 @@
     "priority": 5,
     "course": 7,
     "student": 60,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14447,7 +8477,7 @@
     "priority": 7,
     "course": 2,
     "student": 61,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14477,7 +8507,7 @@
     "priority": 5,
     "course": 5,
     "student": 61,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14487,7 +8517,7 @@
     "priority": 6,
     "course": 3,
     "student": 61,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14537,7 +8567,7 @@
     "priority": 5,
     "course": 7,
     "student": 62,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14547,7 +8577,7 @@
     "priority": 7,
     "course": 3,
     "student": 62,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14567,7 +8597,7 @@
     "priority": 6,
     "course": 1,
     "student": 62,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14587,7 +8617,7 @@
     "priority": 5,
     "course": 6,
     "student": 63,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14617,7 +8647,7 @@
     "priority": 7,
     "course": 7,
     "student": 63,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14647,7 +8677,7 @@
     "priority": 6,
     "course": 3,
     "student": 63,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14657,7 +8687,7 @@
     "priority": 7,
     "course": 4,
     "student": 64,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14677,7 +8707,7 @@
     "priority": 5,
     "course": 1,
     "student": 64,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14717,7 +8747,7 @@
     "priority": 6,
     "course": 6,
     "student": 64,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14727,7 +8757,7 @@
     "priority": 5,
     "course": 1,
     "student": 65,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14757,7 +8787,7 @@
     "priority": 7,
     "course": 7,
     "student": 65,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14777,7 +8807,7 @@
     "priority": 6,
     "course": 5,
     "student": 65,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14797,7 +8827,7 @@
     "priority": 6,
     "course": 3,
     "student": 66,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14807,7 +8837,7 @@
     "priority": 5,
     "course": 5,
     "student": 66,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14857,7 +8887,7 @@
     "priority": 7,
     "course": 1,
     "student": 66,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14867,7 +8897,7 @@
     "priority": 5,
     "course": 3,
     "student": 67,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14907,7 +8937,7 @@
     "priority": 7,
     "course": 6,
     "student": 67,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14917,7 +8947,7 @@
     "priority": 6,
     "course": 4,
     "student": 67,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14967,7 +8997,7 @@
     "priority": 5,
     "course": 3,
     "student": 68,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14977,7 +9007,7 @@
     "priority": 7,
     "course": 4,
     "student": 68,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -14987,7 +9017,7 @@
     "priority": 6,
     "course": 1,
     "student": 68,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15017,7 +9047,7 @@
     "priority": 7,
     "course": 7,
     "student": 69,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15027,7 +9057,7 @@
     "priority": 5,
     "course": 3,
     "student": 69,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15037,7 +9067,7 @@
     "priority": 6,
     "course": 2,
     "student": 69,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15087,7 +9117,7 @@
     "priority": 7,
     "course": 7,
     "student": 70,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15117,7 +9147,7 @@
     "priority": 6,
     "course": 2,
     "student": 70,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15127,7 +9157,7 @@
     "priority": 5,
     "course": 5,
     "student": 70,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15167,7 +9197,7 @@
     "priority": 6,
     "course": 6,
     "student": 71,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15187,7 +9217,7 @@
     "priority": 7,
     "course": 1,
     "student": 71,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15207,7 +9237,7 @@
     "priority": 5,
     "course": 3,
     "student": 71,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15217,7 +9247,7 @@
     "priority": 5,
     "course": 6,
     "student": 72,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15237,7 +9267,7 @@
     "priority": 6,
     "course": 1,
     "student": 72,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15247,7 +9277,7 @@
     "priority": 7,
     "course": 3,
     "student": 72,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15297,7 +9327,7 @@
     "priority": 7,
     "course": 5,
     "student": 73,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15327,7 +9357,7 @@
     "priority": 6,
     "course": 6,
     "student": 73,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15347,7 +9377,7 @@
     "priority": 5,
     "course": 3,
     "student": 73,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15367,7 +9397,7 @@
     "priority": 6,
     "course": 4,
     "student": 74,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15387,7 +9417,7 @@
     "priority": 5,
     "course": 5,
     "student": 74,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15407,7 +9437,7 @@
     "priority": 7,
     "course": 1,
     "student": 74,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15437,7 +9467,7 @@
     "priority": 5,
     "course": 4,
     "student": 75,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15447,7 +9477,7 @@
     "priority": 7,
     "course": 7,
     "student": 75,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15467,7 +9497,7 @@
     "priority": 6,
     "course": 3,
     "student": 75,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15497,7 +9527,7 @@
     "priority": 7,
     "course": 6,
     "student": 76,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15507,7 +9537,7 @@
     "priority": 5,
     "course": 1,
     "student": 76,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15547,7 +9577,7 @@
     "priority": 6,
     "course": 5,
     "student": 76,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15577,7 +9607,7 @@
     "priority": 6,
     "course": 7,
     "student": 77,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15587,7 +9617,7 @@
     "priority": 4,
     "course": 5,
     "student": 77,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15617,7 +9647,7 @@
     "priority": 7,
     "course": 6,
     "student": 77,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15637,7 +9667,7 @@
     "priority": 5,
     "course": 5,
     "student": 78,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15647,7 +9677,7 @@
     "priority": 6,
     "course": 3,
     "student": 78,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15687,7 +9717,7 @@
     "priority": 7,
     "course": 2,
     "student": 78,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15717,7 +9747,7 @@
     "priority": 5,
     "course": 3,
     "student": 79,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15757,7 +9787,7 @@
     "priority": 7,
     "course": 7,
     "student": 79,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15767,7 +9797,7 @@
     "priority": 6,
     "course": 2,
     "student": 79,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15777,7 +9807,7 @@
     "priority": 7,
     "course": 3,
     "student": 80,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15807,7 +9837,7 @@
     "priority": 6,
     "course": 7,
     "student": 80,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15827,7 +9857,7 @@
     "priority": 5,
     "course": 6,
     "student": 80,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15847,7 +9877,7 @@
     "priority": 7,
     "course": 2,
     "student": 81,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15877,7 +9907,7 @@
     "priority": 5,
     "course": 6,
     "student": 81,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15897,7 +9927,7 @@
     "priority": 6,
     "course": 7,
     "student": 81,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15917,7 +9947,7 @@
     "priority": 7,
     "course": 2,
     "student": 82,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15957,7 +9987,7 @@
     "priority": 6,
     "course": 4,
     "student": 82,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -15967,7 +9997,7 @@
     "priority": 5,
     "course": 5,
     "student": 82,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16017,7 +10047,7 @@
     "priority": 5,
     "course": 4,
     "student": 83,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16027,7 +10057,7 @@
     "priority": 7,
     "course": 6,
     "student": 83,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16037,7 +10067,7 @@
     "priority": 6,
     "course": 2,
     "student": 83,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16077,7 +10107,7 @@
     "priority": 6,
     "course": 7,
     "student": 84,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16087,7 +10117,7 @@
     "priority": 7,
     "course": 4,
     "student": 84,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16117,7 +10147,7 @@
     "priority": 5,
     "course": 3,
     "student": 84,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16137,7 +10167,7 @@
     "priority": 7,
     "course": 1,
     "student": 85,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16147,7 +10177,7 @@
     "priority": 6,
     "course": 2,
     "student": 85,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16187,7 +10217,7 @@
     "priority": 5,
     "course": 4,
     "student": 85,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16217,7 +10247,7 @@
     "priority": 5,
     "course": 6,
     "student": 86,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16227,7 +10257,7 @@
     "priority": 7,
     "course": 4,
     "student": 86,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16247,7 +10277,7 @@
     "priority": 6,
     "course": 2,
     "student": 86,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16297,7 +10327,7 @@
     "priority": 6,
     "course": 3,
     "student": 87,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16307,7 +10337,7 @@
     "priority": 7,
     "course": 4,
     "student": 87,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16327,7 +10357,7 @@
     "priority": 5,
     "course": 2,
     "student": 87,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16337,7 +10367,7 @@
     "priority": 6,
     "course": 2,
     "student": 88,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16357,7 +10387,7 @@
     "priority": 5,
     "course": 5,
     "student": 88,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16367,7 +10397,7 @@
     "priority": 7,
     "course": 7,
     "student": 88,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16437,7 +10467,7 @@
     "priority": 7,
     "course": 5,
     "student": 89,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16447,7 +10477,7 @@
     "priority": 6,
     "course": 2,
     "student": 89,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16467,7 +10497,7 @@
     "priority": 5,
     "course": 6,
     "student": 89,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16487,7 +10517,7 @@
     "priority": 6,
     "course": 1,
     "student": 90,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16517,7 +10547,7 @@
     "priority": 5,
     "course": 4,
     "student": 90,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16527,7 +10557,7 @@
     "priority": 7,
     "course": 5,
     "student": 90,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16577,7 +10607,7 @@
     "priority": 7,
     "course": 2,
     "student": 91,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16597,7 +10627,7 @@
     "priority": 5,
     "course": 5,
     "student": 91,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16607,7 +10637,7 @@
     "priority": 6,
     "course": 1,
     "student": 91,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16627,7 +10657,7 @@
     "priority": 5,
     "course": 7,
     "student": 92,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16637,7 +10667,7 @@
     "priority": 6,
     "course": 3,
     "student": 92,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16647,7 +10677,7 @@
     "priority": 7,
     "course": 2,
     "student": 92,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16687,7 +10717,7 @@
     "priority": 7,
     "course": 5,
     "student": 93,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16697,7 +10727,7 @@
     "priority": 6,
     "course": 1,
     "student": 93,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16747,7 +10777,7 @@
     "priority": 5,
     "course": 6,
     "student": 93,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16767,7 +10797,7 @@
     "priority": 5,
     "course": 4,
     "student": 94,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16777,7 +10807,7 @@
     "priority": 7,
     "course": 6,
     "student": 94,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16787,7 +10817,7 @@
     "priority": 6,
     "course": 1,
     "student": 94,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16857,7 +10887,7 @@
     "priority": 4,
     "course": 4,
     "student": 95,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16867,7 +10897,7 @@
     "priority": 6,
     "course": 7,
     "student": 95,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16877,7 +10907,7 @@
     "priority": 7,
     "course": 6,
     "student": 95,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16897,7 +10927,7 @@
     "priority": 7,
     "course": 4,
     "student": 96,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16947,7 +10977,7 @@
     "priority": 5,
     "course": 7,
     "student": 96,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16957,7 +10987,7 @@
     "priority": 6,
     "course": 3,
     "student": 96,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16987,7 +11017,7 @@
     "priority": 5,
     "course": 4,
     "student": 97,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -16997,7 +11027,7 @@
     "priority": 6,
     "course": 2,
     "student": 97,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17017,7 +11047,7 @@
     "priority": 7,
     "course": 6,
     "student": 97,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17057,7 +11087,7 @@
     "priority": 6,
     "course": 3,
     "student": 98,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17077,7 +11107,7 @@
     "priority": 7,
     "course": 7,
     "student": 98,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17097,7 +11127,7 @@
     "priority": 4,
     "course": 4,
     "student": 98,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17117,7 +11147,7 @@
     "priority": 5,
     "course": 1,
     "student": 99,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17147,7 +11177,7 @@
     "priority": 7,
     "course": 3,
     "student": 99,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17167,7 +11197,7 @@
     "priority": 6,
     "course": 2,
     "student": 99,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17217,7 +11247,7 @@
     "priority": 0,
     "course": 3,
     "student": 100,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17227,7 +11257,7 @@
     "priority": 0,
     "course": 7,
     "student": 100,
-    "assigned": true
+    "assigned": false
   }
 },
 {
@@ -17237,7 +11267,7 @@
     "priority": 0,
     "course": 6,
     "student": 100,
-    "assigned": true
+    "assigned": false
   }
 },
 {

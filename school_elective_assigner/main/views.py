@@ -291,12 +291,13 @@ def download_csv(request, item):
 
 
 def upload_students_csv_handler(assignment, file):
-  breakpoint()
 
-  reader = csv.reader(file)
+  reader = csv.reader( file.read().decode('utf-8').splitlines() )
+
   for row in reader:
     _, created = Student.objects.get_or_create(
-    first_name=row[0],
-    email_address=row[1],
+    assignment = assignment,
+    first_name = row[0],
+    email_address = row[1],
     )
   return redirect(f'assignment/{assignment}')
