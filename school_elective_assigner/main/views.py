@@ -44,7 +44,7 @@ def assignments(request):
         assignmentForm.save()
         return redirect('assignments')
     elif 'delete-assignment' in request.POST:
-      assignmentID = request.POST.get('assignmentid', None);
+      assignmentID = request.POST.get('assignmentid', None)
       Assignment.objects.filter(id=assignmentID).delete()
       return redirect('assignments')
 
@@ -63,14 +63,14 @@ def distribute_students(assignment, courses, students, criteria, student_course_
   student_max_bound = 3
   student_bounds = {}
   for student in students:
-    student_bounds[student.email_address] = student_max_bound
+    student_bounds[student.id] = student_max_bound
 
   # creating student coeffs
   student_coeffs = {}
   for student in student_bounds:
     student_coeffs[student] = {}
   for association in student_course_associations:
-    student_coeffs[association.student.email_address][association.course.name] = association.priority
+    student_coeffs[association.student.id][association.course.name] = association.priority
 
   # creating course bounds
   course_bounds = {}
@@ -107,6 +107,10 @@ def distribute_students(assignment, courses, students, criteria, student_course_
   objective.SetMaximization()
 
   status = solver.Solve()
+
+  for student in student_bounds:
+    for course in course_bounds:
+      Student_Course_Association.objects.filter(student=student, course__name=course).update(assigned=bool(variables[student][course].solution_value()))
 
 
 def assignment(request, item):
