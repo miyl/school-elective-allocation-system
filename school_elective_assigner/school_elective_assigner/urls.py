@@ -25,6 +25,6 @@ urlpatterns = [
     #path('assignments/', main_views.AssignmentListView.as_view(), name='assignments'),
     path('assignments/', main_views.assignments, name='assignments'),
     path('assignment/<int:item>', main_views.assignment, name='assignment'),
-    path('assignment/<int:item>/dl-csv', main_views.dl_csv, name='dl_csv'),
+    path('assignment/<int:item>/dl-csv', main_views.download_csv, name='download_csv'),
     #path('site', main_views.index, name='index'),
 ]

@@ -1,5 +1,5 @@
 from django.contrib.admin import widgets
-from django.forms import ModelForm, ChoiceField, HiddenInput
+from django.forms import ModelForm, Form, ChoiceField, HiddenInput, FileField
 from .models import (Assignment, Student, Course, Student_Course_Association,
      Teacher, Criterion)
 
@@ -36,4 +36,12 @@ class AssignmentForm(ModelForm):
                 'priority_form_text', 'invitation_email_sent', 'reminder_email_sent',
                 'results_email_sent', 'deadline')
     widgets = {'school': HiddenInput()}
+    #fields = '__all__'
+
+# Example of a Form without a model - boom!
+class UploadStudentsCSVForm(Form):
+  file = FileField()
+  #class Meta:
+    #widgets = {'assignment': HiddenInput()}
+    #model = Assignment
     #fields = '__all__'

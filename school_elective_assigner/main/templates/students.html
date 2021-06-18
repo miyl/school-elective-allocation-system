@@ -10,7 +10,7 @@
     <div class="opret_t">
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#importStudentsModal">Importer Elever</button>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addStudentModal">Opret Elev</button>
-      <a class="btn btn-primary" href="{% url 'dl_csv' assignment.id %}" target="_blank">Eksporter elevliste med deres valgfag</a>
+      <a class="btn btn-primary" href="{% url 'download_csv' assignment.id %}" target="_blank">Eksporter elevliste med deres valgfag</a>
     </div>
 
     <div class="container-fluid">
