@@ -131,9 +131,9 @@ def assignment(request, item):
       Course.objects.filter(id=courseID).delete()
     elif 'import-students' in request.POST:
       form = UploadStudentsCSVForm(request.POST, request.FILES)
-      # TODO: Validation
+      # TODO: Better validation
       if form.is_valid():
-        upload_students_csv_handler(request.FILES['file'])
+        upload_students_csv_handler(assignment, request.FILES['file'])
     elif 'distribute-students' in request.POST:
       # TODO: Shouldn't need students in the future, but courses are still
       # needed as max capacity is set there.
@@ -239,8 +239,9 @@ def download_csv(request, item):
   )
 
 
-def upload_students_csv_handler(file):
-  print("WOOOOOOHOOO")
+def upload_students_csv_handler(assignment, file):
+  #first_name
+  #email_address
   breakpoint()
 
   with open(path) as f:
