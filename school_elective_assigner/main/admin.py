@@ -19,7 +19,8 @@ class CourseAdmin(admin.ModelAdmin):
 
 @admin.register(Student_Course_Association)
 class Student_Course_AssignmentAdmin(admin.ModelAdmin):
-  pass
+  list_display = ('student', 'priority', 'course', 'assigned')
+  ordering = ('student',)
 
 @admin.register(Criterion)
 class CriterionAdmin(admin.ModelAdmin):

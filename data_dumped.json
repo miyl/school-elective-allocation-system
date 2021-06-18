@@ -1967,10 +1967,10 @@
 {"model": "main.student_course_association","pk": 698,"fields": {"priority": 2,"course": 5,"student": 99,"assigned": "False"}},
 {"model": "main.student_course_association","pk": 699,"fields": {"priority": 6,"course": 2,"student": 99,"assigned": "False"}},
 {"model": "main.student_course_association","pk": 700,"fields": {"priority": 7,"course": 5,"student": 100,"assigned": "False"}},
-{"model": "main.student_course_association","pk": 700,"fields": {"priority": 7,"course": 2,"student": 100,"assigned": "False"}},
-{"model": "main.student_course_association","pk": 700,"fields": {"priority": 7,"course": 1,"student": 100,"assigned": "False"}},
-{"model": "main.student_course_association","pk": 700,"fields": {"priority": 7,"course": 4,"student": 100,"assigned": "False"}},
-{"model": "main.student_course_association","pk": 700,"fields": {"priority": 7,"course": 3,"student": 100,"assigned": "False"}},
-{"model": "main.student_course_association","pk": 700,"fields": {"priority": 7,"course": 7,"student": 100,"assigned": "False"}},
-{"model": "main.student_course_association","pk": 700,"fields": {"priority": 7,"course": 6,"student": 100,"assigned": "False"}}
+{"model": "main.student_course_association","pk": 701,"fields": {"priority": 7,"course": 2,"student": 100,"assigned": "False"}},
+{"model": "main.student_course_association","pk": 702,"fields": {"priority": 7,"course": 1,"student": 100,"assigned": "False"}},
+{"model": "main.student_course_association","pk": 703,"fields": {"priority": 7,"course": 4,"student": 100,"assigned": "False"}},
+{"model": "main.student_course_association","pk": 704,"fields": {"priority": 7,"course": 3,"student": 100,"assigned": "False"}},
+{"model": "main.student_course_association","pk": 705,"fields": {"priority": 7,"course": 7,"student": 100,"assigned": "False"}},
+{"model": "main.student_course_association","pk": 706,"fields": {"priority": 7,"course": 6,"student": 100,"assigned": "False"}}
 ]
