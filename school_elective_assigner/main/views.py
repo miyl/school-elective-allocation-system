@@ -4,6 +4,7 @@ from .models import (Assignment, Student, Course,
      Student_Course_Association, Teacher, Criterion)
 from .forms import ( StudentForm, CriterionForm, CourseForm, AssignmentForm,
   UploadStudentsCSVForm )
+from ortools.linear_solver import pywraplp
 
 def index(request):
   context = {}
@@ -55,34 +56,56 @@ def assignments(request):
 # constraints.
 # See: https://developers.google.com/optimization/mip/integer_opt
 def distribute_students(assignment, students, courses, student_course_associations):
-  print("It's working! Jar-Jar it's working!")
-  #from ortools.linear_solver import pywraplp
-  #solver = pywraplp.Solver.CreateSolver('SCIP')
 
-  # ADD VALUES TO BE SOLVED
-  # The values below are min and max values
-  #x = solver.IntVar(0.0, 5, 'x')
-  #y = solver.IntVar(0.0, 5, 'y')
+  # creating student bounds
+  student_max_bound = 3
+  student_bounds = {}
+  for student in students:
+    student_bounds[student.email_address] = student_max_bound
 
-  # ADD CONSTRAINTS / CRITERIA
-  # x + 7 * y <= 17.5.
-  #solver.Add(x + 7 * y <= 17.5)
+  # creating student coeffs
+  student_coeffs = {}
+  for student in student_bounds:
+    student_coeffs[student] = {}
+  for association in student_course_associations:
+    student_coeffs[association.student.email_address][association.course.name] = association.priority
 
-  # DEFINE THE OBJECTIVE
-  # Maximize x + 10 * y.
-  #solver.Maximize(x + 10 * y)
+  # creating course bounds
+  course_bounds = {}
+  for course in courses:
+    course_bounds[course.name] = course.max_capacity
 
-  # RUN THE SOLVER
-  #status = solver.Solve()
+  # Create the mip solver with the SCIP backend.
+  solver = pywraplp.Solver.CreateSolver('SCIP')
 
-  # PRINT SOLUTION
-  #if status == pywraplp.Solver.OPTIMAL:
-  #    print('Solution:')
-  #    print('Objective value =', solver.Objective().Value())
-  #    print('x =', x.solution_value())
-  #    print('y =', y.solution_value())
-  #else:
-  #    print('The problem does not have an optimal solution.')
+  # Create variable dictionary for modelling.
+  variables = {}
+  for student in student_bounds:
+    variables[student] = {}
+    for course in course_bounds:
+      variables[student][course] = solver.BoolVar(course)
+
+  # Create student course selection constraints.
+  for student in student_bounds:
+    constraint_student = solver.RowConstraint(student_bounds[student], student_bounds[student], '')
+    for course in course_bounds:
+      constraint_student.SetCoefficient(variables[student][course], 1)
+
+  # Create course capacity constraints.
+  for course in course_bounds:
+    constraint_course = solver.RowConstraint(0, course_bounds[course], '')
+    for student in student_bounds:
+      constraint_course.SetCoefficient(variables[student][course], 1)
+
+  # Create maximization objective function.
+  objective = solver.Objective()
+  for student in student_bounds:
+    for course in course_bounds:
+      objective.SetCoefficient(variables[student][course], student_coeffs[student][course])
+  objective.SetMaximization()
+
+  status = solver.Solve()
+
 
 def assignment(request, item):
   assignment = Assignment.objects.get(pk=item)
