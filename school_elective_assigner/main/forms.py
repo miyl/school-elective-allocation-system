@@ -2,6 +2,7 @@ from django.contrib.admin import widgets
 from django.forms import ModelForm, Form, ChoiceField, HiddenInput, FileField
 from .models import (Assignment, Student, Course, Student_Course_Association,
      Teacher, Criterion)
+from django.core.validators import FileExtensionValidator
 
 # We want django admin's ManyToMany boxes instead of django's default
 from django.contrib.admin.widgets import FilteredSelectMultiple
@@ -40,7 +41,8 @@ class AssignmentForm(ModelForm):
 
 # Example of a Form without a model - boom!
 class UploadStudentsCSVForm(Form):
-  file = FileField()
+  # TODO: This really should be validated further, to ensure it's a valid CSV file
+  file = FileField(validators=[FileExtensionValidator(allowed_extensions=['csv'])])
   #class Meta:
     #widgets = {'assignment': HiddenInput()}
     #model = Assignment
