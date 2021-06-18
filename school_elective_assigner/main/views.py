@@ -2,10 +2,9 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from .models import (Assignment, Student, Course,
      Student_Course_Association, Teacher, Criterion)
-from .forms import ( StudentForm, CriterionForm, CourseForm, AssignmentForm,
-  UploadStudentsCSVForm )
 from ortools.linear_solver import pywraplp
-from .forms import EmailForm, StudentForm, CriterionForm, CourseForm, AssignmentForm, EmailForm
+from .forms import (EmailForm, StudentForm, CriterionForm, CourseForm,
+AssignmentForm, EmailForm, UploadStudentsCSVForm)
 from django.conf import settings
 from django.core.mail import send_mail
 
@@ -35,22 +34,27 @@ def assignments(request):
         progress += 25
     progresses.append(progress)
 
+
   # FORMS:
   # TODO: Set the correct school based on login
-  assignmentForm = AssignmentForm(initial={'school': assignments[0].school})
+  assignmentCreateForm = AssignmentForm(initial={'school': assignments[0].school})
 
   if request.method == 'POST':
     if 'add-assignment' in request.POST:
-      assignmentForm = AssignmentForm(request.POST)
-      if assignmentForm.is_valid():
-        assignmentForm.save()
-        return redirect('assignments')
+      assignmentCreateForm = AssignmentForm(request.POST)
+      if assignmentCreateForm.is_valid():
+        assignmentCreateForm.save()
+    elif 'edit-assignment' in request.POST:
+      aid = request.POST.get('id', None)
+      aname = request.POST.get('name', None)
+      Assignment.objects.filter(id=aid).update(name=aname)
     elif 'delete-assignment' in request.POST:
-      assignmentID = request.POST.get('assignmentid', None)
-      Assignment.objects.filter(id=assignmentID).delete()
-      return redirect('assignments')
+      aid = request.POST.get('assignmentid', None)
+      Assignment.objects.filter(id=aid).delete()
+    return redirect('assignments')
 
-  context = {'assignments': assignments, 'progresses': progresses, 'assignmentForm': assignmentForm}
+  context = {'assignments': assignments, 'progresses': progresses,
+      'assignmentCreateForm': assignmentCreateForm }
   return render(request, 'assignment_list.html', context)
 
 # The wrapper function for the solver, that should be called when the button to

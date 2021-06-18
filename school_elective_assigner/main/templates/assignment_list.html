@@ -52,10 +52,11 @@
             </div>
             <form method="post" accept-charset="utf-8">
 
-              {% csrf_token %}
-
               <div class="modal-body">
-                {{assignmentForm|crispy}}
+                {% csrf_token %}
+                {% comment %} Example of manually creating a form! {% endcomment %}
+                <input type="text" value="{{assignment.name}}" name="name" />
+                <input type="hidden" value="{{assignment.id}}" name="id" />
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
@@ -65,7 +66,6 @@
           </div>
         </div>
       </div>
-
 
     <!-- Delete Assignment Modal -->
     <div class="modal fade" id="deleteAssignmentModal{{assignment.id}}" tabindex="-1" aria-labelledby="deleteAssignmentModalLabel" aria-hidden="true">
@@ -107,7 +107,7 @@
           {% csrf_token %}
   
           <div class="modal-body">
-            {{assignmentForm|crispy}}
+            {{assignmentCreateForm|crispy}}
             {% comment %}
             Give us the school id of the first school, since it's the same for all school 
             <input name="school" id="id_school" value="{{assignments.0.school.id}}" type="hidden">
