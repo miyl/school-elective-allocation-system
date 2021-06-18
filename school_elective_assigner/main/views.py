@@ -48,7 +48,6 @@ def assignments(request):
       Assignment.objects.filter(id=assignmentID).delete()
       return redirect('assignments')
 
-
   context = {'assignments': assignments, 'progresses': progresses, 'assignmentForm': assignmentForm}
   return render(request, 'assignment_list.html', context)
 
