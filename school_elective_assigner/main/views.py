@@ -18,7 +18,7 @@ def assignments(request):
   # TODO: This is all assignments, not all assignments for the current
   # user/school which it should be
   assignments = Assignment.objects.all()
-    
+
   progresses = []
   for asn in assignments:
     # If results e-mail has been sent there's no need for the subsequent
@@ -110,9 +110,10 @@ def distribute_students(assignment, courses, students, criteria, student_course_
 
   status = solver.Solve()
 
+  # student is an id, course is a name
   for student in student_bounds:
     for course in course_bounds:
-      Student_Course_Association.objects.filter(student=student, course__name=course).update(assigned=bool(variables[student][course].solution_value()))
+      Student_Course_Association.objects.filter(student=student, course__name=course).update( assigned = bool(variables[student][course].solution_value()) )
 
 
 def assignment(request, item):
@@ -129,7 +130,7 @@ def assignment(request, item):
   criteria = Criterion.objects.filter(assignment=item)
 
   teachers = Teacher.objects.filter(school=school)
-  
+
   #if request.method == 'POST':
   #  message = request.POST['message']
   #  send_mail('Invitations Emails', 
@@ -146,7 +147,7 @@ def assignment(request, item):
   courseForm = CourseForm(initial={'assignment': assignment})
   uploadStudentsCSVForm = UploadStudentsCSVForm(initial={'assignment': assignment})
   emailForm = EmailForm(initial={'assignment': assignment})
-  
+
   # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
