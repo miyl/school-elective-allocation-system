@@ -45,3 +45,10 @@ class UploadStudentsCSVForm(Form):
     #widgets = {'assignment': HiddenInput()}
     #model = Assignment
     #fields = '__all__'
+
+class DistributeStudentsForm(Form):
+  pass
+  #class Meta:
+    #widgets = {'assignment': HiddenInput()}
+    #model = Assignment
+    #fields = '__all__'

@@ -42,8 +42,8 @@ def assignments(request):
       if assignmentForm.is_valid():
         assignmentForm.save()
         return redirect('assignments')
-    elif 'delete-assignment' in request.POST: 
-      assignmentID = request.POST.get('assignmentid', None); 
+    elif 'delete-assignment' in request.POST:
+      assignmentID = request.POST.get('assignmentid', None);
       Assignment.objects.filter(id=assignmentID).delete()
       return redirect('assignments')
 
@@ -54,8 +54,8 @@ def assignments(request):
 # solve is clicked on the website, on some inputted data and with some inputted
 # constraints.
 # See: https://developers.google.com/optimization/mip/integer_opt
-def solve():
-  pass
+def distribute_students(assignment, students, courses, student_course_associations):
+  print("It's working! Jar-Jar it's working!")
   #from ortools.linear_solver import pywraplp
   #solver = pywraplp.Solver.CreateSolver('SCIP')
 
@@ -134,6 +134,9 @@ def assignment(request, item):
       if form.is_valid():
         upload_students_csv_handler(request.FILES['file'])
         #return HttpResponseRedirect('{% url 'assignment' %}')
+    elif 'distribute-students' in request.POST:
+      distribute_students(assignment, students, courses, student_course_associations)
+      #return HttpResponseRedirect('{% url 'assignment' %}')
 
 
   # /FORMS
@@ -141,7 +144,8 @@ def assignment(request, item):
   context = {'assignment': assignment, 'students': students, 'courses':
       courses, 'student_course_associations': student_course_associations,
       'teachers': teachers, 'studentForm': studentForm,
-      'criterionForm': criterionForm, 'courseForm': courseForm
+      'criterionForm': criterionForm, 'courseForm': courseForm,
+      'uploadStudentsCSVForm': uploadStudentsCSVForm
   }
 
   return render(request, 'assignment.html', context)

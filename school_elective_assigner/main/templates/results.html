@@ -1,6 +1,14 @@
 {% load static %}  
   <div class="tab-pane fade" id="resultat" role="tabpanel" aria-labelledby="resultat-tab">
 
+    <div class="opret_t">
+      <form action="" method="POST" accept-charset="utf-8">
+        {% comment %}{{distributeStudentsForm}}{% endcomment %}
+        {% csrf_token %}
+        <input type="submit" value="Fordel elever på fag" name="distribute-students" class="btn btn-primary">
+      </form>
+    </div>
+
     <div class="accordion card-body" id="student-distribution">
 
       <div class="accordion-item col-lg-11 mx-auto">

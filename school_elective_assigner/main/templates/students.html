@@ -134,7 +134,7 @@
         {% csrf_token %}
 
         <div class="modal-body">
-          {{studentForm|crispy}}
+          {{ studentForm|crispy }}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
@@ -157,6 +157,8 @@
       </div>
 
       <form method="post" accept-charset="utf-8">
+
+        {{ uploadStudentsCSVForm|crispy }}
 
         {% csrf_token %}
 
