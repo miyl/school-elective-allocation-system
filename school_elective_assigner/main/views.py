@@ -269,7 +269,7 @@ def upload_students_csv_handler(assignment, file):
   #email_address
   breakpoint()
 
-  with open(path) as f:
+  with open(file) as f:
     reader = csv.reader(f)
     for row in reader:
       _, created = Teacher.objects.get_or_create(
