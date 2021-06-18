@@ -5,10 +5,12 @@ from .models import (Assignment, Student, Course,
 from .forms import ( StudentForm, CriterionForm, CourseForm, AssignmentForm,
   UploadStudentsCSVForm )
 from ortools.linear_solver import pywraplp
+from .forms import EmailForm, StudentForm, CriterionForm, CourseForm, AssignmentForm, EmailForm
+from django.conf import settings
+from django.core.mail import send_mail
 
 def index(request):
   context = {}
-
   return render(request, 'index.html', context)
 
 
@@ -16,7 +18,7 @@ def assignments(request):
   # TODO: This is all assignments, not all assignments for the current
   # user/school which it should be
   assignments = Assignment.objects.all()
-
+    
   progresses = []
   for asn in assignments:
     # If results e-mail has been sent there's no need for the subsequent
@@ -123,6 +125,14 @@ def assignment(request, item):
   criteria = Criterion.objects.filter(assignment=item)
 
   teachers = Teacher.objects.filter(school=school)
+  
+  #if request.method == 'POST':
+  #  message = request.POST['message']
+  #  send_mail('Invitations Emails', 
+  #            message, 
+  #            settings.EMAIL_HOST_USER, 
+  #            ['tariqzaman1@hotmail.com'], 
+  #            fail_silently=False) 
 
 
 
@@ -131,6 +141,8 @@ def assignment(request, item):
   studentForm = StudentForm(initial={'assignment': assignment})
   courseForm = CourseForm(initial={'assignment': assignment})
   uploadStudentsCSVForm = UploadStudentsCSVForm(initial={'assignment': assignment})
+  emailForm = EmailForm(initial={'assignment': assignment})
+  
   # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
@@ -164,6 +176,15 @@ def assignment(request, item):
       # needed as max capacity is set there.
       distribute_students(assignment, courses, students, criteria, student_course_associations)
       #return HttpResponseRedirect('{% url 'assignment' %}')
+    elif 'send-inv-email' in request.POST: 
+      subject = request.POST['subject']
+      message = request.POST['message']
+      send_mail('Invitations Email',
+                subject,
+                message, 
+                settings.EMAIL_HOST_USER, 
+                ['tariqzaman1@hotmail.com'], 
+                fail_silently=False) 
 
 
   # /FORMS
@@ -172,7 +193,7 @@ def assignment(request, item):
       courses, 'student_course_associations': student_course_associations,
       'teachers': teachers, 'criteria': criteria, 'studentForm': studentForm,
       'criterionForm': criterionForm, 'courseForm': courseForm,
-      'uploadStudentsCSVForm': uploadStudentsCSVForm
+      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'emailForm': emailForm
   }
 
   return render(request, 'assignment.html', context)

@@ -8,7 +8,7 @@
 <h1 class="display-6">Tildelinger</h1>
 
 {% comment %} https://getbootstrap.com/docs/5.0/components/accordion/  {% endcomment %}
-<div class="opret_t">
+<div class="page-button">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAssignmentModal">Opret ny Tildeling</button>
 </div>
 
@@ -82,7 +82,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-              <input type="hidden" name="assignmentid" value="{{assignment.id}}">
+              <input type="hidden" name="assignmentname" value="{{assignment.id}}">
               <input type="submit" value="Slet tildeling" name="delete-assignment" class="btn btn-danger">  
             </div> 
             </form>

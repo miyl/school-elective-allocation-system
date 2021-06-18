@@ -12,7 +12,7 @@
   margin-top: 10%;
 }
 
-.opret_t {
+.page-button {
   text-align: center;
   margin-top: 3%;
   margin-bottom: 1%;
@@ -117,9 +117,17 @@
 }
 
 .icon_preview_symbol {
-  right: 3%
+  right: 4.5%
 }
 
 .icon_status_symbol {
-  right: 6%
+  right: 2%
+}
+
+.icon_create_symbol {
+  right: 8%
+}
+
+#design-email-text {
+  text-align: left;
 }

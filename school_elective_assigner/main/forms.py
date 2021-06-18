@@ -54,3 +54,10 @@ class DistributeStudentsForm(Form):
     #widgets = {'assignment': HiddenInput()}
     #model = Assignment
     #fields = '__all__'
+    
+class EmailForm(ModelForm): 
+  class Meta: 
+    model = Assignment
+    exclude = ( 'name', 'reminder_email', 'results_email',
+                'priority_form_text', 'invitation_email_sent', 'reminder_email_sent',
+                'results_email_sent', 'deadline', 'school', )
