@@ -88,9 +88,12 @@ class School(models.Model):
 class Assignment(models.Model):
   name = models.CharField(max_length=200)
 
-  invitation_email = models.TextField(max_length=200, null=True, blank=True)
-  reminder_email = models.TextField(null=True, blank=True )
-  results_email = models.TextField(null=True, blank=True )
+  invitation_email_subject = models.CharField(max_length=200, null=True, blank=True)
+  invitation_email_message = models.TextField(null=True, blank=True)
+  reminder_email_message = models.TextField(null=True, blank=True)
+  reminder_email_subject = models.CharField(max_length=200, null=True, blank=True)
+  results_email_message = models.TextField(null=True, blank=True)
+  results_email_subject = models.CharField(max_length=200, null=True, blank=True)
   priority_form_text = models.TextField(null=True, blank=True)
 
   invitation_email_sent = models.BooleanField(default=False)

@@ -1,6 +1,18 @@
-{% load static %}  
+{% load static %} 
+{% load crispy_forms_tags %}
+
   <div class="tab-pane fade show active margin_top" id="status" role="tabpanel" aria-labelledby="status-tab">
-    <ul class="list-group col-lg-10 mx-auto">
+    
+
+    <!--
+    <form action="{% url 'index' %}">
+      {% csrf_token %}
+      <textarea name="message" id="email-input" cols="30" rows="10"></textarea>
+      <input type="submit" name="Send Invitations-Emails" id="">
+    </form>
+    -->
+
+    <ul class="list-group col-lg-10 mx-auto">    
       <li class="list-group-item">Valgfag: {{ courses|length }}
         <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
           {% if courses|length > 0 %}
@@ -28,29 +40,41 @@
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
           {% endif %}
         </button>
+        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
+        </button>
       </li>
-      <li class="list-group-item">Design prioriteringsside
+      <li class="list-group-item">Prioriteringsside
         <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+          <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
+          </button>
           <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target=""> 
             {% if priority_form_text %}
             <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
             {% endif %}
           </button>
       </li>
-      <li class="list-group-item">Design e-mail-invitation
+        <li class="list-group-item" id="design-email-text"> E-mail-invitation 
+          <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
+          </button>
+          <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendInvEmail">
+            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
+          </button>
+          <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+            {% if invitation_email_sent %}
+            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
+            {% endif %}
+          </button>
+        </li>
+      <li class="list-group-item">E-mail-påmindelse
         <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
         </button>
-        <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          {% if invitation_email_sent %}
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-          {% endif %}
-        </button>
-      </li>
-      <li class="list-group-item">Design e-mail-påmindelse
-        <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
+        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
         </button>
         <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
           {% if reminder_email_sent %}
@@ -58,9 +82,12 @@
           {% endif %}
         </button>
       </li>
-      <li class="list-group-item">Design resultats-e-mail
+      <li class="list-group-item">Resultats-e-mail
         <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
+        </button>
+        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
         </button>
         <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
           {% if results_email_sent %}
@@ -69,4 +96,29 @@
         </button>
       </li>
     </ul>
+  </div>
+
+  <div class="modal fade" id="sendInvEmail" tabindex="-1" aria-labelledby="sendInvEmailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sendInvEmailModalLabel">Send Invitations-Email</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <form method="post" accept-charset="utf-8">
+  
+          {% csrf_token %}
+  
+          <div class="modal-body">
+            {{emailForm|crispy}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <input type="submit" value="Send Email" name="send-inv-email" class="btn btn-primary">
+          </div>
+        </form>
+  
+      </div>
+    </div>
   </div>
