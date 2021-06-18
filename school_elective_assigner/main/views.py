@@ -177,8 +177,8 @@ def assignment(request, item):
       distribute_students(assignment, courses, students, criteria, student_course_associations)
       #return HttpResponseRedirect('{% url 'assignment' %}')
     elif 'send-inv-email' in request.POST: 
-      subject = request.POST['subject']
-      message = request.POST['message']
+      subject = request.POST['invitation_email_subject']
+      message = request.POST['invitation_email_message']
       send_mail('Invitations Email',
                 subject,
                 message, 

@@ -33,7 +33,8 @@ class CourseForm(ModelForm):
 class AssignmentForm(ModelForm):
   class Meta:
     model = Assignment
-    exclude = ( 'invitation_email', 'reminder_email', 'results_email',
+    exclude = ( 'invitation_email_message', 'invitation_email_subject', 'reminder_email_subject', 
+                'reminder_email_message', 'results_email_subject', 'results_email_message',
                 'priority_form_text', 'invitation_email_sent', 'reminder_email_sent',
                 'results_email_sent', 'deadline')
     widgets = {'school': HiddenInput()}
@@ -58,6 +59,7 @@ class DistributeStudentsForm(Form):
 class EmailForm(ModelForm): 
   class Meta: 
     model = Assignment
-    exclude = ( 'name', 'reminder_email', 'results_email',
-                'priority_form_text', 'invitation_email_sent', 'reminder_email_sent',
-                'results_email_sent', 'deadline', 'school', )
+    exclude = ( 'name', 'results_email_message', 'results_email_subject', 
+                'reminder_email_subject', 'reminder_email_message', 'priority_form_text',
+                'invitation_email_sent', 'reminder_email_sent', 'results_email_sent',
+                'deadline', 'school', )
