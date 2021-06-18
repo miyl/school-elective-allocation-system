@@ -55,7 +55,9 @@ def assignments(request):
 # solve is clicked on the website, on some inputted data and with some inputted
 # constraints.
 # See: https://developers.google.com/optimization/mip/integer_opt
-def distribute_students(assignment, students, courses, student_course_associations):
+
+
+def distribute_students(assignment, courses, students, criteria, student_course_associations):
 
   # creating student bounds
   student_max_bound = 3
@@ -118,7 +120,7 @@ def assignment(request, item):
   # No direct foreign key to check on :/ :
   # Instead we check that the course matches one of the assignment courses
   student_course_associations = Student_Course_Association.objects.filter(course__in=courses)
-  #criteria = Assignment.objects.get(pk=item)
+  criteria = Criterion.objects.filter(assignment=item)
 
   teachers = Teacher.objects.filter(school=school)
 
@@ -154,11 +156,13 @@ def assignment(request, item):
       Course.objects.filter(id=courseID).delete()
     elif 'import-students' in request.POST:
       form = UploadStudentsCSVForm(request.POST, request.FILES)
+      # TODO: Better validation
       if form.is_valid():
-        upload_students_csv_handler(request.FILES['file'])
-        #return HttpResponseRedirect('{% url 'assignment' %}')
+        upload_students_csv_handler(assignment, request.FILES['file'])
     elif 'distribute-students' in request.POST:
-      distribute_students(assignment, students, courses, student_course_associations)
+      # TODO: Shouldn't need students in the future, but courses are still
+      # needed as max capacity is set there.
+      distribute_students(assignment, courses, students, criteria, student_course_associations)
       #return HttpResponseRedirect('{% url 'assignment' %}')
 
 
@@ -166,7 +170,7 @@ def assignment(request, item):
 
   context = {'assignment': assignment, 'students': students, 'courses':
       courses, 'student_course_associations': student_course_associations,
-      'teachers': teachers, 'studentForm': studentForm,
+      'teachers': teachers, 'criteria': criteria, 'studentForm': studentForm,
       'criterionForm': criterionForm, 'courseForm': courseForm,
       'uploadStudentsCSVForm': uploadStudentsCSVForm
   }
@@ -260,7 +264,10 @@ def download_csv(request, item):
   )
 
 
-def upload_students_csv_handler():
+def upload_students_csv_handler(assignment, file):
+  #first_name
+  #email_address
+  breakpoint()
 
   with open(path) as f:
     reader = csv.reader(f)

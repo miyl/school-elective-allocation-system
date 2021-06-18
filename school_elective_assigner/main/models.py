@@ -37,7 +37,7 @@ class Course(models.Model):
   name = models.CharField(max_length=200)
   description = models.TextField()
   active = models.BooleanField(default=True)
-  max_capacity = models.PositiveSmallIntegerField(null=True, blank=True)
+  max_capacity = models.PositiveSmallIntegerField()
 
   assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)
 
@@ -61,6 +61,8 @@ class Student_Course_Association(models.Model):
 class Criterion(models.Model):
   type = models.PositiveSmallIntegerField(choices=TYPES)
   all = models.BooleanField(default=False)
+  m = models.PositiveSmallIntegerField(null=True, blank=True)
+  n = models.PositiveSmallIntegerField(null=True, blank=True)
 
   # Skal laves til many to many
   courses = models.ManyToManyField('Course', blank=True)

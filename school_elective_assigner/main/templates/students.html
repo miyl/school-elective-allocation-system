@@ -156,7 +156,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <form method="post" accept-charset="utf-8">
+      {% comment %} 
+      Django needs the enctype set below to detect it as a file, apparently: 
+      https://stackoverflow.com/questions/2010747/empty-request-files-with-django-upload-forms
+      {% endcomment %}
+      <form method="post" accept-charset="utf-8" enctype="multipart/form-data" >
 
         {{ uploadStudentsCSVForm|crispy }}
 
@@ -166,7 +170,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-          <input type="submit" value="Gem Studerende" name="import-student" class="btn btn-primary">
+          <input type="submit" value="Importer Studerende" name="import-students" class="btn btn-primary">
         </div>
       </form>
 
