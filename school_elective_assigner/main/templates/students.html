@@ -79,10 +79,12 @@
                 {% csrf_token %}
 
                 <div class="modal-body">
-                  {{studentForm|crispy}}
+                  {{ student.editForm|crispy }}
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                  {% comment %} To identify the correct student to edit  {% endcomment %}
+                  <input type="hidden" value="{{student.id}}" name="id" />
                   <input type="submit" value="Gem Redigeringer" name="edit-student" class="btn btn-primary">
                 </div>
               </form>
@@ -103,7 +105,7 @@
                 {% csrf_token %}
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                  <input type="hidden" name="studentid" value="{{student.id}}">
+                  <input type="hidden" value="{{student.id}}" name="id" >
                   <input type="submit" value="Slet student" name="delete-student" class="btn btn-danger">  
                 </div> 
               </form>
@@ -134,7 +136,7 @@
         {% csrf_token %}
 
         <div class="modal-body">
-          {{ studentForm|crispy }}
+          {{ studentAddForm|crispy }}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>

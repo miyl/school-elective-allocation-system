@@ -8,6 +8,7 @@ AssignmentForm, EmailForm, UploadStudentsCSVForm)
 from django.conf import settings
 from django.core.mail import send_mail
 
+# Login page
 def index(request):
   context = {}
   return render(request, 'index.html', context)
@@ -61,6 +62,153 @@ def assignments(request):
 # solve is clicked on the website, on some inputted data and with some inputted
 # constraints.
 # See: https://developers.google.com/optimization/mip/integer_opt
+
+
+def assignment(request, item):
+  assignment = Assignment.objects.get(pk=item)
+  # In the future obtain the school from which user is logged in
+  # Right now it's only used to identify the teachers, but its e-mail address
+  # should also be in # the top menu
+  school = assignment.school
+  students = Student.objects.filter(assignment=item)
+  courses = Course.objects.filter(assignment=item)
+  # No direct foreign key to check on :/ :
+  # Instead we check that the course matches one of the assignment courses
+  student_course_associations = Student_Course_Association.objects.filter(course__in=courses)
+  criteria = Criterion.objects.filter(assignment=item)
+
+  teachers = Teacher.objects.filter(school=school)
+
+  #if request.method == 'POST':
+  #  message = request.POST['message']
+  #  send_mail('Invitations Emails',
+  #            message,
+  #            settings.EMAIL_HOST_USER,
+  #            ['tariqzaman1@hotmail.com'],
+  #            fail_silently=False)
+
+
+
+  # FORMS
+  criterionForm = CriterionForm(initial={'assignment': assignment})
+  studentAddForm = StudentForm(initial={'assignment': assignment})
+  courseForm = CourseForm(initial={'assignment': assignment})
+  uploadStudentsCSVForm = UploadStudentsCSVForm(initial={'assignment': assignment})
+  emailForm = EmailForm(initial={'assignment': assignment})
+
+  # A different approach, dynamically creating the forms but simply appending
+  # them to the existing student objects instead of creating a separate
+  # studentEditForms list-object
+  for s in students:
+    s.editForm = StudentForm(instance=s)
+
+  # Other GET forms from this view here
+  if request.method == 'POST':
+    # Identify which form was submitted
+    if 'add-student' in request.POST:
+      studentAddForm = StudentForm(request.POST)
+      # breakpoint()
+      if studentForm.is_valid():
+        studentForm.save()
+    elif 'edit-student' in request.POST:
+      sid = request.POST.get('id', None)
+      sfn = request.POST.get('first_name', None)
+      sea = request.POST.get('email_address', None)
+      Student.objects.filter(id=sid).update(first_name=sfn,
+          email_address=sea)
+    elif 'delete-student' in request.POST:
+      studentID = request.POST.get('id', None);
+      Student.objects.filter(id=studentID).delete()
+    elif 'add-course' in request.POST:
+      courseForm = CourseForm(request.POST)
+      if courseForm.is_valid():
+        courseForm.save()
+    elif 'edit-course' in request.POST:
+      courseName = request.POST.get('name', None);
+      Course.objects.filter(name=courseName).get()
+      if courseForm.is_valid():
+        courseForm.save()
+    elif 'delete-course' in request.POST:
+      courseID = request.POST.get('courseid', None);
+      Course.objects.filter(id=courseID).delete()
+    elif 'import-students' in request.POST:
+      form = UploadStudentsCSVForm(request.POST, request.FILES)
+      # TODO: Better validation
+      if form.is_valid():
+        upload_students_csv_handler(assignment, request.FILES['file'])
+    elif 'distribute-students' in request.POST:
+      # TODO: Shouldn't need students in the future, but courses are still
+      # needed as max capacity is set there.
+      distribute_students(assignment, courses, students, criteria, student_course_associations)
+      #return HttpResponseRedirect('{% url 'assignment' %}')
+    elif 'send-inv-email' in request.POST: 
+      subject = request.POST['invitation_email_subject']
+      message = request.POST['invitation_email_message']
+      send_mail('Invitations Email',
+                subject,
+                message,
+                settings.EMAIL_HOST_USER,
+                ['tariqzaman1@hotmail.com'],
+                fail_silently=False)
+    # Must be a better way, ie. to get the URL directly from URLs.py dynamically
+    # here, just like one can in templates
+    #return redirect(f'{assignment.id}')
+
+
+  # /FORMS
+
+  context = {'assignment': assignment, 'students': students, 'courses':
+      courses, 'student_course_associations': student_course_associations,
+      'teachers': teachers, 'criteria': criteria, 'studentAddForm': studentAddForm,
+      'criterionForm': criterionForm, 'courseForm': courseForm,
+      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'emailForm': emailForm
+  }
+
+  return render(request, 'assignment.html', context)
+
+
+# A generic view!: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
+#class AssignmentListView(ListView):
+#    # Obtain the school from which user is logged in
+#    # school =
+#
+#    model = Assignment
+#
+#
+#
+#    # This is really the default name of the template it expects, but it
+#    # looks at the root of the app name (main) by default, so I specify it here
+#    # to make it look in all template dirs.
+#    template_name="assignment_list.html"
+#
+#    # If we want to pass additional data to the template
+#    def get_context_data(self, **kwargs):
+#        # Call the base implementation first to get a context
+#        context = super().get_context_data(**kwargs)
+#
+#
+#        # CALCULATE THE PROGRESS ON THE ASSIGNMENT (PROGRESS BAR)
+#
+#        self.progresses = []
+#        for asn in Assignment.objects.all():
+#          # If results e-mail has been sent there's no need for the subsequent
+#          # calculations?
+#          progress = 0
+#          if asn.results_email_sent:
+#            progress = 100
+#          else:
+#            if Student.objects.filter(assignment=asn).exists():
+#              progress += 25
+#            if Course.objects.filter(assignment=asn).exists():
+#              progress += 25
+#            # This seems annoying/silly at this point, maybe a criterion should have a
+#            # direct connection with assignment?
+#            if Criterion.objects.filter(assignment=asn).exists():
+#              progress += 25
+#          self.progresses.append(progress)
+#
+#        context['progresses'] = self.progresses
+#        return context
 
 
 def distribute_students(assignment, courses, students, criteria, student_course_associations):
@@ -120,136 +268,6 @@ def distribute_students(assignment, courses, students, criteria, student_course_
       Student_Course_Association.objects.filter(student=student, course__name=course).update( assigned = bool(variables[student][course].solution_value()) )
 
 
-def assignment(request, item):
-  assignment = Assignment.objects.get(pk=item)
-  # In the future obtain the school from which user is logged in
-  # Right now it's only used to identify the teachers, but its e-mail address
-  # should also be in # the top menu
-  school = assignment.school
-  students = Student.objects.filter(assignment=item)
-  courses = Course.objects.filter(assignment=item)
-  # No direct foreign key to check on :/ :
-  # Instead we check that the course matches one of the assignment courses
-  student_course_associations = Student_Course_Association.objects.filter(course__in=courses)
-  criteria = Criterion.objects.filter(assignment=item)
-
-  teachers = Teacher.objects.filter(school=school)
-
-  #if request.method == 'POST':
-  #  message = request.POST['message']
-  #  send_mail('Invitations Emails', 
-  #            message, 
-  #            settings.EMAIL_HOST_USER, 
-  #            ['tariqzaman1@hotmail.com'], 
-  #            fail_silently=False) 
-
-
-
-  # FORMS
-  criterionForm = CriterionForm(initial={'assignment': assignment})
-  studentForm = StudentForm(initial={'assignment': assignment})
-  courseForm = CourseForm(initial={'assignment': assignment})
-  uploadStudentsCSVForm = UploadStudentsCSVForm(initial={'assignment': assignment})
-  emailForm = EmailForm(initial={'assignment': assignment})
-
-  # Other GET forms from this view here
-  if request.method == 'POST':
-    # Identify which form was submitted
-    if 'add-student' in request.POST:
-      studentForm = StudentForm(request.POST)
-      # breakpoint()
-      if studentForm.is_valid():
-        studentForm.save()
-    elif 'delete-student' in request.POST:
-      studentID = request.POST.get('studentid', None);
-      Student.objects.filter(id=studentID).delete()
-    elif 'add-course' in request.POST:
-      courseForm = CourseForm(request.POST)
-      if courseForm.is_valid():
-        courseForm.save()
-    elif 'edit-course' in request.POST:
-      courseName = request.POST.get('name', None);
-      Course.objects.filter(name=courseName).get()
-      if courseForm.is_valid():
-        courseForm.save()
-    elif 'delete-course' in request.POST:
-      courseID = request.POST.get('courseid', None);
-      Course.objects.filter(id=courseID).delete()
-    elif 'import-students' in request.POST:
-      form = UploadStudentsCSVForm(request.POST, request.FILES)
-      # TODO: Better validation
-      if form.is_valid():
-        upload_students_csv_handler(assignment, request.FILES['file'])
-    elif 'distribute-students' in request.POST:
-      # TODO: Shouldn't need students in the future, but courses are still
-      # needed as max capacity is set there.
-      distribute_students(assignment, courses, students, criteria, student_course_associations)
-      #return HttpResponseRedirect('{% url 'assignment' %}')
-    elif 'send-inv-email' in request.POST: 
-      subject = request.POST['invitation_email_subject']
-      message = request.POST['invitation_email_message']
-      send_mail('Invitations Email',
-                subject,
-                message, 
-                settings.EMAIL_HOST_USER, 
-                ['tariqzaman1@hotmail.com'], 
-                fail_silently=False) 
-
-
-  # /FORMS
-
-  context = {'assignment': assignment, 'students': students, 'courses':
-      courses, 'student_course_associations': student_course_associations,
-      'teachers': teachers, 'criteria': criteria, 'studentForm': studentForm,
-      'criterionForm': criterionForm, 'courseForm': courseForm,
-      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'emailForm': emailForm
-  }
-
-  return render(request, 'assignment.html', context)
-
-
-# A generic view!: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
-#class AssignmentListView(ListView):
-#    # Obtain the school from which user is logged in
-#    # school =
-#
-#    model = Assignment
-#
-#
-#
-#    # This is really the default name of the template it expects, but it
-#    # looks at the root of the app name (main) by default, so I specify it here
-#    # to make it look in all template dirs.
-#    template_name="assignment_list.html"
-#
-#    # If we want to pass additional data to the template
-#    def get_context_data(self, **kwargs):
-#        # Call the base implementation first to get a context
-#        context = super().get_context_data(**kwargs)
-#
-#
-#        # CALCULATE THE PROGRESS ON THE ASSIGNMENT (PROGRESS BAR)
-#
-#        self.progresses = []
-#        for asn in Assignment.objects.all():
-#          # If results e-mail has been sent there's no need for the subsequent
-#          # calculations?
-#          progress = 0
-#          if asn.results_email_sent:
-#            progress = 100
-#          else:
-#            if Student.objects.filter(assignment=asn).exists():
-#              progress += 25
-#            if Course.objects.filter(assignment=asn).exists():
-#              progress += 25
-#            # This seems annoying/silly at this point, maybe a criterion should have a
-#            # direct connection with assignment?
-#            if Criterion.objects.filter(assignment=asn).exists():
-#              progress += 25
-#          self.progresses.append(progress)
-#
-#        context['progresses'] = self.progresses
-#        return context
 
 
 
@@ -304,4 +322,4 @@ def upload_students_csv_handler(assignment, file):
     first_name = row[0],
     email_address = row[1],
     )
-  return redirect(f'assignment/{assignment}')
+  return redirect(f'assignment/{assignment.id}')
