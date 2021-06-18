@@ -290,15 +290,12 @@ def download_csv(request, item):
 
 
 def upload_students_csv_handler(assignment, file):
-  #first_name
-  #email_address
   breakpoint()
 
-  with open(file) as f:
-    reader = csv.reader(f)
-    for row in reader:
-      _, created = Teacher.objects.get_or_create(
-      first_name=row[0],
-      last_name=row[1],
-      middle_name=row[2],
-      )
+  reader = csv.reader(file)
+  for row in reader:
+    _, created = Student.objects.get_or_create(
+    first_name=row[0],
+    email_address=row[1],
+    )
+  return redirect(f'assignment/{assignment}')
