@@ -4128,7 +4128,7 @@
   "pk": 1,
   "fields": {
     "name": "Android development",
-    "description": "Description",
+    "description": "Lær Android-development, med fokus på progressive web apps!",
     "active": true,
     "max_capacity": 60,
     "assignment": 1
@@ -4139,7 +4139,7 @@
   "pk": 2,
   "fields": {
     "name": "C",
-    "description": "Description",
+    "description": "Lær ét af de gamle programmeringssprog, der stadig bruges til systemprogrammering.",
     "active": true,
     "max_capacity": 30,
     "assignment": 1
@@ -4150,7 +4150,7 @@
   "pk": 3,
   "fields": {
     "name": "Python",
-    "description": "Description",
+    "description": "Lær et halvgammelt men på mange måder også moderne programmeringssprog at kende, som bl.a. bruges inden for webudvikling og data science",
     "active": true,
     "max_capacity": 60,
     "assignment": 1
@@ -4161,7 +4161,7 @@
   "pk": 4,
   "fields": {
     "name": "Angular",
-    "description": "Description",
+    "description": "Lær frontend webframeworket at kende, som kom før React.",
     "active": true,
     "max_capacity": 50,
     "assignment": 1
@@ -4172,7 +4172,7 @@
   "pk": 5,
   "fields": {
     "name": "Project course",
-    "description": "Description",
+    "description": "Savner du projektopgaverne fra de tidligere semestre, eller har du en produktidé? Så gå på opdagelse med dette valgfag.",
     "active": true,
     "max_capacity": 55,
     "assignment": 1
@@ -4183,7 +4183,7 @@
   "pk": 6,
   "fields": {
     "name": "Vue",
-    "description": "Description",
+    "description": "Et moderne webframework der ifølge mange er uden lige.",
     "active": true,
     "max_capacity": 60,
     "assignment": 1
@@ -4194,7 +4194,7 @@
   "pk": 7,
   "fields": {
     "name": "IT Security",
-    "description": "Description",
+    "description": "Lær om threat management, Denial of Service, SQL Injection og meget mere.",
     "active": true,
     "max_capacity": 60,
     "assignment": 1
