@@ -72,9 +72,15 @@ def assignment(request, item):
   school = assignment.school
   students = Student.objects.filter(assignment=item)
   courses = Course.objects.filter(assignment=item)
+
   # No direct foreign key to check on :/ :
   # Instead we check that the course matches one of the assignment courses
-  student_course_associations = Student_Course_Association.objects.filter(course__in=courses)
+  student_course_associations = Student_Course_Association.objects.filter(course__in=courses).order_by('student', '-priority')
+  for s in students:
+    s.course_associations = [sca for sca in student_course_associations if sca.student == s]
+
+  #print(students[0].first_name); print(students[0].student_course_associations)
+
   criteria = Criterion.objects.filter(assignment=item)
 
   teachers = Teacher.objects.filter(school=school)
@@ -136,10 +142,10 @@ def assignment(request, item):
       # TODO: Better validation
       if form.is_valid():
         upload_students_csv_handler(assignment, request.FILES['file'])
-    elif 'distribute-students' in request.POST:
+    elif 'allocate-courses' in request.POST:
       # TODO: Shouldn't need students in the future, but courses are still
       # needed as max capacity is set there.
-      distribute_students(assignment, courses, students, criteria, student_course_associations)
+      allocate_courses(assignment, courses, students, criteria, student_course_associations)
       #return HttpResponseRedirect('{% url 'assignment' %}')
     elif 'send-inv-email' in request.POST: 
       subject = request.POST['invitation_email_subject']
@@ -157,10 +163,10 @@ def assignment(request, item):
 
   # /FORMS
 
-  context = {'assignment': assignment, 'students': students, 'courses':
-      courses, 'student_course_associations': student_course_associations,
-      'teachers': teachers, 'criteria': criteria, 'studentAddForm': studentAddForm,
-      'criterionForm': criterionForm, 'courseForm': courseForm,
+  context = {'assignment': assignment, 'students': students,
+      'courses': courses, 'teachers': teachers, 'criteria': criteria,
+      'studentAddForm': studentAddForm, 'criterionForm': criterionForm,
+      'courseForm': courseForm,
       'uploadStudentsCSVForm': uploadStudentsCSVForm, 'emailForm': emailForm
   }
 
@@ -211,7 +217,7 @@ def assignment(request, item):
 #        return context
 
 
-def distribute_students(assignment, courses, students, criteria, student_course_associations):
+def allocate_courses(assignment, courses, students, criteria, student_course_associations):
 
   # creating student bounds
   student_max_bound = 3

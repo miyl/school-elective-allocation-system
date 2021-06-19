@@ -44,21 +44,25 @@
                     <td><h5>Tildelt</h5></td>
                   </tr>
                 </thead>
-                {% for student_course_association in student_course_associations %}
-                  {% if student_course_association.student == student %}
+                <tbody>
+                  {% for sca in student.course_associations %}
                     <tr>
                       <td>
-                          {{ student_course_association.priority }}
-                          {{ student_course_association.course }}
+                          {{ sca.priority }}
+                          {{ sca.course }}
                       </td>
                       <td>
-                        {% if student_course_association.assigned %}
+                        {% if sca.assigned %}
                           <img src="/static/libs/node/node_modules/bootstrap-icons/icons/check-circle.svg" alt="Bootstrap" width="20" height="20">
                         {% endif %}
                       </td>
                     </tr>
-                  {% endif %}
-                {% endfor %}
+                  {% empty %}
+                  <tr><td>
+                    Den studerende har ikke prioriteret fag.
+                  </td></tr>
+                  {% endfor %}
+                </tbody>
               </table>
               </div> <!-- Row -->
               </div> <!-- Container -->

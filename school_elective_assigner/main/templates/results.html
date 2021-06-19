@@ -3,28 +3,28 @@
 
     <div class="page-button">
       <form action="" method="POST" accept-charset="utf-8">
-        {% comment %}{{distributeStudentsForm}}{% endcomment %}
+        {% comment %}{{allocateCoursesForm}}{% endcomment %}
         {% csrf_token %}
-        <input type="submit" value="Fordel elever på fag" name="distribute-students" class="btn btn-primary">
+        <input type="submit" value="Fordel elever på fag" name="allocate-courses" class="btn btn-primary">
       </form>
     </div>
 
-    <div class="accordion card-body" id="student-distribution">
+    <div class="accordion card-body" id="course-allocation">
 
       <div class="accordion-item col-lg-11 mx-auto">
-        <h2 class="accordion-header" id="student-distribution-header">
+        <h2 class="accordion-header" id="course-allocation-header">
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-          <button class="accordion-button  collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#student-distro"
+          <button class="accordion-button collapsed"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#course-alloc"
                                                                                    aria-expanded="false"
-                                                                                   aria-controls="student-distro">
-            Elevdistribution
+                                                                                   aria-controls="course-alloc">
+            Elevfordeling
             <a href=""  class="icon_edit_res icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
             <a href=""  class="icon_del_res icon_absolute"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
-        <div id="student-distro" class="accordion-collapse collapse show"
-          aria-labelledby="student-distribution-header" data-bs-parent="#student-distribution">
+        <div id="course-alloc" class="accordion-collapse collapse show"
+          aria-labelledby="course-allocation-header" data-bs-parent="#course-allocation">
           <div class="accordion-body">
             <!--{{ course.name }}-->
           </div>
@@ -34,22 +34,22 @@
     </div>
 
 
-    <div class="accordion card-body" id="distribution-result">
+    <div class="accordion card-body" id="allocation-result">
 
       <div class="accordion-item col-lg-11 mx-auto">
-        <h2 class="accordion-header" id="distribution-result-header">
+        <h2 class="accordion-header" id="allocation-result-header">
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
           <button class="accordion-button collapsed"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#distribution-res"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#allocation-res"
                                                                                    aria-expanded="false"
-                                                                                   aria-controls="distribution-res">
-            Distributionsresultat
+                                                                                   aria-controls="allocation-res">
+            Fordelingsresultat
             <a href="" class="icon_edit_res icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></a>
             <a href="" class="icon_del_res icon_absolute" ><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></a>
           </button>
         </h2>
-        <div id="distribution-res" class="accordion-collapse collapse show"
-          aria-labelledby="distribution-result-header" data-bs-parent="#distribution-result">
+        <div id="allocation-res" class="accordion-collapse collapse show"
+          aria-labelledby="allocation-result-header" data-bs-parent="#allocation-result">
           <div class="accordion-body">
             <div class="progress">
               <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
