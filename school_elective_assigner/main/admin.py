@@ -7,15 +7,16 @@ from .models import (
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-  pass
+  list_display = ('first_name', 'email_address', 'assignment')
 
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
+  list_display = ('full_name', 'school')
   pass
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-  pass
+  list_display = ('name', 'max_capacity', 'active', 'assignment')
 
 @admin.register(Student_Course_Association)
 class Student_Course_AssignmentAdmin(admin.ModelAdmin):
