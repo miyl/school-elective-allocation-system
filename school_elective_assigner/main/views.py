@@ -50,7 +50,7 @@ def assignments(request):
       aname = request.POST.get('name', None)
       Assignment.objects.filter(id=aid).update(name=aname)
     elif 'delete-assignment' in request.POST:
-      aid = request.POST.get('assignmentid', None)
+      aid = request.POST.get('id', None)
       Assignment.objects.filter(id=aid).delete()
     return redirect('assignments')
 
@@ -147,7 +147,7 @@ def assignment(request, item):
       # needed as max capacity is set there.
       allocate_courses(assignment, courses, students, criteria, student_course_associations)
       #return HttpResponseRedirect('{% url 'assignment' %}')
-    elif 'send-inv-email' in request.POST: 
+    elif 'send-inv-email' in request.POST:
       subject = request.POST['invitation_email_subject']
       message = request.POST['invitation_email_message']
       send_mail('Invitations Email',
@@ -158,7 +158,7 @@ def assignment(request, item):
                 fail_silently=False)
     # Must be a better way, ie. to get the URL directly from URLs.py dynamically
     # here, just like one can in templates
-    #return redirect(f'{assignment.id}')
+    return redirect(f'/assignment/{assignment.id}')
 
 
   # /FORMS
@@ -273,7 +273,7 @@ def allocate_courses(assignment, courses, students, criteria, student_course_ass
     for course in course_bounds:
       Student_Course_Association.objects.filter(student=student, course__name=course).update( assigned = bool(variables[student][course].solution_value()) )
 
-
+  return redirect(f'/assignment/{assignment.id}')
 
 
 
@@ -298,16 +298,18 @@ def download_csv(request, item):
   students = Student.objects.filter(assignment=item)
   # No direct foreign key to check on :/ :
   # Instead we check that the course matches one of the assignment courses
-  #student_course_associations = Student_Course_Association.objects.filter(student__in=students).order_by('student')
-  student_course_associations = Student_Course_Association.objects.filter(student__in=students)
+  #student_course_associations = Student_Course_Association.objects.filter(student__in=students)
+  student_course_associations = Student_Course_Association.objects.filter(student__in=students).order_by('student', '-priority')
+  for s in students:
+    s.course_associations = [sca for sca in student_course_associations if sca.student == s]
   rows = []
-  for st in students:
+  for s in students:
     courses_assigned = []
-    for sca in student_course_associations:
-      if sca.student == st and sca.assigned:
+    for sca in s.course_associations:
+      if sca.assigned:
         courses_assigned.append(sca.course.name)
 
-    rows.append((st.email_address, ",".join(courses_assigned)))
+    rows.append((s.email_address, ",".join(courses_assigned)))
 
   pseudo_buffer = Echo()
   writer = csv.writer(pseudo_buffer)
