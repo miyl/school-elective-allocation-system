@@ -1,6 +1,6 @@
 {% extends 'base_with_general_nav.html' %}
 {% load custom_tags %}
-{% load static %}  
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -9,119 +9,136 @@
 
 {% comment %} https://getbootstrap.com/docs/5.0/components/accordion/  {% endcomment %}
 <div class="page-button">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAssignmentModal">Opret ny tildeling</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAssignmentModal">Opret ny
+        tildeling
+    </button>
 </div>
 
 <div class="accordion card-body" id="accordionExample">
 
-  {% for assignment, progress in assignments|zip:progresses %}
+    {% for assignment, progress in assignments|zip:progresses %}
 
-  <div class="accordion-item col-lg-11 mx-auto">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="icon_edit_assign icon_absolute" data-bs-toggle="modal" data-bs-target="#editAssignmentModal{{assignment.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
-      <button class="icon_del_assign icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteAssignmentModal{{assignment.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
-      {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-      <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#a{{ assignment.id  }}"
-                                                                               aria-expanded="false"
-                                                                               aria-controls="a{{ assignment.id }}">
-        {{ assignment.name }}
-      </button>
-    </h2>
-    <div id="a{{ assignment.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <!--<p>TODO: Status for om elever, kurser, kriterier osv. er oprettet, som progress bar</p>-->
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: {{progress}}%;"
-                                                       aria-valuenow="{{progress}}"
-                                                                                     aria-valuemin="0"
-                                                                                     aria-valuemax="100">{{progress}}%</div>
-        </div>
-        <br/>
-        <p style="text-align: center;"><a class="btn btn-primary" href="{% url 'assignment' assignment.id %}">Gå til tildeling</a></p>
-      </div>
-    </div>
-  </div>
-
-      <!-- Edit Assignment Modal -->
-      <div class="modal fade" id="editAssignmentModal{{assignment.id}}" tabindex="-1" aria-labelledby="editAssignmentModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="editAssignmentModalLabel">Rediger {{assignment.name}}</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="accordion-item col-lg-11 mx-auto">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="icon_edit_assign icon_absolute" data-bs-toggle="modal"
+                    data-bs-target="#editAssignmentModal{{assignment.id}}"><img
+                    src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap"
+                    width="20" height="20"></button>
+            <button class="icon_del_assign icon_absolute" data-bs-toggle="modal"
+                    data-bs-target="#deleteAssignmentModal{{assignment.id}}"><img
+                    src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap"
+                    width="20" height="20"></button>
+            {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an
+            'id' below. {% endcomment %}
+            <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#a{{ assignment.id  }}"
+                    aria-expanded="false"
+                    aria-controls="a{{ assignment.id }}">
+                {{ assignment }}
+            </button>
+        </h2>
+        <div id="a{{ assignment.id }}"
+             class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <!--<p>TODO: Status for om elever, kurser, kriterier osv. er oprettet, som progress bar</p>-->
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{progress}}%;"
+                         aria-valuenow="{{progress}}"
+                         aria-valuemin="0"
+                         aria-valuemax="100">{{progress}}%
+                    </div>
+                </div>
+                <br/>
+                <p style="text-align: center;"><a class="btn btn-primary" href="{% url 'assignment' assignment.id %}">Gå
+                    til tildeling</a></p>
             </div>
-            <form method="post" accept-charset="utf-8">
-
-              <div class="modal-body">
-                {% csrf_token %}
-                {% comment %} Example of manually creating a form! {% endcomment %}
-                <input type="text" value="{{assignment.name}}" name="name" />
-                <input type="hidden" value="{{assignment.id}}" name="id" />
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                <input type="submit" value="Gem redigeringer" name="edit-assignment" class="btn btn-primary">
-              </div>
-            </form>
-          </div>
         </div>
-      </div>
+    </div>
+
+    <!-- Edit Assignment Modal -->
+    <div class="modal fade" id="editAssignmentModal{{assignment.id}}" tabindex="-1"
+         aria-labelledby="editAssignmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editAssignmentModalLabel">Rediger {{assignment}}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" accept-charset="utf-8">
+
+                    <div class="modal-body">
+                        {% csrf_token %}
+                        {% comment %} Example of manually creating a form! {% endcomment %}
+                        <input type="text" value="{{assignment.name}}" name="name"/>
+                        <input type="hidden" value="{{assignment.id}}" name="id"/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                        <input type="submit" value="Gem redigeringer" name="edit-assignment" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Delete Assignment Modal -->
-    <div class="modal fade" id="deleteAssignmentModal{{assignment.id}}" tabindex="-1" aria-labelledby="deleteAssignmentModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="deleteAssignmentModalLabel">Slet {{assignment}}<h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <form method="post" accept-charset="utf-8">
-            <div class="modal-body">
-                Er du sikker?
-                {% csrf_token %}
+    <div class="modal fade" id="deleteAssignmentModal{{assignment.id}}" tabindex="-1"
+         aria-labelledby="deleteAssignmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteAssignmentModalLabel">Slet {{assignment}}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" accept-charset="utf-8">
+                    <div class="modal-body">
+                        Er du sikker?
+                        {% csrf_token %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                        <input type="hidden" name="id" value="{{assignment.id}}">
+                        <input type="submit" value="Slet tildeling" name="delete-assignment" class="btn btn-danger">
+                    </div>
+                </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-              <input type="hidden" name="id" value="{{assignment.id}}">
-              <input type="submit" value="Slet tildeling" name="delete-assignment" class="btn btn-danger">  
-            </div> 
-            </form>
         </div>
-      </div>
     </div>
 
 
-  {% endfor %}
+    {% endfor %}
 
-  <!-- Add Assignment Modal -->
-  <div class="modal fade" id="addAssignmentModal" tabindex="-1" aria-labelledby="addAssignmentModal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="addAssignmentModalLabel">Opret Tildeling</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Add Assignment Modal -->
+    <div class="modal fade" id="addAssignmentModal" tabindex="-1" aria-labelledby="addAssignmentModal"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addAssignmentModalLabel">Opret Tildeling</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <form method="post" accept-charset="utf-8">
+
+                    {% csrf_token %}
+
+                    <div class="modal-body">
+                        {{assignmentCreateForm|crispy}}
+                        {% comment %}
+                        Give us the school id of the first school, since it's the same for all school
+                        <input name="school" id="id_school" value="{{assignments.0.school.id}}" type="hidden">
+                        {% endcomment %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                        <input type="submit" value="Gem Tildeling" name="add-assignment" class="btn btn-primary">
+                    </div>
+                </form>
+
+            </div>
         </div>
-  
-        <form method="post" accept-charset="utf-8">
-  
-          {% csrf_token %}
-  
-          <div class="modal-body">
-            {{assignmentCreateForm|crispy}}
-            {% comment %}
-            Give us the school id of the first school, since it's the same for all school 
-            <input name="school" id="id_school" value="{{assignments.0.school.id}}" type="hidden">
-            {% endcomment %}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <input type="submit" value="Gem Tildeling" name="add-assignment" class="btn btn-primary">
-          </div>
-        </form>
-  
-      </div>
     </div>
-  </div>
 
 </div>
 
