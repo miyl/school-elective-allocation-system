@@ -30,6 +30,12 @@ class CourseForm(ModelForm):
     exclude = ( 'active', )
     widgets = {'assignment': HiddenInput()}
 
+class TeacherForm(ModelForm):
+  class Meta:
+    model = Teacher
+    exclude = ( 'courses', )
+    widgets = {'school': HiddenInput()}
+
 class AssignmentForm(ModelForm):
   class Meta:
     model = Assignment

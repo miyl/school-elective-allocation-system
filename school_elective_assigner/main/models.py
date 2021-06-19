@@ -59,12 +59,13 @@ class Student_Course_Association(models.Model):
     return str(self.student) + " - " + str(self.course) + ": " + str(self.priority)
 
 class Criterion(models.Model):
+  name = models.CharField(max_length=200)
   type = models.PositiveSmallIntegerField(choices=TYPES)
   all = models.BooleanField(default=False)
   m = models.PositiveSmallIntegerField(null=True, blank=True)
   n = models.PositiveSmallIntegerField(null=True, blank=True)
 
-  # Skal laves til many to many
+  # Note: null=True is redundant for ManyToManyFields
   courses = models.ManyToManyField('Course', blank=True)
   students = models.ManyToManyField('Student', blank=True)
   assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)

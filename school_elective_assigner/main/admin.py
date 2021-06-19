@@ -25,7 +25,7 @@ class Student_Course_AssignmentAdmin(admin.ModelAdmin):
 
 @admin.register(Criterion)
 class CriterionAdmin(admin.ModelAdmin):
-  pass
+  list_display = ('name', 'type', 'all', 'm', 'n')
 
 @admin.register(School)
 class SchoolAdmin(admin.ModelAdmin):
