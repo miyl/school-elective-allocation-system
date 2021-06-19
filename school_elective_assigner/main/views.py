@@ -3,8 +3,9 @@ from django.views.generic import ListView
 from .models import (Assignment, Student, Course,
      Student_Course_Association, Teacher, Criterion)
 from ortools.linear_solver import pywraplp
-from .forms import (EmailForm, StudentForm, CriterionForm, CourseForm,
-AssignmentForm, EmailForm, UploadStudentsCSVForm)
+from .forms import (InvitationEmailForm, ResultEmailForm, ReminderEmailForm,
+                    StudentForm, CriterionForm, CourseForm, AssignmentForm,
+                    UploadStudentsCSVForm)
 from django.conf import settings
 from django.core.mail import send_mail
 
@@ -100,7 +101,9 @@ def assignment(request, item):
   studentAddForm = StudentForm(initial={'assignment': assignment})
   courseForm = CourseForm(initial={'assignment': assignment})
   uploadStudentsCSVForm = UploadStudentsCSVForm(initial={'assignment': assignment})
-  emailForm = EmailForm(initial={'assignment': assignment})
+  invitationEmailForm = InvitationEmailForm(initial={'assignment': assignment})
+  reminderEmailForm = ReminderEmailForm(initial={'assignment': assignment})
+  resultEmailForm = ResultEmailForm(initial={'assignment': assignment})
 
   # A different approach, dynamically creating the forms but simply appending
   # them to the existing student objects instead of creating a separate
@@ -147,15 +150,34 @@ def assignment(request, item):
       # needed as max capacity is set there.
       allocate_courses(assignment, courses, students, criteria, student_course_associations)
       #return HttpResponseRedirect('{% url 'assignment' %}')
+    #TODO: The following email types are to be changed toz
     elif 'send-inv-email' in request.POST:
-      subject = request.POST['invitation_email_subject']
-      message = request.POST['invitation_email_message']
-      send_mail('Invitations Email',
-                subject,
+      subject = request.POST.get('invitation_email_subject')
+      message = request.POST.get('invitation_email_message')
+      send_mail(subject,
                 message,
                 settings.EMAIL_HOST_USER,
-                ['tariqzaman1@hotmail.com'],
+                ['SchoolEmailerExam@gmail.com'],
                 fail_silently=False)
+      
+    elif 'send-reminder-email' in request.POST:
+      subject = request.POST.get('reminder_email_subject')
+      message = request.POST.get('reminder_email_message')
+      send_mail(subject,
+                message,
+                settings.EMAIL_HOST_USER,
+                ['SchoolEmailerExam@gmail.com'],
+                fail_silently=False)
+    
+    elif 'send-res-email' in request.POST: 
+      subject = request.POST.get('results_email_subject')
+      message = request.POST.get('results_email_message')
+      send_mail(subject,
+                message,
+                settings.EMAIL_HOST_USER,
+                ['SchoolEmailerExam@gmail.com'],
+                fail_silently=False)
+      
     # Must be a better way, ie. to get the URL directly from URLs.py dynamically
     # here, just like one can in templates
     return redirect(f'/assignment/{assignment.id}')
@@ -166,8 +188,9 @@ def assignment(request, item):
   context = {'assignment': assignment, 'students': students,
       'courses': courses, 'teachers': teachers, 'criteria': criteria,
       'studentAddForm': studentAddForm, 'criterionForm': criterionForm,
-      'courseForm': courseForm,
-      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'emailForm': emailForm
+      'courseForm': courseForm, 'invitationEmailForm': invitationEmailForm, 
+      'reminderEmailForm':reminderEmailForm, 'resultEmailForm':resultEmailForm,
+      'uploadStudentsCSVForm': uploadStudentsCSVForm
   }
 
   return render(request, 'assignment.html', context)

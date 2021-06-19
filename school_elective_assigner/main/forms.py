@@ -56,10 +56,29 @@ class DistributeStudentsForm(Form):
     #model = Assignment
     #fields = '__all__'
 
-class EmailForm(ModelForm):
+class InvitationEmailForm(ModelForm):
   class Meta:
     model = Assignment
     exclude = ( 'name', 'results_email_message', 'results_email_subject',
                 'reminder_email_subject', 'reminder_email_message', 'priority_form_text',
                 'invitation_email_sent', 'reminder_email_sent', 'results_email_sent',
                 'deadline', 'school', )
+    
+
+class ReminderEmailForm(ModelForm):
+  class Meta:
+    model = Assignment
+    exclude = ( 'name', 'results_email_message', 'results_email_subject',
+                'priority_form_text', 'invitation_email_sent', 
+                'reminder_email_sent', 'results_email_sent',
+                'deadline', 'school', 'invitation_email_subject',
+                'invitation_email_message', )
+    
+class ResultEmailForm(ModelForm):
+  class Meta:
+    model = Assignment
+    exclude = ( 'name', 'priority_form_text', 'invitation_email_sent', 
+                'reminder_email_sent', 'results_email_sent',
+                'deadline', 'school', 'invitation_email_subject',
+                'invitation_email_message', 'reminder_email_subject',
+                'reminder_email_message', )

@@ -73,10 +73,10 @@
         <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
         </button>
-        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendreminderemail">
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
         </button>
-        <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+        <button class="icon_status_symbol icon_absolute" data-bs-toggle="">
           {% if reminder_email_sent %}
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
           {% endif %}
@@ -86,7 +86,7 @@
         <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
         </button>
-        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendresultemail">
           <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
         </button>
         <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
@@ -111,11 +111,63 @@
           {% csrf_token %}
   
           <div class="modal-body">
-            {{emailForm|crispy}}
+            {{invitationEmailForm|crispy}}
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
             <input type="submit" value="Send Email" name="send-inv-email" class="btn btn-primary">
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal fade" id="sendreminderemail" tabindex="-1" aria-labelledby="sendReminderEmailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sendInvEmailModalLabel">Send Påmindelses-Email</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <form method="post" accept-charset="utf-8">
+  
+          {% csrf_token %}
+  
+          <div class="modal-body">
+            {{reminderEmailForm|crispy}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <input type="submit" value="Send Email" name="send-reminder-email" class="btn btn-primary">
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="modal fade" id="sendresultemail" tabindex="-1" aria-labelledby="sendResultEmailModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sendResultEmailModalLabel">Send Resultats-Email</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <form method="post" accept-charset="utf-8">
+  
+          {% csrf_token %}
+  
+          <div class="modal-body">
+            {{resultEmailForm|crispy}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <input type="submit" value="Send Email" name="send-res-email" class="btn btn-primary">
           </div>
         </form>
   
