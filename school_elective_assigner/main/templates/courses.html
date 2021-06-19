@@ -29,11 +29,8 @@
           <div class="accordion-body">
               <p>
                   Undervisere:
-                  {% for teacher in teachers %}
-                  {% comment %} if the current course is a course the teacher teaches {% endcomment %}
-                    {% if course in teacher.courses.all %}
-                    {{ teacher.full_name }},
-                    {% endif %}
+                  {% for teacher in course.teachers.all %}
+                    {{ teacher.full_name }}{% if not forloop.last %}, {% endif %}
                   {% endfor %}
               </p>
               <p>

@@ -4062,10 +4062,7 @@
   "pk": 1,
   "fields": {
     "full_name": "David Harry",
-    "school": "kea@example.com",
-    "courses": [
-      5
-    ]
+    "school": "kea@example.com"
   }
 },
 {
@@ -4073,10 +4070,7 @@
   "pk": 2,
   "fields": {
     "full_name": "Jarl",
-    "school": "kea@example.com",
-    "courses": [
-      7
-    ]
+    "school": "kea@example.com"
   }
 },
 {
@@ -4084,10 +4078,7 @@
   "pk": 3,
   "fields": {
     "full_name": "Asger",
-    "school": "kea@example.com",
-    "courses": [
-      2
-    ]
+    "school": "kea@example.com"
   }
 },
 {
@@ -4095,10 +4086,7 @@
   "pk": 4,
   "fields": {
     "full_name": "Claus",
-    "school": "kea@example.com",
-    "courses": [
-      3
-    ]
+    "school": "kea@example.com"
   }
 },
 {
@@ -4106,10 +4094,7 @@
   "pk": 5,
   "fields": {
     "full_name": "Henrik",
-    "school": "kea@example.com",
-    "courses": [
-      3
-    ]
+    "school": "kea@example.com"
   }
 },
 {
@@ -4117,10 +4102,7 @@
   "pk": 6,
   "fields": {
     "full_name": "Jon",
-    "school": "kea@example.com",
-    "courses": [
-      1
-    ]
+    "school": "kea@example.com"
   }
 },
 {
@@ -4131,7 +4113,10 @@
     "description": "Lær Android-development, med fokus på progressive web apps!",
     "active": true,
     "max_capacity": 60,
-    "assignment": 1
+    "assignment": 1,
+    "teachers": [
+      6
+    ]
   }
 },
 {
@@ -4142,7 +4127,10 @@
     "description": "Lær ét af de gamle programmeringssprog, der stadig bruges til systemprogrammering.",
     "active": true,
     "max_capacity": 30,
-    "assignment": 1
+    "assignment": 1,
+    "teachers": [
+      3
+    ]
   }
 },
 {
@@ -4153,7 +4141,11 @@
     "description": "Lær et halvgammelt men på mange måder også moderne programmeringssprog at kende, som bl.a. bruges inden for webudvikling og data science",
     "active": true,
     "max_capacity": 60,
-    "assignment": 1
+    "assignment": 1,
+    "teachers": [
+      4,
+      5
+    ]
   }
 },
 {
@@ -4164,7 +4156,8 @@
     "description": "Lær frontend webframeworket at kende, som kom før React.",
     "active": true,
     "max_capacity": 50,
-    "assignment": 1
+    "assignment": 1,
+    "teachers": []
   }
 },
 {
@@ -4175,7 +4168,10 @@
     "description": "Savner du projektopgaverne fra de tidligere semestre, eller har du en produktidé? Så gå på opdagelse med dette valgfag.",
     "active": true,
     "max_capacity": 55,
-    "assignment": 1
+    "assignment": 1,
+    "teachers": [
+      1
+    ]
   }
 },
 {
@@ -4186,7 +4182,8 @@
     "description": "Et moderne webframework der ifølge mange er uden lige.",
     "active": true,
     "max_capacity": 60,
-    "assignment": 1
+    "assignment": 1,
+    "teachers": []
   }
 },
 {
@@ -4197,7 +4194,10 @@
     "description": "Lær om threat management, Denial of Service, SQL Injection og meget mere.",
     "active": true,
     "max_capacity": 60,
-    "assignment": 1
+    "assignment": 1,
+    "teachers": [
+      2
+    ]
   }
 },
 {
@@ -11307,10 +11307,10 @@
     "name": "Datamatiker Sommer 2021",
     "invitation_email_subject": null,
     "invitation_email_message": "",
-    "reminder_email_message": null,
     "reminder_email_subject": null,
-    "results_email_message": null,
+    "reminder_email_message": null,
     "results_email_subject": null,
+    "results_email_message": null,
     "priority_form_text": "",
     "invitation_email_sent": false,
     "reminder_email_sent": false,
@@ -11326,10 +11326,10 @@
     "name": "Datamatiker Vinter 2020",
     "invitation_email_subject": null,
     "invitation_email_message": "",
-    "reminder_email_message": null,
     "reminder_email_subject": null,
-    "results_email_message": null,
+    "reminder_email_message": null,
     "results_email_subject": null,
+    "results_email_message": null,
     "priority_form_text": "",
     "invitation_email_sent": false,
     "reminder_email_sent": false,
@@ -11345,10 +11345,10 @@
     "name": "Datamatiker Sommer 2020",
     "invitation_email_subject": null,
     "invitation_email_message": "",
-    "reminder_email_message": null,
     "reminder_email_subject": null,
-    "results_email_message": null,
+    "reminder_email_message": null,
     "results_email_subject": null,
+    "results_email_message": null,
     "priority_form_text": "",
     "invitation_email_sent": false,
     "reminder_email_sent": false,
@@ -11364,10 +11364,10 @@
     "name": "Datamatiker Vinter 2019",
     "invitation_email_subject": null,
     "invitation_email_message": "",
-    "reminder_email_message": null,
     "reminder_email_subject": null,
-    "results_email_message": null,
+    "reminder_email_message": null,
     "results_email_subject": null,
+    "results_email_message": null,
     "priority_form_text": "",
     "invitation_email_sent": false,
     "reminder_email_sent": false,

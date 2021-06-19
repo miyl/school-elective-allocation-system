@@ -24,8 +24,6 @@ class Teacher(models.Model):
 
   # When adding a teacher, it's from the list of teachers from the school
   school = models.ForeignKey('School', on_delete=models.CASCADE)
-  # When listing teachers teaching a course
-  courses = models.ManyToManyField('Course', blank=True)
 
   def __str__(self):
     return self.full_name
@@ -40,6 +38,8 @@ class Course(models.Model):
   max_capacity = models.PositiveSmallIntegerField()
 
   assignment = models.ForeignKey('Assignment', on_delete=models.CASCADE)
+  # When listing teachers teaching a course
+  teachers = models.ManyToManyField('Teacher', blank=True)
 
   def __str__(self):
     return self.name
