@@ -5,7 +5,7 @@ from .models import (Assignment, Student, Course,
 from ortools.linear_solver import pywraplp
 from .forms import (InvitationEmailForm, ResultEmailForm, ReminderEmailForm,
                     StudentForm, CriterionForm, CourseForm, AssignmentForm,
-                    UploadStudentsCSVForm)
+                    UploadStudentsCSVForm, TeacherForm)
 from django.conf import settings
 from django.core.mail import send_mail
 
@@ -100,6 +100,7 @@ def assignment(request, item):
   criterionForm = CriterionForm(initial={'assignment': assignment})
   studentAddForm = StudentForm(initial={'assignment': assignment})
   courseForm = CourseForm(initial={'assignment': assignment})
+  teacherForm = TeacherForm(initial={'school': school})
   uploadStudentsCSVForm = UploadStudentsCSVForm(initial={'assignment': assignment})
   invitationEmailForm = InvitationEmailForm(initial={'assignment': assignment})
   reminderEmailForm = ReminderEmailForm(initial={'assignment': assignment})
@@ -117,8 +118,8 @@ def assignment(request, item):
     if 'add-student' in request.POST:
       studentAddForm = StudentForm(request.POST)
       # breakpoint()
-      if studentForm.is_valid():
-        studentForm.save()
+      if studentAddForm.is_valid():
+        studentAddForm.save()
     elif 'edit-student' in request.POST:
       sid = request.POST.get('id', None)
       sfn = request.POST.get('first_name', None)
@@ -140,6 +141,25 @@ def assignment(request, item):
     elif 'delete-course' in request.POST:
       courseID = request.POST.get('courseid', None);
       Course.objects.filter(id=courseID).delete()
+    elif 'add-teacher' in request.POST:
+      teacherForm = TeacherForm(request.POST)
+      if teacherForm.is_valid():
+        teacherForm.save()
+    elif 'add-criterion' in request.POST:
+      criterionAddForm = CriterionForm(request.POST)
+      if criterionAddForm.is_valid():
+        criterionAddForm.save()
+    elif 'edit-criterion' in request.POST:
+      cid = request.POST.get('id', None)
+      #sfn = request.POST.get('name', None)
+      #a = request.POST.get('', None)
+      #a = request.POST.get('', None)
+      #a = request.POST.get('', None)
+      #a = request.POST.get('', None)
+      Criterion.objects.filter(id=cid).update()
+    elif 'delete-criterion' in request.POST:
+      criterion_id = request.POST.get('id', None);
+      Criterion.objects.filter(id=criterion_id).delete()
     elif 'import-students' in request.POST:
       form = UploadStudentsCSVForm(request.POST, request.FILES)
       # TODO: Better validation
@@ -159,7 +179,6 @@ def assignment(request, item):
                 settings.EMAIL_HOST_USER,
                 ['SchoolEmailerExam@gmail.com'],
                 fail_silently=False)
-      
     elif 'send-reminder-email' in request.POST:
       subject = request.POST.get('reminder_email_subject')
       message = request.POST.get('reminder_email_message')
@@ -168,7 +187,6 @@ def assignment(request, item):
                 settings.EMAIL_HOST_USER,
                 ['SchoolEmailerExam@gmail.com'],
                 fail_silently=False)
-    
     elif 'send-res-email' in request.POST: 
       subject = request.POST.get('results_email_subject')
       message = request.POST.get('results_email_message')
@@ -177,7 +195,7 @@ def assignment(request, item):
                 settings.EMAIL_HOST_USER,
                 ['SchoolEmailerExam@gmail.com'],
                 fail_silently=False)
-      
+
     # Must be a better way, ie. to get the URL directly from URLs.py dynamically
     # here, just like one can in templates
     return redirect(f'/assignment/{assignment.id}')
@@ -188,9 +206,9 @@ def assignment(request, item):
   context = {'assignment': assignment, 'students': students,
       'courses': courses, 'teachers': teachers, 'criteria': criteria,
       'studentAddForm': studentAddForm, 'criterionForm': criterionForm,
-      'courseForm': courseForm, 'invitationEmailForm': invitationEmailForm, 
+      'courseForm': courseForm, 'invitationEmailForm': invitationEmailForm,
       'reminderEmailForm':reminderEmailForm, 'resultEmailForm':resultEmailForm,
-      'uploadStudentsCSVForm': uploadStudentsCSVForm
+      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'teacherForm': teacherForm
   }
 
   return render(request, 'assignment.html', context)

@@ -4,7 +4,7 @@
   <div class="tab-pane fade margin_top" id="kriterier" role="tabpanel" aria-labelledby="kriterier-tab">
 
     <div class="page-button">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#studentCriterionModal">Opret kriterie</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#criterion-modal">Opret kriterie</button>
     </div>
 
     <div class="accordion card-body" id="accordion-criteria">
@@ -13,8 +13,14 @@
 
       <div class="accordion-item col-lg-11 mx-auto">
         <h2 class="accordion-header" id="criteria-header">
+            <button class="icon_edit_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#editCriterionModal{{criterion.id}}">
+              <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20">
+            </button>
+            <button class="icon_del_stud icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteCriterionModal{{criterion.id}}">
+              <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20">
+            </button>
           {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
-          <button class="accordion-button {% if forloop.counter0 != 0%} collapsed {% endif %}"
+          <button class="accordion-button collapsed"
                   type="button" data-bs-toggle="collapse" data-bs-target="#a{{ criterion.id  }}"
                                                                                    aria-expanded="false"
                                                                                    aria-controls="a{{ criterion.id }}">
@@ -22,17 +28,76 @@
         
           </button>
         </h2>
-        <div id="a{{ criterion.id }}" class="accordion-collapse collapse {% if forloop.counter0 == 0%} show {% endif %}"
+        <div id="a{{ criterion.id }}" class="accordion-collapse collapse show"
           aria-labelledby="criteria-header" data-bs-parent="#accordion-criteria">
           <div class="accordion-body">
-            {% comment %} TODO: Display them differently for each type?  {% endcomment %}
-            {{ criterion.type }}
-            {{ criterion.all }}
-            {{ criterion.courses }}
-            {{ criterion.students }}
+            <ul>
+              {% comment %} TODO: Display them differently for each type?  {% endcomment %}
+              {{ criterion.name }}
+              {% if criterion.type == 1%}
+                <li>{{ criterion.type }}</li>
+                <li>{{ criterion.m }}</li>
+              {% endif %}
+              {% comment %}
+              {% if criterion.type == 0 %}
+              {% elif criterion.type == 2%}
+              {% elif criterion.type == 3%}
+              {% elif criterion.type == 4%}
+              {{ criterion.all }}
+              {{ criterion.courses }}
+              {{ criterion.students }}
+              {{ criterion.m }}
+              {{ criterion.n }}{%endcomment%}
+            </ul>
           </div>
         </div>
       </div>
+                  
+        <!-- TODO: Edit Criterion Modal -->
+        <div class="modal fade" id="editCriterionModal{{criterion.id}}" tabindex="-1" aria-labelledby="editCriterionModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editCriterionModalLabel">Rediger {{criterion}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post" accept-charset="utf-8">
+
+                {% csrf_token %}
+
+                <div class="modal-body">
+                  {% comment %}{{ criterion.editForm|crispy }}{% endcomment %}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                  <input type="hidden" value="{{criterion.id}}" name="id" />
+                  <input type="submit" value="Gem Redigeringer" name="edit-criterion" class="btn btn-primary">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delete Criterion Modal -->
+        <div class="modal fade" id="deleteCriterionModal{{criterion.id}}" tabindex="-1"
+                                                                      aria-labelledby="deleteCriterionModalLabel{{criterion.id}}" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteCriterionModalLabel{{criterion.id}}">Slet {{criterion}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post" accept-charset="utf-8">
+                {% csrf_token %}
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                  <input type="hidden" value="{{criterion.id}}" name="id" >
+                  <input type="submit" value="Slet kriterie" name="delete-criterion" class="btn btn-danger">  
+                </div> 
+              </form>
+            </div>
+          </div>
+        </div>
 
       {% empty %}
         <div class='text-center'>Der er endnu ikke tilføjet nogen kriterier.</div>
@@ -41,22 +106,25 @@
 
 
 
-    <!-- Criterion Modal -->
-    <div class="modal fade" id="studentCriterionModal" tabindex="-1" aria-labelledby="studentCriterionModalLabel" aria-hidden="true">
+    <!-- Add Criterion Modal -->
+    <div class="modal fade" id="criterion-modal" tabindex="-1" aria-labelledby="criterion-modal-label" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="studentCriterionModalLabel">Opret elev-kriterie</h5>
+            <h5 class="modal-title" id="criterion-modal-label">Opret elev-kriterie</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            {{ criterionForm|crispy }}
-          </div>
+          <form method="POST" accept-charset="utf-8">
+            <div class="modal-body">
+              {% csrf_token %}
+              {{ criterionForm|crispy }}
+            </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <button type="button" class="btn btn-primary">Gem tildeling</button>
-          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+              <button type="submit" name="add-criterion" class="btn btn-primary">Gem kriterie</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

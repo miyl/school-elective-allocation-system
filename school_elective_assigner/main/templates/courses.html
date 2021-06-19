@@ -4,6 +4,7 @@
 
     <div class="page-button">
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourseModal">Opret Fag</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTeacherModal">Opret Underviser</button>
     </div>
 
     <div class="accordion card-body" id="accordion-courses">
@@ -27,7 +28,7 @@
           aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
           <div class="accordion-body">
               <p>
-                  Lærere: 
+                  Undervisere:
                   {% for teacher in teachers %}
                   {% comment %} if the current course is a course the teacher teaches {% endcomment %}
                     {% if course in teacher.courses.all %}
@@ -108,11 +109,37 @@
           {% csrf_token %}
   
           <div class="modal-body">
-            {{courseForm|crispy}}
+            {{ courseForm|crispy }}
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <input type="submit" value="Gem Studerende" name="add-course" class="btn btn-primary">
+            <input type="submit" value="Gem Fag" name="add-course" class="btn btn-primary">
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Teacher Modal -->
+  <div class="modal fade" id="addTeacherModal" tabindex="-1" aria-labelledby="addTeacherModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addTeacherModalLabel">Opret Underviser</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <form method="post" accept-charset="utf-8">
+  
+          {% csrf_token %}
+  
+          <div class="modal-body">
+            {{ teacherForm|crispy }}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <input type="submit" value="Gem Underviser" name="add-teacher" class="btn btn-primary">
           </div>
         </form>
   
