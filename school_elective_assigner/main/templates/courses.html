@@ -219,7 +219,7 @@
                       </div>
                       <form method="post" accept-charset="utf-8">
                           <div class="modal-body">
-                              {% comment %} teacher.editForm {% endcomment %}
+                            {{ teacher.editForm|crispy }}
                               {% csrf_token %}
                           </div>
                           <div class="modal-footer">

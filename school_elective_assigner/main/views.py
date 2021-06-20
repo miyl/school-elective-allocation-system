@@ -97,6 +97,9 @@ def assignment(request, item):
     c.editForm = CourseForm(instance=c)
     
   assignment.editForm = EditDeadlineForm(instance=assignment)
+  
+  for t in teachers: 
+    t.editForm = TeacherForm(instance=t)
     
   # Other GET forms from this view here
   if request.method == 'POST':
@@ -135,8 +138,12 @@ def assignment(request, item):
       if teacherForm.is_valid():
         teacherForm.save()
     elif 'delete-teacher' in request.POST:
-      id = request.POST.get('id', None);
+      id = request.POST.get('id', None)
       Teacher.objects.filter(id=id).delete()
+    elif 'edit-teacher' in request.POST: 
+      tid = request.POST.get('id', None)
+      tfn = request.POST.get('full_name', None)
+      Teacher.objects.filter(id=tid).update(full_name=tfn)
     elif 'add-criterion' in request.POST:
       criterionAddForm = CriterionForm(request.POST)
       if criterionAddForm.is_valid():
