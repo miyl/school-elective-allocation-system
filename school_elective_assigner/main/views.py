@@ -196,7 +196,7 @@ def assignment(request, item):
                 settings.EMAIL_HOST_USER,
                 ['SchoolEmailerExam@gmail.com'],
                 fail_silently=False)
-    elif 'send-res-email' in request.POST: 
+    elif 'send-res-email' in request.POST:
       subject = request.POST.get('results_email_subject')
       message = request.POST.get('results_email_message')
       send_mail(subject,
