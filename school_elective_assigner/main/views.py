@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect   
 from .models import (Assignment, Student, Course,
      Student_Course_Association, Teacher, Criterion)
 from ortools.linear_solver import pywraplp
