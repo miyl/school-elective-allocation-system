@@ -29,7 +29,7 @@ class CriterionForm(ModelForm):
 class CourseForm(ModelForm):
   class Meta:
     model = Course
-    exclude = ( 'active', )
+    exclude = ( 'active', 'teachers', )
     widgets = {'assignment': HiddenInput()}
 
 

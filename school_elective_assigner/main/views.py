@@ -127,9 +127,9 @@ def assignment(request, item):
       cn = request.POST.get('name', None)
       cd = request.POST.get('description', None)
       cmc = request.POST.get('max_capacity', None)
-      ct = request.POST.get('teachers', None)
+      #ct = request.POST.get('teachers', None)
       Course.objects.filter(id=cid).update(name=cn, description=cd,
-                                           max_capacity=cmc, teachers=ct)
+                                           max_capacity=cmc)
     elif 'add-teacher' in request.POST:
       teacherForm = TeacherForm(request.POST)
       if teacherForm.is_valid():
