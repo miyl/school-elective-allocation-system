@@ -40,9 +40,8 @@
                 <div class="accordion-body">
                     <ul>
                         {% comment %} TODO: Display them differently for each type? {% endcomment %}
-                        {{ criterion.name }}
                         {% if criterion.type == 1%}
-                        <li>{{ criterion.type }}</li>
+                        <li>{{ criterion.get_type_display }}</li>
                         <li>{{ criterion.m }}</li>
                         {% endif %}
                         {% comment %}
