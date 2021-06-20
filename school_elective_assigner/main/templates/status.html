@@ -158,9 +158,9 @@
           <h5 class="modal-title" id="sendResultEmailModalLabel">Send Resultats-Email</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-  
+
         <form method="post" accept-charset="utf-8">
-  
+
           {% csrf_token %}
   
           <div class="modal-body">
@@ -171,7 +171,7 @@
             <input type="submit" value="Send Email" name="send-res-email" class="btn btn-primary">
           </div>
         </form>
-  
+
       </div>
     </div>
   </div>
@@ -184,12 +184,13 @@
           <h5 class="modal-title" id="editDeadlineModalLabel">Opdatér Deadline</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-  
+
         <form method="post" accept-charset="utf-8">
   
           {% csrf_token %}
   
           <div class="modal-body">
+            Please use the format: YYYY-MM-DD
             {{ editDeadlineForm|crispy }}
           </div>
           <div class="modal-footer">
@@ -198,7 +199,7 @@
             <input type="submit" value="Opdatér Deadline" name="edit-deadline" class="btn btn-primary">
           </div>
         </form>
-  
+        
       </div>
     </div>
   </div>
