@@ -79,7 +79,7 @@ class Criterion(models.Model):
 
   class Meta:
     verbose_name_plural='criteria'
-
+    ordering = ['type', '-all']
 
 class School(models.Model):
   email_address = models.CharField(max_length=200, primary_key=True)
