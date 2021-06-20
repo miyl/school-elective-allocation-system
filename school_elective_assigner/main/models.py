@@ -19,6 +19,7 @@ class Student(models.Model):
   class Meta:
     ordering = ['first_name']
 
+
 class Teacher(models.Model):
   full_name = models.CharField(max_length=200)
 
@@ -30,6 +31,7 @@ class Teacher(models.Model):
 
   class Meta:
     ordering = ['full_name']
+
 
 class Course(models.Model):
   name = models.CharField(max_length=200)
@@ -44,6 +46,7 @@ class Course(models.Model):
   def __str__(self):
     return self.name
 
+
 class Student_Course_Association(models.Model):
   priority = models.PositiveSmallIntegerField()
 
@@ -57,6 +60,7 @@ class Student_Course_Association(models.Model):
 
   def __str__(self):
     return str(self.student) + " - " + str(self.course) + ": " + str(self.priority)
+
 
 class Criterion(models.Model):
   name = models.CharField(max_length=200)
@@ -76,6 +80,7 @@ class Criterion(models.Model):
   class Meta:
     verbose_name_plural='criteria'
 
+
 class School(models.Model):
   email_address = models.CharField(max_length=200, primary_key=True)
   name = models.CharField(max_length=100)
@@ -85,6 +90,7 @@ class School(models.Model):
 
   def __str__(self):
     return self.name
+
 
 class Assignment(models.Model):
   name = models.CharField(max_length=200)

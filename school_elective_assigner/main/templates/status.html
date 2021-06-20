@@ -2,15 +2,6 @@
 {% load crispy_forms_tags %}
 
   <div class="tab-pane fade show active margin_top" id="status" role="tabpanel" aria-labelledby="status-tab">
-    
-
-    <!--
-    <form action="{% url 'index' %}">
-      {% csrf_token %}
-      <textarea name="message" id="email-input" cols="30" rows="10"></textarea>
-      <input type="submit" name="Send Invitations-Emails" id="">
-    </form>
-    -->
 
     <ul class="list-group col-lg-11 mx-auto">
       <li class="list-group-item">Valgfag: {{ courses|length }}
@@ -98,7 +89,7 @@
     </ul>
   </div>
   
-  <!--Invitation Email-->
+  <!--Invitation Email Form-->
   <div class="modal fade" id="sendInvEmail" tabindex="-1" aria-labelledby="sendInvEmailModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">

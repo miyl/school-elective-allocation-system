@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.views.generic import ListView
 from .models import (Assignment, Student, Course,
      Student_Course_Association, Teacher, Criterion)
 from ortools.linear_solver import pywraplp
@@ -13,7 +12,6 @@ from django.core.mail import send_mail
 def index(request):
   context = {}
   return render(request, 'index.html', context)
-
 
 def assignments(request):
   # TODO: This is all assignments, not all assignments for the current
@@ -59,12 +57,6 @@ def assignments(request):
       'assignmentCreateForm': assignmentCreateForm }
   return render(request, 'assignment_list.html', context)
 
-# The wrapper function for the solver, that should be called when the button to
-# solve is clicked on the website, on some inputted data and with some inputted
-# constraints.
-# See: https://developers.google.com/optimization/mip/integer_opt
-
-
 def assignment(request, item):
   assignment = Assignment.objects.get(pk=item)
   # In the future obtain the school from which user is logged in
@@ -86,16 +78,6 @@ def assignment(request, item):
 
   teachers = Teacher.objects.filter(school=school)
 
-  #if request.method == 'POST':
-  #  message = request.POST['message']
-  #  send_mail('Invitations Emails',
-  #            message,
-  #            settings.EMAIL_HOST_USER,
-  #            ['tariqzaman1@hotmail.com'],
-  #            fail_silently=False)
-
-
-
   # FORMS
   criterionForm = CriterionForm(initial={'assignment': assignment})
   studentAddForm = StudentForm(initial={'assignment': assignment})
@@ -114,6 +96,7 @@ def assignment(request, item):
     
   for c in courses:
     c.editForm = CourseForm(instance=c)
+    
   # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
@@ -143,9 +126,9 @@ def assignment(request, item):
       cn = request.POST.get('name', None)
       cd = request.POST.get('description', None)
       cmc = request.POST.get('max_capacity', None)
-      #ct = request.POST.get('teachers', None)
+      ct = request.POST.get('teachers', None)
       Course.objects.filter(id=cid).update(name=cn, description=cd,
-                                           max_capacity=cmc)
+                                           max_capacity=cmc, teachers=ct)
     elif 'add-teacher' in request.POST:
       teacherForm = TeacherForm(request.POST)
       if teacherForm.is_valid():
@@ -222,51 +205,6 @@ def assignment(request, item):
   }
 
   return render(request, 'assignment.html', context)
-
-
-# A generic view!: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
-#class AssignmentListView(ListView):
-#    # Obtain the school from which user is logged in
-#    # school =
-#
-#    model = Assignment
-#
-#
-#
-#    # This is really the default name of the template it expects, but it
-#    # looks at the root of the app name (main) by default, so I specify it here
-#    # to make it look in all template dirs.
-#    template_name="assignment_list.html"
-#
-#    # If we want to pass additional data to the template
-#    def get_context_data(self, **kwargs):
-#        # Call the base implementation first to get a context
-#        context = super().get_context_data(**kwargs)
-#
-#
-#        # CALCULATE THE PROGRESS ON THE ASSIGNMENT (PROGRESS BAR)
-#
-#        self.progresses = []
-#        for asn in Assignment.objects.all():
-#          # If results e-mail has been sent there's no need for the subsequent
-#          # calculations?
-#          progress = 0
-#          if asn.results_email_sent:
-#            progress = 100
-#          else:
-#            if Student.objects.filter(assignment=asn).exists():
-#              progress += 25
-#            if Course.objects.filter(assignment=asn).exists():
-#              progress += 25
-#            # This seems annoying/silly at this point, maybe a criterion should have a
-#            # direct connection with assignment?
-#            if Criterion.objects.filter(assignment=asn).exists():
-#              progress += 25
-#          self.progresses.append(progress)
-#
-#        context['progresses'] = self.progresses
-#        return context
-
 
 def allocate_courses(assignment, courses, students, criteria, student_course_associations):
 
