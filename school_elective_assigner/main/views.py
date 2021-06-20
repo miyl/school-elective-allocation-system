@@ -212,7 +212,14 @@ def assignment(request, item):
 def allocate_courses(assignment, courses, students, criteria, student_course_associations):
 
   # creating student bounds
-  student_max_bound = 3
+  student_max_bound = 0
+  for crit in criteria:
+    if crit.type == 1:
+      student_max_bound = crit.m
+    else:
+      pass
+
+  # creating student bounds
   student_bounds = {}
   for student in students:
     student_bounds[student.id] = student_max_bound
