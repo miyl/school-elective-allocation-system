@@ -211,20 +211,18 @@ def assignment(request, item):
 
 def allocate_courses(assignment, courses, students, criteria, student_course_associations):
 
-  # creating student bounds
-  student_bounds = {}
-  def assign_student_bounds(student_list, bound):
-    for student in student_list:
-      student_bounds[student.id] = bound
-
   # parsing criteria
   student_max_bound = 0
   for crit in criteria:
     if crit.type == 1:
-      assign_student_bounds(crit.students.all, crit.m)
+      student_max_bound = crit.m
     else:
       pass
 
+  # creating student bounds
+  student_bounds = {}
+  for student in students:
+    student_bounds[student.id] = student_max_bound
 
   # creating student coeffs
   student_coeffs = {}
