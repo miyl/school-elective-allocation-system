@@ -5,7 +5,7 @@ from .models import (Assignment, Student, Course,
 from ortools.linear_solver import pywraplp
 from .forms import (InvitationEmailForm, ResultEmailForm, ReminderEmailForm,
                     StudentForm, CriterionForm, CourseForm, AssignmentForm,
-                    UploadStudentsCSVForm, TeacherForm)
+                    UploadStudentsCSVForm, TeacherForm, EditDeadlineForm)
 from django.conf import settings
 from django.core.mail import send_mail
 
@@ -105,7 +105,7 @@ def assignment(request, item):
   invitationEmailForm = InvitationEmailForm(initial={'assignment': assignment})
   reminderEmailForm = ReminderEmailForm(initial={'assignment': assignment})
   resultEmailForm = ResultEmailForm(initial={'assignment': assignment})
-
+  editDeadlineForm = EditDeadlineForm(initial={'assignment': assignment})
   # A different approach, dynamically creating the forms but simply appending
   # them to the existing student objects instead of creating a separate
   # studentEditForms list-object
@@ -133,14 +133,15 @@ def assignment(request, item):
       courseForm = CourseForm(request.POST)
       if courseForm.is_valid():
         courseForm.save()
-    elif 'edit-course' in request.POST:
-      courseName = request.POST.get('name', None);
-      Course.objects.filter(name=courseName).get()
-      if courseForm.is_valid():
-        courseForm.save()
     elif 'delete-course' in request.POST:
       courseID = request.POST.get('courseid', None);
       Course.objects.filter(id=courseID).delete()
+    elif 'edit-course' in request.POST:
+      cid = request.POST.get('id', None)
+      cn = request.POST.get('name', None)
+      cd = request.POST.get('description', None)
+      #ct = request.POST.get('teachers', None)
+      Course.objects.filter(id=cid).update(name=cn, description=cd)
     elif 'add-teacher' in request.POST:
       teacherForm = TeacherForm(request.POST)
       if teacherForm.is_valid():
@@ -170,7 +171,11 @@ def assignment(request, item):
       # needed as max capacity is set there.
       allocate_courses(assignment, courses, students, criteria, student_course_associations)
       #return HttpResponseRedirect('{% url 'assignment' %}')
-    #TODO: The following email types are to be changed toz
+    elif 'edit-deadline' in request.POST:
+      aid = request.POST.get('id', None)
+      adl = request.POST.get('deadline', None)
+      Assignment.objects.filter(id=aid).update(deadline=adl)
+      #breakpoint()
     elif 'send-inv-email' in request.POST:
       subject = request.POST.get('invitation_email_subject')
       message = request.POST.get('invitation_email_message')
@@ -207,8 +212,9 @@ def assignment(request, item):
       'courses': courses, 'teachers': teachers, 'criteria': criteria,
       'studentAddForm': studentAddForm, 'criterionForm': criterionForm,
       'courseForm': courseForm, 'invitationEmailForm': invitationEmailForm,
-      'reminderEmailForm':reminderEmailForm, 'resultEmailForm':resultEmailForm,
-      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'teacherForm': teacherForm
+      'reminderEmailForm': reminderEmailForm, 'resultEmailForm':resultEmailForm,
+      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'teacherForm': teacherForm,
+      'editDeadlineForm': editDeadlineForm
   }
 
   return render(request, 'assignment.html', context)
