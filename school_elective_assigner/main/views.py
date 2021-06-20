@@ -111,7 +111,9 @@ def assignment(request, item):
   # studentEditForms list-object
   for s in students:
     s.editForm = StudentForm(instance=s)
-
+    
+  for c in courses:
+    c.editForm = CourseForm(instance=c)
   # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
@@ -140,8 +142,10 @@ def assignment(request, item):
       cid = request.POST.get('id', None)
       cn = request.POST.get('name', None)
       cd = request.POST.get('description', None)
+      cmc = request.POST.get('max_capacity', None)
       #ct = request.POST.get('teachers', None)
-      Course.objects.filter(id=cid).update(name=cn, description=cd)
+      Course.objects.filter(id=cid).update(name=cn, description=cd,
+                                           max_capacity=cmc)
     elif 'add-teacher' in request.POST:
       teacherForm = TeacherForm(request.POST)
       if teacherForm.is_valid():
