@@ -86,9 +86,9 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="deleteCourseModalLabel">Slet {{course}}
-                            <h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
+                        </h5>
                     </div>
                     <form method="post" accept-charset="utf-8">
                         <div class="modal-body">
@@ -145,17 +145,20 @@
                     </div>
 
                     <div class="modal-body">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#addTeacherModal">
-                            Opret Underviser
-                        </button>
+                      
+                        <div class='page-button'>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#addTeacherModal">
+                                Opret Underviser
+                            </button>
+                        </div
 
                         <ul class='list-group list-group-flush'>
 
                             {% for teacher in teachers %}
                             <li class='list-group-item'>
                                 {{ teacher.full_name }}
-                                <button class="icon_edit_cour icon_absolute" data-bs-toggle="modal"
+                                <button class="icon-teacher-edit icon_absolute" data-bs-toggle="modal"
                                         data-bs-target="#editTeacherModal{{teacher.id}}"><img
                                         src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}"
                                         alt="Bootstrap" width="20" height="20"></button>
@@ -168,8 +171,7 @@
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                        <input type="submit" value="Gem Underviser" name="add-teacher" class="btn btn-primary">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Luk</button>
                     </div>
                 </div>
             </div>
@@ -200,32 +202,61 @@
                 </div>
             </div>
         </div>
+        {% comment %} Doesn't seem ideal this second looping through of teachers is needed but much of the above should
+        not be repeated, so... {% endcomment %}
+        {% for teacher in teachers %}
 
-        <!-- Delete Teacher Modal -->
-        <div class="modal fade" id="deleteTeacherModal{{course.id}}" tabindex="-1"
-             aria-labelledby="deleteTeacherModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="deleteTeacherModalLabel">Slet {{course}}
-                            <h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                    </div>
-                    <form method="post" accept-charset="utf-8">
-                        <div class="modal-body">
-                            Er du sikker?
-                            {% csrf_token %}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                            <input type="hidden" name="id" value="{{teacher.id}}">
-                            <input type="submit" value="Slet Underviser" name="delete-teacher" class="btn btn-danger">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+          <!-- Edit Teacher Modal -->
+          <div class="modal fade" id="editTeacherModal{{ teacher.id }}" tabindex="-1"
+               aria-labelledby="editTeacherModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="editTeacherModalLabel">Rediger {{ teacher }}
+                              <h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                      </div>
+                      <form method="post" accept-charset="utf-8">
+                          <div class="modal-body">
+                              {% comment %} teacher.editForm {% endcomment %}
+                              {% csrf_token %}
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                              <input type="hidden" name="id" value="{{teacher.id}}">
+                              <input type="submit" value="Rediger Underviser" name="edit-teacher" class="btn btn-danger">
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
 
+          <!-- Delete Teacher Modal -->
+          <div class="modal fade" id="deleteTeacherModal{{ teacher.id }}" tabindex="-1"
+               aria-labelledby="deleteTeacherModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="deleteTeacherModalLabel">Slet {{ teacher }}
+                              <h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                      </div>
+                      <form method="post" accept-charset="utf-8">
+                          <div class="modal-body">
+                              Er du sikker?
+                              {% csrf_token %}
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                              <input type="hidden" name="id" value="{{teacher.id}}">
+                              <input type="submit" value="Slet Underviser" name="delete-teacher" class="btn btn-danger">
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
     </div>
 </div>
