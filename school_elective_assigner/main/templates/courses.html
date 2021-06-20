@@ -4,7 +4,7 @@
 
     <div class="page-button">
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourseModal">Opret Fag</button>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTeacherModal">Opret Underviser</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teacherModal">Opret Underviser</button>
     </div>
 
     <div class="accordion card-body" id="accordion-courses">
@@ -118,6 +118,34 @@
     </div>
   </div>
 
+  <!-- Teacher Modal -->
+  <div class="modal fade" id="teacherModal" tabindex="-1" aria-labelledby="teacherModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teacherModalLabel">Håndter Undervisere</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form method="post" accept-charset="utf-8">
+  
+          {% csrf_token %}
+  
+          <div class="modal-body">
+              {% for teacher in teachers %}
+                <li>{{ teacher.full_name }}</li>
+            {% endfor %}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+            <input type="submit" value="Gem Underviser" name="add-teacher" class="btn btn-primary">
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
   <!-- Add Teacher Modal -->
   <div class="modal fade" id="addTeacherModal" tabindex="-1" aria-labelledby="addTeacherModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -143,6 +171,8 @@
       </div>
     </div>
   </div>
+
+
 
   </div>
 </div>
