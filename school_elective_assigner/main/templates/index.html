@@ -1,38 +1,38 @@
 {% extends 'base.html' %}
 {% block content %}
-    <body>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 mx-auto">
-              <div class="card card-signin">
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 mx-auto">
+            <div class="card card-signin">
                 <div class="card-body">
-                  <h5 class="card-title" style="text-align: center;" id="login-title">Log ind</h5>
-                  <form class="form-login">
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput">Email</label>
-                    </div>
-                    <div class="form-floating">
-                      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Adgangskode</label>
-                    </div>
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="customCheck">
-                      <label class="custom-control-label" id="r-password">Husk mig</label>
-                    </div>
-                    <!--<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="submit-btn">Sign in</button>-->
-                    <a class='btn btn-primary' href='/assignments'>Log ind</a>
-                  
-                    <div id="addon-form">
-                        <a id="sign-up" href="#">Registrér</a> <br>
-                        <a id="forgot-password" href="#">Glemt Adgangskode?</a>
-                    </div>
-                </form>
+                    <h5 class="card-title" style="text-align: center;" id="login-title">Log ind</h5>
+                    <form class="form-login">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Adgangskode</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                            <label class="custom-control-label" id="r-password">Husk mig</label>
+                        </div>
+                        <!--<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="submit-btn">Sign in</button>-->
+                        <a class='btn btn-primary' href='/assignments'>Log ind</a>
+
+                        <div id="addon-form">
+                            <a id="sign-up" href="#">Registrér</a> <br>
+                            <a id="forgot-password" href="#">Glemt Adgangskode?</a>
+                        </div>
+                    </form>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </body>
+    </div>
+</div>
+</body>
 
 {% endblock %}

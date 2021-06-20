@@ -7,38 +7,47 @@
 <h1 class="display-6">{{ assignment.name }}</h1>
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="status-tab" data-bs-toggle="tab" data-bs-target="#status" type="button" role="tab"
-      aria-controls="status" aria-selected="true">Status</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="valgfag-tab" data-bs-toggle="tab" data-bs-target="#valgfag" type="button" role="tab"
-      aria-controls="valgfag" aria-selected="false">Valgfag</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="elever-tab" data-bs-toggle="tab" data-bs-target="#elever" type="button" role="tab"
-      aria-controls="elever" aria-selected="false">Elever</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="kriterier-tab" data-bs-toggle="tab" data-bs-target="#kriterier" type="button" role="tab"
-      aria-controls="kriterier" aria-selected="false">Kriterier</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="resultat-tab" data-bs-toggle="tab" data-bs-target="#resultat" type="button" role="tab"
-      aria-controls="resultat" aria-selected="false">Resultat</button>
-  </li>
-  <li class="nav-item" style="margin-left: auto;" role="presentation">
-    <a class="nav-link" href="{% url 'assignments' %}">Tildelingsoversigt</a>
-  </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="status-tab" data-bs-toggle="tab" data-bs-target="#status" type="button"
+                role="tab"
+                aria-controls="status" aria-selected="true">Status
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="valgfag-tab" data-bs-toggle="tab" data-bs-target="#valgfag" type="button"
+                role="tab"
+                aria-controls="valgfag" aria-selected="false">Valgfag
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="elever-tab" data-bs-toggle="tab" data-bs-target="#elever" type="button" role="tab"
+                aria-controls="elever" aria-selected="false">Elever
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="kriterier-tab" data-bs-toggle="tab" data-bs-target="#kriterier" type="button"
+                role="tab"
+                aria-controls="kriterier" aria-selected="false">Kriterier
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="resultat-tab" data-bs-toggle="tab" data-bs-target="#resultat" type="button"
+                role="tab"
+                aria-controls="resultat" aria-selected="false">Resultat
+        </button>
+    </li>
+    <li class="nav-item" style="margin-left: auto;" role="presentation">
+        <a class="nav-link" href="{% url 'assignments' %}">Tildelingsoversigt</a>
+    </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
 
-  {% include 'status.html' %}
-  {% include 'courses.html' %}
-  {% include 'students.html' %}
-  {% include 'criteria.html' %}
-  {% include 'results.html' %}
+    {% include 'status.html' %}
+    {% include 'courses.html' %}
+    {% include 'students.html' %}
+    {% include 'criteria.html' %}
+    {% include 'results.html' %}
 
 </div>
 
