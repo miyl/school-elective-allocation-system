@@ -4201,6 +4201,62 @@
   }
 },
 {
+  "model": "main.course",
+  "pk": 16,
+  "fields": {
+    "name": "Android Development",
+    "description": "Lær Android-development, med fokus på progressive web apps!",
+    "active": true,
+    "max_capacity": 40,
+    "assignment": 9,
+    "teachers": [
+      6
+    ]
+  }
+},
+{
+  "model": "main.course",
+  "pk": 17,
+  "fields": {
+    "name": "C",
+    "description": "Lær ét af de gamle programmeringssprog, der stadig bruges til systemprogrammering.",
+    "active": true,
+    "max_capacity": 50,
+    "assignment": 9,
+    "teachers": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.course",
+  "pk": 18,
+  "fields": {
+    "name": "Rust",
+    "description": "Lær et moderne programmeringssprog til systemprogrammering at kende, der har været det mest populære sprog på Stack Overflow i mange år i træk.",
+    "active": true,
+    "max_capacity": 60,
+    "assignment": 9,
+    "teachers": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.course",
+  "pk": 19,
+  "fields": {
+    "name": "Vue",
+    "description": "Et moderne webframework der ifølge mange er uden lige.",
+    "active": true,
+    "max_capacity": 50,
+    "assignment": 9,
+    "teachers": [
+      2
+    ]
+  }
+},
+{
   "model": "main.student_course_association",
   "pk": 0,
   "fields": {
@@ -11304,26 +11360,7 @@
   "model": "main.assignment",
   "pk": 1,
   "fields": {
-    "name": "Datamatiker Sommer 2021",
-    "invitation_email_subject": null,
-    "invitation_email_message": "",
-    "reminder_email_subject": null,
-    "reminder_email_message": null,
-    "results_email_subject": null,
-    "results_email_message": null,
-    "priority_form_text": "",
-    "invitation_email_sent": false,
-    "reminder_email_sent": false,
-    "results_email_sent": false,
-    "deadline": "2021-07-23",
-    "school": "kea@example.com"
-  }
-},
-{
-  "model": "main.assignment",
-  "pk": 2,
-  "fields": {
-    "name": "Datamatiker Vinter 2020",
+    "name": "Datamatiker Vinter 2019",
     "invitation_email_subject": null,
     "invitation_email_message": "",
     "reminder_email_subject": null,
@@ -11340,7 +11377,7 @@
 },
 {
   "model": "main.assignment",
-  "pk": 3,
+  "pk": 2,
   "fields": {
     "name": "Datamatiker Sommer 2020",
     "invitation_email_subject": null,
@@ -11359,9 +11396,9 @@
 },
 {
   "model": "main.assignment",
-  "pk": 4,
+  "pk": 3,
   "fields": {
-    "name": "Datamatiker Vinter 2019",
+    "name": "Datamatiker Vinter 2020",
     "invitation_email_subject": null,
     "invitation_email_message": "",
     "reminder_email_subject": null,
@@ -11369,6 +11406,44 @@
     "results_email_subject": null,
     "results_email_message": null,
     "priority_form_text": "",
+    "invitation_email_sent": false,
+    "reminder_email_sent": false,
+    "results_email_sent": false,
+    "deadline": null,
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.assignment",
+  "pk": 4,
+  "fields": {
+    "name": "Datamatiker Sommer 2021",
+    "invitation_email_subject": null,
+    "invitation_email_message": "",
+    "reminder_email_subject": null,
+    "reminder_email_message": null,
+    "results_email_subject": null,
+    "results_email_message": null,
+    "priority_form_text": "",
+    "invitation_email_sent": false,
+    "reminder_email_sent": false,
+    "results_email_sent": false,
+    "deadline": "2021-07-23",
+    "school": "kea@example.com"
+  }
+},
+{
+  "model": "main.assignment",
+  "pk": 9,
+  "fields": {
+    "name": "Datamatiker Vinter 2021",
+    "invitation_email_subject": null,
+    "invitation_email_message": null,
+    "reminder_email_subject": null,
+    "reminder_email_message": null,
+    "results_email_subject": null,
+    "results_email_message": null,
+    "priority_form_text": null,
     "invitation_email_sent": false,
     "reminder_email_sent": false,
     "results_email_sent": false,
