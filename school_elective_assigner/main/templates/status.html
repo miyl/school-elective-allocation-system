@@ -1,196 +1,214 @@
-{% load static %} 
+{% load static %}
 {% load crispy_forms_tags %}
 
-  <div class="tab-pane fade show active margin_top" id="status" role="tabpanel" aria-labelledby="status-tab">
+<div class="tab-pane fade show active margin_top" id="status" role="tabpanel" aria-labelledby="status-tab">
 
     <ul class="list-group col-lg-11 mx-auto">
-      <li class="list-group-item">Valgfag: {{ courses|length }}
-        <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          {% if courses|length > 0 %}
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-          {% endif %}
-        </button>
-      </li>
-      <li class="list-group-item">Elever: {{ students|length }}
-        <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          {% if students|length > 0 %}
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-          {% endif %}
-        </button>
-      </li>
-      <li class="list-group-item">Kriterier: {{ criteria|length }}
-        <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          {% if criteria|length > 0 %}
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-          {% endif %}   
-        </button>   
-      </li>
-      <li class="list-group-item">Deadline: {{ assignment.deadline }}
-        <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          {% if assignment.deadline %}
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-          {% endif %}
-        </button>
-        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#editDeadline">
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
-        </button>
-      </li>
-      <li class="list-group-item">Prioriteringsside
-        <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20"></button>
-          <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
-          </button>
-          <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target=""> 
-            {% if priority_form_text %}
-            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-            {% endif %}
-          </button>
-      </li>
-        <li class="list-group-item" id="design-email-text"> E-mail-invitation 
-          <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
-          </button>
-          <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendInvEmail">
-            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
-          </button>
-          <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-            {% if invitation_email_sent %}
-            <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-            {% endif %}
-          </button>
+        <li class="list-group-item">Valgfag: {{ courses|length }}
+            <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                {% if courses|length > 0 %}
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+                {% endif %}
+            </button>
         </li>
-      <li class="list-group-item">E-mail-påmindelse
-        <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
-        </button>
-        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendreminderemail">
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
-        </button>
-        <button class="icon_status_symbol icon_absolute" data-bs-toggle="">
-          {% if reminder_email_sent %}
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-          {% endif %}
-        </button>
-      </li>
-      <li class="list-group-item">Resultats-e-mail
-        <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap" width="20" height="20">
-        </button>
-        <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendResultEmail">
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap" width="20" height="20">
-        </button>
-        <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
-          {% if results_email_sent %}
-          <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap" width="20" height="20">
-          {% endif %}
-        </button>
-      </li>
+        <li class="list-group-item">Elever: {{ students|length }}
+            <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                {% if students|length > 0 %}
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+                {% endif %}
+            </button>
+        </li>
+        <li class="list-group-item">Kriterier: {{ criteria|length }}
+            <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                {% if criteria|length > 0 %}
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+                {% endif %}
+            </button>
+        </li>
+        <li class="list-group-item">Deadline: {{ assignment.deadline }}
+            <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                {% if assignment.deadline %}
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+                {% endif %}
+            </button>
+            <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#editDeadline">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+            </button>
+        </li>
+        <li class="list-group-item">Prioriteringsside
+            <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap"
+                     width="20" height="20"></button>
+            <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+            </button>
+            <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                {% if priority_form_text %}
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+                {% endif %}
+            </button>
+        </li>
+        <li class="list-group-item" id="design-email-text"> E-mail-invitation
+            <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+            </button>
+            <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendInvEmail">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+            </button>
+            <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                {% if invitation_email_sent %}
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+                {% endif %}
+            </button>
+        </li>
+        <li class="list-group-item">E-mail-påmindelse
+            <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+            </button>
+            <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendreminderemail">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+            </button>
+            <button class="icon_status_symbol icon_absolute" data-bs-toggle="">
+                {% if reminder_email_sent %}
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+                {% endif %}
+            </button>
+        </li>
+        <li class="list-group-item">Resultats-e-mail
+            <button class="icon_preview_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/eye.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+            </button>
+            <button class="icon_create_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="#sendResultEmail">
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+            </button>
+            <button class="icon_status_symbol icon_absolute" data-bs-toggle="modal" data-bs-target="">
+                {% if results_email_sent %}
+                <img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/check-circle.svg' %}" alt="Bootstrap"
+                     width="20" height="20">
+                {% endif %}
+            </button>
+        </li>
     </ul>
-  </div>
-  
-  <!--Invitation Email Form-->
-  <div class="modal fade" id="sendInvEmail" tabindex="-1" aria-labelledby="sendInvEmailModalLabel" aria-hidden="true">
+</div>
+
+<!--Invitation Email Form-->
+<div class="modal fade" id="sendInvEmail" tabindex="-1" aria-labelledby="sendInvEmailModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="sendInvEmailModalLabel">Send Invitations-Email</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-  
-        <form method="post" accept-charset="utf-8">
-  
-          {% csrf_token %}
-  
-          <div class="modal-body">
-            {{ invitationEmailForm|crispy }}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <input type="submit" value="Send Email" name="send-inv-email" class="btn btn-primary">
-          </div>
-        </form>
-  
-      </div>
-    </div>
-  </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sendInvEmailModalLabel">Send Invitations-Email</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
 
-  <!--Reminder Email Form-->
-  <div class="modal fade" id="sendreminderemail" tabindex="-1" aria-labelledby="sendReminderEmailModalLabel" aria-hidden="true">
+            <form method="post" accept-charset="utf-8">
+
+                {% csrf_token %}
+
+                <div class="modal-body">
+                    {{ invitationEmailForm|crispy }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                    <input type="submit" value="Send Email" name="send-inv-email" class="btn btn-primary">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--Reminder Email Form-->
+<div class="modal fade" id="sendreminderemail" tabindex="-1" aria-labelledby="sendReminderEmailModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="sendInvEmailModalLabel">Send Påmindelses-Email</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-  
-        <form method="post" accept-charset="utf-8">
-  
-          {% csrf_token %}
-  
-          <div class="modal-body">
-            {{ reminderEmailForm|crispy }}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <input type="submit" value="Send Email" name="send-reminder-email" class="btn btn-primary">
-          </div>
-        </form>
-  
-      </div>
-    </div>
-  </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sendInvEmailModalLabel">Send Påmindelses-Email</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
 
-  <!--Result Email Form-->
-  <div class="modal fade" id="sendResultEmail" tabindex="-1" aria-labelledby="sendResultEmailModal" aria-hidden="true">
+            <form method="post" accept-charset="utf-8">
+
+                {% csrf_token %}
+
+                <div class="modal-body">
+                    {{ reminderEmailForm|crispy }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                    <input type="submit" value="Send Email" name="send-reminder-email" class="btn btn-primary">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--Result Email Form-->
+<div class="modal fade" id="sendResultEmail" tabindex="-1" aria-labelledby="sendResultEmailModal" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="sendResultEmailModalLabel">Send Resultats-Email</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sendResultEmailModalLabel">Send Resultats-Email</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form method="post" accept-charset="utf-8">
+
+                {% csrf_token %}
+
+                <div class="modal-body">
+                    {{ resultEmailForm|crispy }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                    <input type="submit" value="Send Email" name="send-res-email" class="btn btn-primary">
+                </div>
+            </form>
+
         </div>
-
-        <form method="post" accept-charset="utf-8">
-
-          {% csrf_token %}
-  
-          <div class="modal-body">
-            {{ resultEmailForm|crispy }}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <input type="submit" value="Send Email" name="send-res-email" class="btn btn-primary">
-          </div>
-        </form>
-
-      </div>
     </div>
-  </div>
+</div>
 
-  <!--Edit Deadline Form-->
-  <div class="modal fade" id="editDeadline" tabindex="-1" aria-labelledby="editDeadlineModal" aria-hidden="true">
+<!--Edit Deadline Form-->
+<div class="modal fade" id="editDeadline" tabindex="-1" aria-labelledby="editDeadlineModal" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="editDeadlineModalLabel">Opdatér Deadline</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editDeadlineModalLabel">Opdatér Deadline</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
 
-        <form method="post" accept-charset="utf-8">
-  
-          {% csrf_token %}
-  
-          <div class="modal-body">
-            Please use the format: YYYY-MM-DD
-            {{ editDeadlineForm|crispy }}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-            <input type="hidden" value="{{assignment.id}}" name="id" />
-            <input type="submit" value="Opdatér Deadline" name="edit-deadline" class="btn btn-primary">
-          </div>
-        </form>
-        
-      </div>
+            <form method="post" accept-charset="utf-8">
+
+                {% csrf_token %}
+
+                <div class="modal-body">
+                    Please use the format: YYYY-MM-DD
+                    {{ editDeadlineForm|crispy }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                    <input type="hidden" value="{{assignment.id}}" name="id"/>
+                    <input type="submit" value="Opdatér Deadline" name="edit-deadline" class="btn btn-primary">
+                </div>
+            </form>
+
+        </div>
     </div>
-  </div>
+</div>

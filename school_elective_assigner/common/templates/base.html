@@ -2,20 +2,21 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
     <title>Valgfags-allokeringssystem</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
-    <link rel="stylesheet" href="{% static 'libs/node/node_modules/bootstrap/dist/css/bootstrap.min.css' %}" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'libs/node/node_modules/bootstrap/dist/css/bootstrap.min.css' %}"
+          media="screen" charset="utf-8">
     <link rel="stylesheet" href="{% static '/css/css.css' %}" media="screen" charset="utf-8">
-  </head>
-  <body>
+</head>
+<body>
 
-    {% block nav %}{% endblock %}
+{% block nav %}{% endblock %}
 
-    {% block content %}{% endblock %}
-    <script src="{% static 'libs/node/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' %}" charset="utf-8"></script>
-  </body>
+{% block content %}{% endblock %}
+<script src="{% static 'libs/node/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' %}" charset="utf-8"></script>
+</body>
 </html>
