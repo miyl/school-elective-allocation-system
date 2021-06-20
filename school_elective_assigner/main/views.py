@@ -87,7 +87,6 @@ def assignment(request, item):
   invitationEmailForm = InvitationEmailForm(initial={'assignment': assignment})
   reminderEmailForm = ReminderEmailForm(initial={'assignment': assignment})
   resultEmailForm = ResultEmailForm(initial={'assignment': assignment})
-  editDeadlineForm = EditDeadlineForm(initial={'assignment': assignment})
   # A different approach, dynamically creating the forms but simply appending
   # them to the existing student objects instead of creating a separate
   # studentEditForms list-object
@@ -96,6 +95,8 @@ def assignment(request, item):
     
   for c in courses:
     c.editForm = CourseForm(instance=c)
+    
+  assignment.editForm = EditDeadlineForm(instance=assignment)
     
   # Other GET forms from this view here
   if request.method == 'POST':
@@ -203,8 +204,7 @@ def assignment(request, item):
       'studentAddForm': studentAddForm, 'criterionForm': criterionForm,
       'courseForm': courseForm, 'invitationEmailForm': invitationEmailForm,
       'reminderEmailForm': reminderEmailForm, 'resultEmailForm':resultEmailForm,
-      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'teacherForm': teacherForm,
-      'editDeadlineForm': editDeadlineForm
+      'uploadStudentsCSVForm': uploadStudentsCSVForm, 'teacherForm': teacherForm
   }
 
   return render(request, 'assignment.html', context)
