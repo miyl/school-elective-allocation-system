@@ -28,7 +28,7 @@
                 {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an
                 <id> below. {% endcomment %}
                     <button class="accordion-button collapsed"
-                            type="button" data-bs-toggle="collapse" data-bs-target="#a{{ criterion.id  }}"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#a{{ criterion.id }}"
                             aria-expanded="false"
                             aria-controls="a{{ criterion.id }}">
                         {{ criterion.name }}
@@ -41,6 +41,8 @@
                     <ul>
                         {% comment %} TODO: Display them differently for each type? {% endcomment %}
                         {% if criterion.type == 1%}
+                        {% comment %} type itself displays it as a number - this displays the other half of the tuple,
+                        ie. the textual representation {% endcomment %}
                         <li>{{ criterion.get_type_display }}</li>
                         <li>{{ criterion.m }}</li>
                         {% endif %}
