@@ -133,6 +133,9 @@ def assignment(request, item):
       teacherForm = TeacherForm(request.POST)
       if teacherForm.is_valid():
         teacherForm.save()
+    elif 'delete-teacher' in request.POST:
+      id = request.POST.get('id', None);
+      Teacher.objects.filter(id=id).delete()
     elif 'add-criterion' in request.POST:
       criterionAddForm = CriterionForm(request.POST)
       if criterionAddForm.is_valid():

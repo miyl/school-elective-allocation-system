@@ -1,230 +1,218 @@
-{% load static %}
+{% load static %}  
 {% load crispy_forms_tags %}
-<div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
+  <div class="tab-pane fade" id="valgfag" role="tabpanel" aria-labelledby="valgfag-tab">
 
     <div class="page-button">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourseModal">
-            Opret Fag
+          Opret Fag
         </button>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teacherModal">
-            Håndter Undervisere
+          Håndter Undervisere
         </button>
     </div>
 
     <div class="accordion card-body" id="accordion-courses">
 
-        {% for course in courses %}
+      {% for course in courses %}
 
         <div class="accordion-item col-lg-11 mx-auto">
-            <h2 class="accordion-header" id="courses-header">
-                <button class="icon_edit_cour icon_absolute" data-bs-toggle="modal"
-                        data-bs-target="#editCourseModal{{course.id}}"><img
-                        src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap"
-                        width="20" height="20"></button>
-                <button class="icon_del_cour icon_absolute" data-bs-toggle="modal"
-                        data-bs-target="#deleteCourseModal{{course.id}}"><img
-                        src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap"
-                        width="20" height="20"></button>
-                {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an
-                <id> below. {% endcomment %}
-                    <button class="accordion-button collapsed"
-                            type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
-                            aria-expanded="false"
-                            aria-controls="a{{ course.id }}">
-                        {{ course.name }}
-                    </button>
+          <h2 class="accordion-header" id="courses-header">
+            <button class="icon_edit_cour icon_absolute" data-bs-toggle="modal" data-bs-target="#editCourseModal{{course.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+            <button class="icon_del_cour icon_absolute" data-bs-toggle="modal" data-bs-target="#deleteCourseModal{{course.id}}"><img src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}" alt="Bootstrap" width="20" height="20"></button>
+            {% comment %} A CSS class name seemingly cannot start with a number? Therefore I write an<id> below. {% endcomment %}
+            <button class="accordion-button collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#a{{ course.id  }}"
+                                                                                     aria-expanded="false"
+                                                                                     aria-controls="a{{ course.id }}">
+              {{ course.name }}
+            </button>
 
-            </h2>
-            <div id="a{{ course.id }}" class="accordion-collapse collapse"
-                 aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
-                <div class="accordion-body">
-                    <p>
-                        Undervisere:
-                        {% for teacher in course.teachers.all %}
-                        {{ teacher.full_name }}{% if not forloop.last %}, {% endif %}
-                        {% endfor %}
-                    </p>
-                    <p>
-                        {{ course.description }}
-                    </p>
-                </div>
+          </h2>
+          <div id="a{{ course.id }}" class="accordion-collapse collapse"
+            aria-labelledby="courses-header" data-bs-parent="#accordion-courses">
+            <div class="accordion-body">
+                <p>
+                    Undervisere:
+                    {% for teacher in course.teachers.all %}
+                      {{ teacher.full_name }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                <p>
+                  {{ course.description }}                
+                </p>
             </div>
+          </div>
         </div>
 
-
+        
         <!-- Edit Course Modal -->
-        <div class="modal fade" id="editCourseModal{{course.id}}" tabindex="-1" aria-labelledby="editCourseModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editCourseModalLabel">Rediger {{course}}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <form method="post" accept-charset="utf-8">
+        <div class="modal fade" id="editCourseModal{{course.id}}" tabindex="-1" aria-labelledby="editCourseModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editCourseModalLabel">Rediger {{course}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post" accept-charset="utf-8">
 
-                        {% csrf_token %}
+                {% csrf_token %}
 
-                        <div class="modal-body">
-                            {{ course.editForm|crispy }}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                            <input type="hidden" value="{{student.id}}" name="id"/>
-                            <input type="submit" value="Gem Redigeringer" name="edit-course" class="btn btn-primary">
-                        </div>
-                    </form>
+                <div class="modal-body">
+                  {{ course.editForm|crispy }}
                 </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                  <input type="hidden" value="{{student.id}}" name="id" />
+                  <input type="submit" value="Gem Redigeringer" name="edit-course" class="btn btn-primary">
+                </div>
+              </form>
             </div>
+          </div>
         </div>
 
 
         <!-- Delete Course Modal -->
-        <div class="modal fade" id="deleteCourseModal{{course.id}}" tabindex="-1"
-             aria-labelledby="deleteCourseModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="deleteCourseModalLabel">Slet {{course}}
-                            <h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                    </div>
-                    <form method="post" accept-charset="utf-8">
-                        <div class="modal-body">
-                            Er du sikker?
-                            {% csrf_token %}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                            <input type="hidden" name="courseid" value="{{course.id}}">
-                            <input type="submit" value="Slet fag" name="delete-course" class="btn btn-danger">
-                        </div>
-                    </form>
+        <div class="modal fade" id="deleteCourseModal{{course.id}}" tabindex="-1" aria-labelledby="deleteCourseModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteCourseModalLabel">Slet {{course}}<h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post" accept-charset="utf-8">
+                <div class="modal-body">
+                    Er du sikker?
+                    {% csrf_token %}
                 </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                  <input type="hidden" name="courseid" value="{{course.id}}">
+                  <input type="submit" value="Slet fag" name="delete-course" class="btn btn-danger">  
+                </div> 
+                </form>
             </div>
+          </div>
         </div>
-        {% endfor %}
+      {% endfor %}
 
-        <!-- Add Course Modal -->
-        <div class="modal fade" id="addCourseModal" tabindex="-1" aria-labelledby="addCourseModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addCourseModalLabel">Opret Fag</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
+      <!-- Add Course Modal -->
+      <div class="modal fade" id="addCourseModal" tabindex="-1" aria-labelledby="addCourseModalLabel"
+           aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="addCourseModalLabel">Opret Fag</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
 
-                    <form method="post" accept-charset="utf-8">
+                  <form method="post" accept-charset="utf-8">
 
-                        {% csrf_token %}
+                      {% csrf_token %}
 
-                        <div class="modal-body">
-                            {{ courseForm|crispy }}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                            <input type="submit" value="Gem Fag" name="add-course" class="btn btn-primary">
-                        </div>
-                    </form>
+                      <div class="modal-body">
+                          {{ courseForm|crispy }}
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                          <input type="submit" value="Gem Fag" name="add-course" class="btn btn-primary">
+                      </div>
+                  </form>
 
-                </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Teacher modals!: -->
+
+      <!-- Teacher Overview Modal -->
+      <div class="modal fade" id="teacherModal" tabindex="-1" aria-labelledby="teacherModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="teacherModalLabel">Håndter Undervisere</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTeacherModal">
+                        Opret Underviser
+                      </button>
+
+                      <ul class='list-group list-group-flush'>
+
+                        {% for teacher in teachers %}
+                          <li class='list-group-item'>
+                            {{ teacher.full_name }}
+                            <button class="icon_edit_cour icon_absolute" data-bs-toggle="modal"
+                                    data-bs-target="#editTeacherModal{{teacher.id}}"><img
+                                    src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}"
+                                    alt="Bootstrap" width="20" height="20"></button>
+                            <button class="icon_del_cour icon_absolute" data-bs-toggle="modal"
+                                    data-bs-target="#deleteTeacherModal{{teacher.id}}"><img
+                                    src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}"
+                                    alt="Bootstrap" width="20" height="20"></button>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                      <input type="submit" value="Gem Underviser" name="add-teacher" class="btn btn-primary">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Add Teacher Modal -->
+      <div class="modal fade" id="addTeacherModal" tabindex="-1" aria-labelledby="addTeacherModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addTeacherModalLabel">Opret Underviser</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+      
+            <form method="post" accept-charset="utf-8">
+      
+              {% csrf_token %}
+      
+              <div class="modal-body">
+                {{ teacherForm|crispy }}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                <input type="submit" value="Gem Underviser" name="add-teacher" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
 
-        <!-- Teacher modals!: -->
+      <!-- Delete Teacher Modal -->
+      <div class="modal fade" id="deleteTeacherModal{{course.id}}" tabindex="-1"
+           aria-labelledby="deleteTeacherModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="deleteTeacherModalLabel">Slet {{course}}
+                          <h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                  </div>
+                  <form method="post" accept-charset="utf-8">
+                      <div class="modal-body">
+                          Er du sikker?
+                          {% csrf_token %}
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                          <input type="hidden" name="id" value="{{teacher.id}}">
+                          <input type="submit" value="Slet Underviser" name="delete-teacher" class="btn btn-danger">
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
 
-        <!-- Teacher Overview Modal -->
-        <div class="modal fade" id="teacherModal" tabindex="-1" aria-labelledby="teacherModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="teacherModalLabel">Håndter Undervisere</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div class="modal-body">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#addTeacherModal">
-                            Opret Underviser
-                        </button>
-
-                        <ul class='list-group list-group-flush'>
-
-                            {% for teacher in teachers %}
-                            <li class='list-group-item'>
-                                {{ teacher.full_name }}
-                                <button class="icon_edit_cour icon_absolute" data-bs-toggle="modal"
-                                        data-bs-target="#editTeacherModal{{teacher.id}}"><img
-                                        src="{% static 'libs/node/node_modules/bootstrap-icons/icons/pencil-square.svg' %}"
-                                        alt="Bootstrap" width="20" height="20"></button>
-                                <button class="icon_del_cour icon_absolute" data-bs-toggle="modal"
-                                        data-bs-target="#deleteTeacherModal{{teacher.id}}"><img
-                                        src="{% static 'libs/node/node_modules/bootstrap-icons/icons/trash.svg' %}"
-                                        alt="Bootstrap" width="20" height="20"></button>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                        <input type="submit" value="Gem Underviser" name="add-teacher" class="btn btn-primary">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Add Teacher Modal -->
-        <div class="modal fade" id="addTeacherModal" tabindex="-1" aria-labelledby="addTeacherModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addTeacherModalLabel">Opret Underviser</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <form method="post" accept-charset="utf-8">
-
-                        {% csrf_token %}
-
-                        <div class="modal-body">
-                            {{ teacherForm|crispy }}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                            <input type="submit" value="Gem Underviser" name="add-teacher" class="btn btn-primary">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Delete Teacher Modal -->
-        <div class="modal fade" id="deleteTeacherModal{{course.id}}" tabindex="-1"
-             aria-labelledby="deleteTeacherModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="deleteTeacherModalLabel">Slet {{course}}
-                            <h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                    </div>
-                    <form method="post" accept-charset="utf-8">
-                        <div class="modal-body">
-                            Er du sikker?
-                            {% csrf_token %}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
-                            <input type="hidden" name="id" value="{{teacher.id}}">
-                            <input type="submit" value="Slet Underviser" name="delete-teacher" class="btn btn-danger">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
