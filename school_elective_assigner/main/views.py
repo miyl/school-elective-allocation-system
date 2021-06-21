@@ -92,15 +92,15 @@ def assignment(request, item):
   # studentEditForms list-object
   for s in students:
     s.editForm = StudentForm(instance=s)
-    
+
   for c in courses:
     c.editForm = CourseForm(instance=c)
-    
+
   assignment.editForm = EditDeadlineForm(instance=assignment)
-  
-  for t in teachers: 
+
+  for t in teachers:
     t.editForm = TeacherForm(instance=t)
-    
+
   # Other GET forms from this view here
   if request.method == 'POST':
     # Identify which form was submitted
@@ -130,9 +130,12 @@ def assignment(request, item):
       cn = request.POST.get('name', None)
       cd = request.POST.get('description', None)
       cmc = request.POST.get('max_capacity', None)
-      #ct = request.POST.get('teachers', None)
+      # Use getlist rather than get to get a list of objects!
+      cts = request.POST.getlist('teachers', None)
       Course.objects.filter(id=cid).update(name=cn, description=cd,
                                            max_capacity=cmc)
+      c = Course.objects.get(id=cid)
+      c.teachers.set(cts)
     elif 'add-teacher' in request.POST:
       teacherForm = TeacherForm(request.POST)
       if teacherForm.is_valid():
@@ -218,27 +221,28 @@ def assignment(request, item):
 
 def allocate_courses(assignment, courses, students, criteria, student_course_associations):
 
-  # parsing criteria
+  # Parsing criteria
   student_max_bound = 0
+  # TODO: Handle all the criteria types
   for crit in criteria:
     if crit.type == 1:
       student_max_bound = crit.m
     else:
       pass
 
-  # creating student bounds
+  # Creating student bounds
   student_bounds = {}
   for student in students:
     student_bounds[student.id] = student_max_bound
 
-  # creating student coeffs
+  # Creating student coeffs
   student_coeffs = {}
   for student in student_bounds:
     student_coeffs[student] = {}
   for association in student_course_associations:
     student_coeffs[association.student.id][association.course.name] = association.priority
 
-  # creating course bounds
+  # Creating course bounds
   course_bounds = {}
   for course in courses:
     course_bounds[course.name] = course.max_capacity
@@ -272,8 +276,10 @@ def allocate_courses(assignment, courses, students, criteria, student_course_ass
       objective.SetCoefficient(variables[student][course], student_coeffs[student][course])
   objective.SetMaximization()
 
+  # Run the solver
   status = solver.Solve()
 
+  # Update the database with the results
   # student is an id, course is a name
   for student in student_bounds:
     for course in course_bounds:

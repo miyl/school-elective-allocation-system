@@ -29,7 +29,7 @@ class CriterionForm(ModelForm):
 class CourseForm(ModelForm):
   class Meta:
     model = Course
-    exclude = ( 'active', 'teachers', )
+    exclude = ( 'active', )
     widgets = {'assignment': HiddenInput()}
 
 
@@ -43,12 +43,8 @@ class TeacherForm(ModelForm):
 class AssignmentForm(ModelForm):
   class Meta:
     model = Assignment
-    exclude = ( 'invitation_email_message', 'invitation_email_subject', 'reminder_email_subject', 
-                'reminder_email_message', 'results_email_subject', 'results_email_message',
-                'priority_form_text', 'invitation_email_sent', 'reminder_email_sent',
-                'results_email_sent', 'deadline')
+    fields = ['id', 'name', 'school']
     widgets = {'school': HiddenInput()}
-    #fields = '__all__'
 
 
 # Example of a Form without a model - boom!
@@ -65,7 +61,7 @@ class InvitationEmailForm(ModelForm):
   class Meta:
     model = Assignment
     fields = [ 'invitation_email_subject', 'invitation_email_message' ]
-    
+
 
 class ReminderEmailForm(ModelForm):
   class Meta:
