@@ -332,14 +332,57 @@ def download_csv(request, item):
   )
 
 
+# Consider updating this to also support importing an identifier for the
+# student (e.g. e-mail address) and a list of priorities!
 def upload_students_csv_handler(assignment, file):
 
   reader = csv.reader( file.read().decode('utf-8').splitlines() )
 
+
+  type = None
   for row in reader:
-    _, created = Student.objects.get_or_create(
-    assignment = assignment,
-    first_name = row[0],
-    email_address = row[1],
-    )
+    if not type: # Why inside the loop? Because it's a generator, I think, so I
+      # can't just index into the reader to check the row as that results in
+      # this error:
+      # '_csv.reader' object is not subscriptable
+
+      # Determine the format super crudely:
+      if "@" in row[0]:
+        type = 0 # Assuming: e-mail-address + list of priorities
+      else:
+        type = 1 # Assuming: name + e-mail address
+
+    # unpacking list + tuple
+    email_address = row[0]
+    if type == 0:
+      _, created = Student.objects.get_or_create(
+          assignment = assignment,
+          # Set the name to the e-mail address as well...
+          email_address = row[1],
+          first_name = email_address,
+      )
+      # Priorities: Assume the rest of the row are priorities
+      priorities = row[1:]
+      # Loop through them two at a time, assuming the uneven ones are courses
+      # and even ones priorities
+      for i in range( 0, len(priorities), 2 ):
+        #breakpoint()
+        # If there's whitespace first between the commas this lookup would
+        # fail, so stripping that first
+        # course and student need IDs, so looking those up unfortunately
+        # assuming names are unique
+        cid = Course.objects.get(name=priorities[i].strip())
+        sid = Student.objects.get(email_address=email_address.strip())
+        _, created = Student_Course_Association.objects.get_or_create(
+          course = cid,
+          student = sid,
+          priority = priorities[i+1]
+        )
+    else: # type 1
+      _, created = Student.objects.get_or_create(
+        assignment = assignment,
+        first_name = row[0],
+        email_address = row[1],
+      )
+
   return redirect(f'assignment/{assignment.id}')
